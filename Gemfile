@@ -6,6 +6,7 @@ gem 'rails', '4.1.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -38,3 +39,15 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.1'
+  gem 'spork-rails'
+end
+
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+end
+
+#Awesome Fonts
+gem "font-awesome-rails"
