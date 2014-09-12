@@ -48,3 +48,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
 end
+
+#Awesome Fonts
+gem "font-awesome-rails"
