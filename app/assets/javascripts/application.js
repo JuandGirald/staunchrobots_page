@@ -20,5 +20,6 @@
 //= require jquery.nicescroll.min
 //= require modernizr.custom.47152
 //= require modernizr-ie
+//= require waypoints.min
 //= require grid
 //= require_tree .

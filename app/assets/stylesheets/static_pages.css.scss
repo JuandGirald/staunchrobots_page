@@ -82,145 +82,7 @@ a:hover {
   font-weight: 300;
   margin-bottom: 50px;
 }
-/* ---------- BUTTONS ---------- */
-.btn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -moz-background-clip: border;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  border: none;
-  background-color: #32425a;
-  color: #fff;
-  border: 1px solid #32425a;
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
-}
-.btn:hover {
-  background-color: #232f40;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  color: #f1f1f1;
-}
-.btn-small {
-  padding: 5px 12px;
-  font-size: 0.75em;
-}
-.btn-medium {
-  padding: 6px 14px;
-  font-size: 0.85em;
-}
-.btn-big {
-  padding: 12px 25px;
-  font-size: 1.125em;
-}
-.btn-blue {
-  border-color: #3598DC;
-  color: #3598DC;
-  background-color: #3598DC;
-}
-.btn-blue:hover {
-  background-color: #2283c6;
-  border-color: #2283c6;
-}
-.btn-darkblue {
-  border-color: #32425a;
-  color: #32425a;
-  background-color: #32425a;
-}
-.btn-darkblue:hover {
-  background-color: #232f40;
-  border-color: #232f40;
-}
-.btn-red {
-  border-color: #df5757;
-  color: #df5757;
-  background-color: #df5757;
-}
-.btn-red:hover {
-  background-color: #d83535;
-  border-color: #d83535;
-}
-.btn-green {
-  border-color: #579f6a;
-  color: #579f6a;
-  background-color: #579f6a;
-}
-.btn-green:hover {
-  background-color: #498558;
-  border-color: #498558;
-}
-.btn-orange {
-  border-color: #d9a13f;
-  color: #d9a13f;
-  background-color: #d9a13f;
-}
-.btn-orange:hover {
-  background-color: #c88d28;
-  border-color: #c88d28;
-}
-.btn-outline {
-  border-width: 1px;
-  border-style: solid;
-  background-color: transparent;
-}
-.btn-fill {
-  border-width: 1px;
-  border-style: solid;
-  color: #fff;
-}
-.btn-fill:hover {
-  color: #fff;
-}
-.read-more {
-  font-size: 0.875em;
-  line-height: 1.5714em;
-  color: #d9a13f;
-  border: 2px solid #d9a13f;
-  background: none;
-  padding: 2px 10px;
-}
-.read-more:hover {
-  background: none;
-  color: #32425a;
-  border-color: #32425a;
-}
-/* ---------- INPUTS ---------- */
-.form-control {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -moz-background-clip: border;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  border: 3px solid #32425a;
-  -webkit-box-shadow: 0 0 0 #000000;
-  -moz-box-shadow: 0 0 0 #000000;
-  box-shadow: 0 0 0 #000000;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.form-control:focus {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -moz-background-clip: border;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  border: 3px solid #32425a;
-  -webkit-box-shadow: 0 0 0 #000000;
-  -moz-box-shadow: 0 0 0 #000000;
-  box-shadow: 0 0 0 #000000;
-  background: #32425a;
-  color: #fff;
-}
+
 /* ---------- SPECIALS ---------- */
 .special-heading {
   border: 3px solid #ffc400;
@@ -249,7 +111,110 @@ a:hover {
   border-bottom-color: transparent;
 }
 
-// Home Section
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+  padding: 20px 0;
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  border: none;
+  margin-bottom: 0;
+  min-height: 0;
+}
+.navbar-fixed-top {
+  border-bottom: none !important;
+}
+.minified {
+  padding: 5px 0;
+}
+.minified .navbar-brand {
+  height: auto !important;
+}
+img.logo {
+  width: 100%
+}
+.darken-menu {
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.dark-menu {
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.navbar-header {
+  display: table;
+  width: 20%;
+}
+.navbar-header .navbar-brand {
+  display: table-cell;
+  vertical-align: middle;
+  float: left;
+  padding: 0;
+  height: 50px;
+}
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-collapse {
+  margin: 0;
+}
+.navbar-toggle {
+  margin: 0;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-nav {
+  float: none;
+  font-size: 0.875em;
+  color: #fff;
+  text-align: center;
+}
+.navbar-nav li a {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+#my-nav {
+  float: right;
+}
+.navbar-nav li a:hover,
+.navbar-nav li a:focus {
+  text-decoration: none;
+  background: none;
+  color: #d9a13f;
+}
+.navbar-nav .active a {
+  color: #d9a13f;
+  background: none;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.navbar-nav .active a:hover,
+.navbar-nav .active a:focus {
+  color: #bf8726;
+  background: none;
+}
+
+/* ----------- Home Section ----------- */
 .welcome-section {
   background-image: image-url('yellow.jpg');
   background-attachment: scroll;
@@ -264,7 +229,7 @@ a:hover {
 }
 
 .welcome-section.full {
-  height: 55em;
+  height: 58em;
 }
 
 .welcome-section .overlay {
@@ -376,46 +341,6 @@ a:hover {
   border-width: 3px;
   border-color: white;
   box-shadow: none;
-}
-.scroll-more {
-  color: #d9a13f;
-  text-align: center;
-  display: none;
-  cursor: pointer;
-  height: 80px;
-  width: 120px;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -60px;
-}
-.scroll-more span {
-  display: inline-block;
-  clear: both;
-  font-family: 'DroidSerif';
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.875em;
-}
-.scroll-more i {
-  height: 24px;
-  width: 8px;
-  display: block;
-  background: transparent url('../assets/scroll-arrow.png') no-repeat center center;
-  margin: 0 auto;
-  -webkit-animation: bounce 1s infinite ease-in-out;
-  animation: bounce 1s infinite ease-in-out;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-.scroll-more:hover i {
-  transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
 }
 .rotating-words {
   color: #d9a13f;
