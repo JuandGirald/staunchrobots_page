@@ -12,6 +12,35 @@
 </head>
 <body data-spy="scroll" data-target="#my-nav">
 
+  <!-- Navigation Bar -->
+  <div class="navbar navbar-fixed-top">
+    <div class="container">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img class="logo" src="assets/white1.png" alt=""></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <nav id="my-nav" class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#welcome">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!--/.navbar-collapse -->
+
+    </div>
+  </div>
+  <!-- End of Navigation Bar -->
+
   <%= yield %>
 
   <!-- Bootstrap core JavaScript
@@ -24,7 +53,7 @@
   <script src="assets/jquery.simple-text-rotator.min.js"></script>
   <script src="assets/grid.js"></script>
   <script src="assets/jquery.nicescroll.min.js"></script>
-
-
+  <script src="assets/waypoints.min.js"></script>
+  
 </body>
 </html>
