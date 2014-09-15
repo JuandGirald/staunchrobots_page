@@ -14,4 +14,11 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.simple-text-rotator.min
+//= require jquery.textrotator.min
+//= require jquery.easing.1.3.min
+//= require jquery.nicescroll.min
+//= require modernizr.custom.47152
+//= require modernizr-ie
+//= require grid
 //= require_tree .

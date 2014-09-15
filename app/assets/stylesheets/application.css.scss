@@ -17,3 +17,49 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+
+//Custom Fonts
+
+@font-face {
+  font-family: "BreeSerif-Regular";
+  src: url(../assets/BreeSerif-Regular.otf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DroidSerif";
+  src: url(../assets/Droid/DroidSerif-Italic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "DroidSerif";
+  src: url(../assets/Droid/DroidSerif-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DroidSerif";
+  src: url(../assets/Droid/DroidSerif-BoldItalic.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "DroidSerif";
+  src: url(../assets/Droid/DroidSerif-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(../assets/Museo/MuseoSans_700.otf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(../assets/Museo/MuseoSans_500.otf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
