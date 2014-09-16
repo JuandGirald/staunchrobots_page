@@ -1,4 +1,4 @@
-y/* ==========================================================================
+/* ==========================================================================
    General Styles
    ========================================================================== */
 body {
@@ -82,147 +82,22 @@ a:hover {
   font-weight: 300;
   margin-bottom: 50px;
 }
-/* ---------- BUTTONS ---------- */
-.btn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -moz-background-clip: border;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  border: none;
-  background-color: #32425a;
-  color: #fff;
-  border: 1px solid #32425a;
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
-}
-.btn:hover {
-  background-color: #232f40;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  color: #f1f1f1;
-}
-.btn-small {
-  padding: 5px 12px;
-  font-size: 0.75em;
-}
-.btn-medium {
-  padding: 6px 14px;
-  font-size: 0.85em;
-}
-.btn-big {
-  padding: 12px 25px;
-  font-size: 1.125em;
-}
-.btn-blue {
-  border-color: #3598DC;
-  color: #3598DC;
-  background-color: #3598DC;
-}
-.btn-blue:hover {
-  background-color: #2283c6;
-  border-color: #2283c6;
-}
-.btn-darkblue {
-  border-color: #32425a;
-  color: #32425a;
-  background-color: #32425a;
-}
-.btn-darkblue:hover {
-  background-color: #232f40;
-  border-color: #232f40;
-}
-.btn-red {
-  border-color: #df5757;
-  color: #df5757;
-  background-color: #df5757;
-}
-.btn-red:hover {
-  background-color: #d83535;
-  border-color: #d83535;
-}
-.btn-green {
-  border-color: #579f6a;
-  color: #579f6a;
-  background-color: #579f6a;
-}
-.btn-green:hover {
-  background-color: #498558;
-  border-color: #498558;
-}
-.btn-orange {
-  border-color: #d9a13f;
-  color: #d9a13f;
-  background-color: #d9a13f;
-}
-.btn-orange:hover {
-  background-color: #c88d28;
-  border-color: #c88d28;
-}
 .btn-outline {
-  border-width: 1px;
-  border-style: solid;
-  background-color: transparent;
+  border: 1px solid !important;
+  border-radius: 0 !important;   
 }
-.btn-fill {
-  border-width: 1px;
-  border-style: solid;
-  color: #fff;
-}
-.btn-fill:hover {
-  color: #fff;
-}
-.read-more {
-  font-size: 0.875em;
-  line-height: 1.5714em;
-  color: #d9a13f;
-  border: 2px solid #d9a13f;
-  background: none;
-  padding: 2px 10px;
-}
-.read-more:hover {
-  background: none;
-  color: #32425a;
-  border-color: #32425a;
-}
-/* ---------- INPUTS ---------- */
-.form-control {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -moz-background-clip: border;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  border: 3px solid #32425a;
-  -webkit-box-shadow: 0 0 0 #000000;
-  -moz-box-shadow: 0 0 0 #000000;
-  box-shadow: 0 0 0 #000000;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.form-control:focus {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -moz-background-clip: border;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  border: 3px solid #32425a;
-  -webkit-box-shadow: 0 0 0 #000000;
-  -moz-box-shadow: 0 0 0 #000000;
-  box-shadow: 0 0 0 #000000;
-  background: #32425a;
-  color: #fff;
-}
+
 /* ---------- SPECIALS ---------- */
 .special-heading {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0;
+  padding: 5px 10px;
+  border: 3px solid;
+  display: inline-block;
+  position: relative;
+}
+.special-box {
   border: 3px solid #ffc400;
   border-radius: 0px;
   width: 260px;
@@ -359,9 +234,17 @@ a:hover {
   -o-transition: background-color 0.6s ease 0s, opacity 1000ms, transform 1000ms;
   transition: background-color 0.6s ease 0s, opacity 1000ms, transform 1000ms;
 }
-.welcome-section .special-heading {
-  margin-left: 1em;
-  margin-right: 1em;
+.welcome-section .special-box {
+  position: relative;
+  left: 170px;
+  top: 0px;
+  bottom: 0px;
+  width: 260px;
+  margin-top: 61px;
+  margin-right: 14px;
+  margin-left: 14px;
+  padding-right: 28px;
+  padding-left: 28px;
   float: left;
 }
 .scroll-more {

@@ -23,11 +23,45 @@ $(document).ready ->
   #   pde evt
   #   return
 
+  # ----- Filterable Portfolio effect ----- 
+  $("ul.og-grid li").append "<div class='hidden-overlay'></div>"
+  $("ul.filter-list li").click ->
+    $(this).css "outline", "none"
+    $("ul.filter-list .active").removeClass "active"
+    $(this).addClass "active"
+    filterVal = $(this).attr("data-id")
+    if filterVal is "all"
+      $("ul.og-grid li.hidden-item").addClass "visible-item"
+      $("ul.og-grid li.hidden-item").removeClass("hidden-item").animate
+        opacity: 1
+      , 600
+    else
+      $("ul.og-grid li").each ->
+        attrArr = $(this).attr("data-id").split(" ")
+        found = $.inArray(filterVal, attrArr)
+        if found is -1
+          $(this).animate
+            opacity: 0.2
+          , 600, ->
+            $(this).removeClass("visible-item").addClass "hidden-item"
+            return
+
+        else
+          $(this).addClass "visible-item"
+          $(this).removeClass("hidden-item").animate
+            opacity: 1
+          , 600
+        return
+    false
+
   # ----- Text Rotator ----- 
   $(".rotating-words").textrotator
     animation: "dissolve"
     separator: ","
     speed: 3000
+
+  # ----- Initialize Portfolio Grid ----- 
+  initializeGrid()
 
   # ----- Initializa Parallax effect ----- 
   parallaxed ".parallax"
