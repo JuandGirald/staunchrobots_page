@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Blog Section
+   ========================================================================== */
+.blog-section {
+  background-color: #e3e3e3 !important;
+  width: 100%;
+  min-width: 100%;
+  text-align: center;
+  padding: 120px 0;
+  position: relative;
+}
+.blog-section .special-heading {
+  margin-bottom: 70px;
+}
+.blog-section .row {
+  text-align: left;
+}
+.blog-section .post-col {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.blog-section .post-col:last-child {
+  margin-bottom: 0;
+}
+.blog-section img {
+  width: 100%;
+  height: auto;
+}
+.blog-section h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 30px 0 20px 0;
+  color: #32425a;
+}
+.blog-section p {
+  margin-bottom: 24px;
+  font-size: 0.875em;
+}
+.more-blog {
+  margin-top: 50px;
+  border-width: 3px;
+  font-weight: 600;
+  font-size: 1.5em;
+  font-family: 'Titillium Web', sans-serif;
+  padding-left: 25px;
+  padding-right: 25px;
+}
