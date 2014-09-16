@@ -1,0 +1,287 @@
+/* ==========================================================================
+   CSS Fallbacks for no JS or old browsers
+   ========================================================================== */
+.no-js .navbar {
+  background: rgba(0, 0, 0, 0.75);
+}
+.no-js .testimonials-rotator .testimonial {
+  display: none;
+}
+.no-js .testimonials-rotator .testimonial:first-child {
+  display: block;
+}
+.no-js .carousel div {
+  display: none;
+  float: left;
+}
+.no-js .carousel div .client-logo {
+  max-width: 285px;
+}
+.no-js .carousel div .client-logo img {
+  width: 100%;
+  height: auto;
+}
+.no-js .carousel div:nth-child(1),
+.no-js .carousel div:nth-child(2),
+.no-js .carousel div:nth-child(3),
+.no-js .carousel div:nth-child(4) {
+  display: inline-block;
+}
+.ie7 .hidden-item,
+.ie8 .hidden-item,
+.ie9 .hidden-item,
+.ie10 .hidden-item {
+  visibility: hidden;
+}
+.ie7 .hidden-item .hidden-overlay,
+.ie8 .hidden-item .hidden-overlay,
+.ie9 .hidden-item .hidden-overlay,
+.ie10 .hidden-item .hidden-overlay {
+  display: block;
+}
+.no-cssgradients .navbar {
+  background: transparent url('assets/navbar-bg.png') top left repeat-x;
+  background-size: 2px 100%;
+}
+.no-cssgradients .dark-menu {
+  background: transparent url('assets/dark-bg.png') top left repeat;
+}
+.no-boxshadow .service-col:hover .service-icon {
+  background-color: #fff;
+}
+.no-csstransforms .og-close {
+  background: transparent url('assets/close-bg.png') top left no-repeat;
+}
+.no-rgba .darken-menu,
+.ie8 .darken-menu,
+.ie9 .darken-menu {
+  background: transparent url('assets/dark-bg.png') top left repeat;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .photo-section {
+    background-attachment: fixed;
+    background-position: 50% 0;
+  }
+  .navbar {
+    min-height: 50px;
+  }
+  .minified .navbar-brand {
+    height: 50px !important;
+  }
+  .navbar-header {
+    width: auto;
+  }
+  .navbar-header .navbar-brand {
+    float: none;
+  }
+  .container > .navbar-header,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .navbar-nav {
+    float: right;
+    font-size: 0.875em;
+    color: #fff;
+  }
+  .navbar-nav li a {
+    color: #fff;
+    text-decoration: none;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    outline: none;
+  }
+  .navbar-nav li a:hover,
+  .navbar-nav li a:focus {
+    background: transparent url('assets/menu-bullet.png') no-repeat center 85%;
+    text-decoration: none;
+    color: #d9a13f;
+    outline: none;
+  }
+  .navbar-nav .active a {
+    color: #d9a13f;
+    background: transparent url('assets/menu-bullet.png') no-repeat center 85%;
+    outline: none;
+  }
+  .navbar-nav .active a:hover,
+  .navbar-nav .active a:focus {
+    color: #bf8726;
+    background: transparent url('assets/menu-bullet.png') no-repeat center 100%;
+    outline: none;
+  }
+  .welcome-section {
+    height: 100%;
+  }
+  .welcome-section .welcome-content p {
+    font-size: 1.875em;
+  }
+  .welcome-section .welcome-content h1 {
+    font-size: 3.625em;
+  }
+  .scroll-more {
+    display: inline-block;
+  }
+  .portfolio-section .more-work {
+    float: right;
+    display: inline-block;
+  }
+  .portfolio-section .filter-bar {
+    display: block !important;
+  }
+  .portfolio-section .filter-list {
+    float: left;
+    width: auto !important;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .portfolio-section .filter {
+    margin-right: 10px !important;
+    text-transform: uppercase !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 0.85em !important;
+    font-weight: 400 !important;
+    display: inline-block !important;
+    padding: 6px 14px  !important;
+  }
+  .og-fullimg {
+    display: block;
+  }
+  .og-details {
+    padding: 0 15px;
+  }
+  .quote-separator:before {
+    right: 54%;
+  }
+  .quote-separator:after {
+    left: 54%;
+  }
+  .team-member .profile-social {
+    display: block;
+  }
+  .team-member .profile-picture .profile-overlay {
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    display: block;
+  }
+  .team-member:hover .profile-picture .profile-overlay {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  }
+  .service-col {
+    margin-bottom: 20px;
+  }
+  .blog-section .post-col {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    position: relative;
+    text-align: left;
+  }
+  .blog-section .post-col:before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 15px;
+    right: 15px;
+    height: 3px;
+    background-color: #32425a;
+    width: auto;
+  }
+  .contact-info {
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+  .contact-info i {
+    font-size: 3em;
+    color: #d9a13f;
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 15px;
+  }
+  .contact-info span {
+    text-align: left;
+    font-size: 0.875em;
+    line-height: 1.4285em;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .section-description {
+    font-size: 1.5em;
+  }
+  .og-grid li {
+    width: 345px;
+  }
+  .og-grid li img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .photo-section {
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .team-member {
+    margin-bottom: 0;
+  }
+  .team-member .profile-picture .profile-overlay {
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  }
+  .team-member .profile-social {
+    display: none;
+  }
+  .team-member:hover .profile-picture .profile-overlay {
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  }
+  .service-col {
+    margin-bottom: 0;
+  }
+  .og-grid li {
+    width: 455px;
+  }
+  .og-grid li img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .team-member .profile-social {
+    display: block;
+  }
+  .team-member .profile-picture .profile-overlay {
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    display: block;
+  }
+  .team-member:hover .profile-picture .profile-overlay {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  }
+  .service-col {
+    margin-bottom: 0;
+  }
+  .og-grid li {
+    width: 360px !important;
+  }
+  .og-grid li img {
+    width: 100%;
+    height: auto;
+  }
+}
