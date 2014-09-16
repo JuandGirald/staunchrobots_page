@@ -51,11 +51,20 @@ $(document).ready ->
 
   # ----- Minimize and darken the Menu Bar ----- 
   $("body").waypoint ((direction) ->
+    $(".navbar").fadeToggle "slow", "linear" 
     $(".navbar").toggleClass "minified dark-menu"
-    $(".navbar .navbar-brand").fadeToggle "slow", "linear" 
     return
   ),
-    offset: "-400px"
+    offset: "-500px"
+
+  # Scroll on Top
+  $(".scrolltotop, .navbar-brand").click (e) ->
+    $("html, body").animate
+      scrollTop: "0"
+    , 1200, "easeInOutCubic"
+    pde e
+    return
+
 
 
   # ----- Filterable Portfolio effect ----- 
@@ -105,7 +114,14 @@ $(document).ready ->
   parallaxed ".parallax"
 
 
-  $(".navbar .navbar-brand").hide()
+  # ----- Show Navbar when reload----- 
+  position = $(document).scrollTop()
+  headerHeight = $("#welcome").outerHeight()
+  if position <= headerHeight - 300
+    $(".navbar").hide()
+  else
+    $(".navbar").show "fast"
+  return
 
 # ----- Functions ----- 
 initializeGrid = ->
