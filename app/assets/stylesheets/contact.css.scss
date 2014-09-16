@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+.contact-section {
+  background: url('../assets/contact.jpg') fixed;
+  width: 100%;
+  min-width: 100%;
+  text-align: center;
+  padding: 120px 0;
+}
+.contact-section .special-heading {
+  margin-bottom: 70px;
+}
+.contact-informations {
+  margin-bottom: 30px;
+}
+.contact-info {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.contact-info i {
+  font-size: 3em;
+  color: #d9a13f;
+  display: block;
+  padding: 0;
+}
+.contact-info span {
+  text-align: center;
+  font-size: 0.875em;
+  line-height: 1.4285em;
+  display: block;
+  clear: both;
+}
+.contact-form {
+  margin: 40px 0 70px;
+}
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+.contact-form button {
+  background-color: #e7ddcc;
+  border: 1px solid #e7ddcc !important;
+  color: #32425a;
+  border: none;
+  width: 100%;
+  display: block;
+  padding: 8px 25px;
+  font-size: 1.3125em;
+  text-transform: uppercase;
+  font-weight: 600;
+  outline: none;
+}
+.contact-form button:focus {
+  outline: none;
+  color: #32425a;
+}
+#result {
+  width: 100%;
+  height: auto;
+  background: none;
+}
+#result span {
+  display: block;
+}
+#result .fa {
+  margin-right: 10px;
+}
+#result .error {
+  padding: 10px;
+  background-color: #f3dcdc;
+}
+#result .error .fa {
+  color: #e33a3a;
+}
+#result .success {
+  padding: 10px;
+  background-color: #e8f3dc;
+}
+#result .success .fa {
+  color: #32425a;
+}
+
+/* ---------- INPUTS ---------- */
+.contact-section {
+  .contact-form {
+    .form-control {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      -moz-background-clip: border;
+      -webkit-background-clip: border-box;
+      background-clip: border-box;
+      border: 3px solid #32425a;
+      -webkit-box-shadow: 0 0 0 #000000;
+      -moz-box-shadow: 0 0 0 #000000;
+      box-shadow: 0 0 0 #000000;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+    .form-control:focus {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      -moz-background-clip: border;
+      -webkit-background-clip: border-box;
+      background-clip: border-box;
+      border: 3px solid #32425a;
+      -webkit-box-shadow: 0 0 0 #000000;
+      -moz-box-shadow: 0 0 0 #000000;
+      box-shadow: 0 0 0 #000000;
+      background: #32425a;
+      color: #fff;
+    }
+  }
+}
