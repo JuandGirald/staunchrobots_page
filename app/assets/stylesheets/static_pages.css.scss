@@ -87,21 +87,6 @@ a:hover {
   border-radius: 0 !important;   
 }
 
-.btn-outline {
-  border: 1px solid !important;
-  border-radius: 0 !important;   
-}
-
-.btn-outline {
-  border: 1px solid !important;
-  border-radius: 0 !important;   
-}
-
-.btn-outline {
-  border: 1px solid !important;
-  border-radius: 0 !important;   
-}
-
 /* ---------- SPECIALS ---------- */
 .special-heading {
   text-transform: uppercase;
@@ -139,9 +124,112 @@ a:hover {
   border-bottom-color: transparent;
 }
 
-// Home Section
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+  padding: 20px 0;
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  border: none;
+  margin-bottom: 0;
+  min-height: 0;
+}
+.navbar-fixed-top {
+  border-bottom: none !important;
+}
+.minified {
+  padding: 5px 0;
+}
+.minified .navbar-brand {
+  height: auto !important;
+}
+img.logo {
+  width: 100%
+}
+.darken-menu {
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.dark-menu {
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.navbar-header {
+  display: table;
+  width: 20%;
+}
+.navbar-header .navbar-brand {
+  display: table-cell;
+  vertical-align: middle;
+  float: left;
+  padding: 0;
+  height: 50px;
+}
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-collapse {
+  margin: 0;
+}
+.navbar-toggle {
+  margin: 0;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-nav {
+  float: none;
+  font-size: 0.875em;
+  color: #fff;
+  text-align: center;
+}
+.navbar-nav li a {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+#my-nav {
+  float: right;
+}
+.navbar-nav li a:hover,
+.navbar-nav li a:focus {
+  text-decoration: none;
+  background: none;
+  color: #d9a13f;
+}
+.navbar-nav .active a {
+  color: #d9a13f;
+  background: none;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.navbar-nav .active a:hover,
+.navbar-nav .active a:focus {
+  color: #bf8726;
+  background: none;
+}
+
+/* ----------- Home Section ----------- */
 .welcome-section {
-  background-image: url('../assets/yellow.jpg');
+  background-image: image-url('yellow.jpg');
   background-attachment: scroll;
   background-position: center; 
   height: auto;
@@ -154,7 +242,7 @@ a:hover {
 }
 
 .welcome-section.full {
-  height: 55em;
+  height: 58em;
 }
 
 .welcome-section .overlay {
@@ -178,44 +266,45 @@ a:hover {
   display: table;
   margin: 0 auto;
   h1, h2 {
-    font-family: "MuseoSans";
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    text-transform: uppercase;
   }
   h2{
     margin-top: 8px;
     margin-bottom: 20px;
-  }
-  .box {
-    margin-top: 61px;
+    letter-spacing: 6px;
+    line-height: 38px;
+    width: 940px;
   }
 }
 .welcome-section .welcome-content {
   img{
     opacity: 0;
-    -moz-animation: dropHeader 0.5s ease-in forwards; /* Firefox */
-    -webkit-animation: dropHeader 0.5s ease-in forwards; /* Safari and Chrome */
-    -o-animation: dropHeader 0.5s ease-in forwards; /* Opera */
-    animation: dropHeader 0.5s ease-in forwards;
+    -moz-animation: dropHeader 0.8s ease-in forwards; /* Firefox */
+    -webkit-animation: dropHeader 0.8s ease-in forwards; /* Safari and Chrome */
+    -o-animation: dropHeader 0.8s ease-in forwards; /* Opera */
+    animation: dropHeader 0.8s ease-in forwards;
   }
   h2 {
     opacity: 0;
-    -moz-animation: dropTitle 0.5s ease-in forwards; /* Firefox */
-    -webkit-animation: dropTitle 0.5s ease-in forwards; /* Safari and Chrome */
-    -o-animation: dropTitle 0.5s ease-in forwards; /* Opera */
-    animation: dropTitle 0.5s ease-in forwards;
+    -moz-animation: dropTitle 0.7s ease-in forwards; /* Firefox */
+    -webkit-animation: dropTitle 0.7s ease-in forwards; /* Safari and Chrome */
+    -o-animation: dropTitle 0.7s ease-in forwards; /* Opera */
+    animation: dropTitle 0.7s ease-in forwards;
   }
   h1 {
     opacity: 0;
-    -moz-animation: dropTitle 0.5s ease-in 1.1s forwards; /* Firefox */
-    -webkit-animation: dropTitle 0.5s ease-in 1.1s forwards; /* Safari and Chrome */
-    -o-animation: dropTitle 0.5s ease-in 1.1s forwards; /* Opera */
-    animation: dropTitle 0.5s ease-in 1.1s forwards;
+    -moz-animation: dropTitle 0.7s ease-in 1.1s forwards; /* Firefox */
+    -webkit-animation: dropTitle 0.7s ease-in 1.1s forwards; /* Safari and Chrome */
+    -o-animation: dropTitle 0.7s ease-in 1.1s forwards; /* Opera */
+    animation: dropTitle 0.7s ease-in 1.1s forwards;
   }
 }
 .welcome-section .welcome-content {
   display: table-cell;
   vertical-align: middle;
-  max-width: 700px;
+  max-width: 964px;
   .white {
     h1:hover {
       background-color: white;
@@ -241,7 +330,7 @@ a:hover {
   margin-bottom: 40px;
 }
 .welcome-section .welcome-content h1 {
-  font-size: 1.5em;
+  font-size: 14px;
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   -webkit-transition: background-color 0.6s ease 0s, opacity 1000ms, transform 1000ms;
@@ -261,46 +350,10 @@ a:hover {
   padding-right: 28px;
   padding-left: 28px;
   float: left;
-}
-.scroll-more {
-  color: #d9a13f;
-  text-align: center;
-  display: none;
-  cursor: pointer;
-  height: 80px;
-  width: 120px;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -60px;
-}
-.scroll-more span {
-  display: inline-block;
-  clear: both;
-  font-family: 'DroidSerif';
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.875em;
-}
-.scroll-more i {
-  height: 24px;
-  width: 8px;
-  display: block;
-  background: transparent url('../assets/scroll-arrow.png') no-repeat center center;
-  margin: 0 auto;
-  -webkit-animation: bounce 1s infinite ease-in-out;
-  animation: bounce 1s infinite ease-in-out;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-.scroll-more:hover i {
-  transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
+  clear: none;
+  border-width: 3px;
+  border-color: white;
+  box-shadow: none;
 }
 .rotating-words {
   color: #d9a13f;
