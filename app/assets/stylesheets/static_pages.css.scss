@@ -83,8 +83,19 @@ a:hover {
   margin-bottom: 50px;
 }
 .btn-outline {
-  border: 1px solid !important;
-  border-radius: 0 !important;   
+  border: 2px solid #32425a !important;
+  border-radius: 0 !important;  
+  color: #32425a;
+  font-weight: 600 !important;
+  font-size: 1.5em !important;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; 
+}
+.btn-outline:hover {
+  background-color: #232f40;
+  color: white !important;
 }
 
 /* ---------- SPECIALS ---------- */
@@ -96,6 +107,19 @@ a:hover {
   border: 3px solid;
   display: inline-block;
   position: relative;
+}
+.special-heading:after {
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -23px;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  background: none;
+  border-color: transparent;
 }
 .special-box {
   border: 3px solid #ffc400;
