@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Portfolio Section
+   ========================================================================== */
+
+.about-section {
+  height: auto;
+  min-width: 100%;
+  text-align: center;
+  .special-heading {
+    margin-bottom: 50px;  
+  }
+  .strengths {
+    list-style: none;
+    li {
+      background: #232525;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1em;
+      padding-left: 0;
+      padding-right: 0;
+      .copy {
+        padding-top: 1em;
+        padding: 50px;
+        h4 {
+          color: #fff;
+          font-size: 2.5em;
+          font-weight: 700;
+          letter-spacing: -0.06em;
+          margin-bottom: 0.5em;
+        }
+        p {
+          color: #918F8F;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
