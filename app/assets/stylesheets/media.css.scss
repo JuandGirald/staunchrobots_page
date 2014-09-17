@@ -288,6 +288,9 @@
 // small devices 
 @media (max-width: 992px) {
   .welcome-section {
+    h2 {
+      font-size: 1.4em;
+    }
     .special-box {
       left: 4em !important;
     }

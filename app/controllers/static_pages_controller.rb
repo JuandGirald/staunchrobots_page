@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
     
     if @message.valid?
       NotificationsMailer.new_message(@message).deliver
-      redirect_to(root_path, :notice => "Su mensaje fue enviado satisfactoriamente. / Your message was sent successfully. ")
+      redirect_to(root_path, :notice => "Your message was sent successfully. ")
     else
       flash.now.alert = "Check the error list"
       render :home
