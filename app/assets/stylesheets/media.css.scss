@@ -285,3 +285,11 @@
     height: auto;
   }
 }
+// small devices 
+@media (max-width: 992px) {
+  .welcome-section {
+    .special-box {
+      left: 4em !important;
+    }
+  }
+}

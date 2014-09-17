@@ -299,7 +299,6 @@ img.logo {
     margin-bottom: 20px;
     letter-spacing: 6px;
     line-height: 38px;
-    width: 940px;
   }
 }
 .welcome-section .welcome-content {
@@ -328,7 +327,7 @@ img.logo {
 .welcome-section .welcome-content {
   display: table-cell;
   vertical-align: middle;
-  max-width: 964px;
+  max-width: 60em;
   .white {
     h1:hover {
       background-color: white;
@@ -364,7 +363,7 @@ img.logo {
 }
 .welcome-section .special-box {
   position: relative;
-  left: 170px;
+  left: 8em;
   top: 0px;
   bottom: 0px;
   width: 260px;
