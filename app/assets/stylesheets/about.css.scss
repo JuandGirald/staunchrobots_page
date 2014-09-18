@@ -11,6 +11,7 @@
   }
   .strengths {
     list-style: none;
+    padding-left: 0;
     li {
       background: #232525;
       font-family: 'Montserrat', sans-serif;
@@ -32,6 +33,18 @@
           font-weight: 500;
         }
       }
+    }
+  }
+}
+
+/* =====================================================
+   Media Querys
+   ===================================================== */
+
+@media (min-width: 1200px) {
+  .about-section {
+    .container {
+      width: 1280px;
     }
   }
 }
