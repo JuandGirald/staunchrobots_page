@@ -101,83 +101,7 @@ body #cdawrap:hover #cda-remove {
   stroke: #f17a2e;
 }
 
-// /* Content */
-// .ip-main {
-//   overflow: hidden;
-//   margin: 0 auto;
-//   padding: 160px 0 10em 0;
-//   max-width: 1100px;
-//   width: 90%;
-// }
-
-// .ip-main h2 {
-//   margin: 0;
-//   padding: 0.5em 0 1em;
-//   color: #be4856;
-//   text-align: center;
-//   font-size: 4.25em;
-//   font-size: 4vw;
-//   line-height: 1;
-// }
-
-// .browser {
-//   margin: 0 auto;
-//   padding-top: 8%;
-//   min-height: 400px;
-//   max-width: 1000px;
-//   width: 100%;
-//   border-radius: 8px;
-//   background: #fff url(../img/browser.png) no-repeat 50% 0;
-//   background-size: 100%;
-//   color: #d3d3d3;
-// }
-
-// .box {
-//   float: left;
-//   padding: 3.5em;
-//   width: 33.3%;
-//   font-size: 0.7em;
-//   line-height: 1.5;
-// }
-
-// .box p {
-//   font-family: 'Blokk', Arial, sans-serif;
-// }
-
-// [class^="icon-"]::before, 
-// [class*=" icon-"]::before {
-//   display: block;
-//   margin-bottom: 0.5em;
-//   padding: 0.5em;
-//   border-radius: 5px;
-//   background: #dfdfdf;
-//   color: #fff;
-//   text-align: center;
-//   text-transform: none;
-//   font-weight: normal;
-//   font-style: normal;
-//   font-variant: normal;
-//   font-size: 5em;
-//   font-family: 'feather';
-//   line-height: 1;
-//   speak: none;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
-
-// .icon-bell:before {
-//   content: "\e006";
-// }
-
-// .icon-cog:before {
-//   content: "\e023";
-// }
-
-// .icon-heart:before {
-//   content: "\e024";
-// }
-
-// /* Animations */
+// ================ /* Animations */ ======================= //
 
 /* Initial animation of header elements */
 .loading .ip-logo,
@@ -243,85 +167,32 @@ body #cdawrap:hover #cda-remove {
 
 /* Header animation when loading finishes */
 .loaded .ip-header {
-  -webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
-  animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  -webkit-transform-origin: 0% 0%;
+  -webkit-animation: rotateFall 1s both ease-in;
+  -moz-transform-origin: 0% 0%;
+  -moz-animation: rotateFall 1s both ease-in;
+  transform-origin: 0% 0%;
+  animation: rotateFall 1s both ease-in;
 }
 
-@-webkit-keyframes animLoadedHeader {
-  to { -webkit-transform: translate3d(0,-100%,0); }
+@-webkit-keyframes rotateFall {
+  0% { -webkit-transform: rotateZ(0deg); }
+  20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+  40% { -webkit-transform: rotateZ(17deg); }
+  60% { -webkit-transform: rotateZ(16deg); }
+  100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
 }
-
-@keyframes animLoadedHeader {
-  to { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); }
+@-moz-keyframes rotateFall {
+  0% { -moz-transform: rotateZ(0deg); }
+  20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+  40% { -moz-transform: rotateZ(17deg); }
+  60% { -moz-transform: rotateZ(16deg); }
+  100% { -moz-transform: translateY(100%) rotateZ(17deg); }
 }
-
-// /* Content animations */
-// .loaded .ip-main h2,
-// .loaded .ip-main .browser,
-// .loaded .ip-main .browser .box,
-// .loaded .codrops-demos {
-//   -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
-//   animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
-// }
-
-// .loaded .ip-main .browser,
-// .loaded .ip-main .browser .box:first-child {
-//   -webkit-animation-delay: 0.1s;
-//   animation-delay: 0.1s;
-// }
-
-// .loaded .ip-main .browser .box:nth-child(2) {
-//   -webkit-animation-delay: 0.15s;
-//   animation-delay: 0.15s;
-// }
-
-// .loaded .ip-main .browser .box:nth-child(3) {
-//   -webkit-animation-delay: 0.2s;
-//   animation-delay: 0.2s;
-// }
-
-// @-webkit-keyframes animLoadedContent {
-//   from { opacity: 0; -webkit-transform: translate3d(0,200px,0); }
-// }
-
-// @keyframes animLoadedContent {
-//   from { opacity: 0; -webkit-transform: translate3d(0,200px,0); transform: translate3d(0,200px,0); }
-// }
-
-// /* Change layout class for header */
-// .layout-switch .ip-header {
-//   position: absolute;
-// }
-
-// /* No JS */
-// .no-js .ip-header {
-//   position: relative;
-//   min-height: 0px;
-// }
-
-// .no-js .ip-header .ip-logo {
-//   margin-top: 20px;
-//   height: 180px;
-//   opacity: 1;
-//   -webkit-transform: none;
-//   transform: none;
-// }
-
-// .no-js .ip-header .ip-logo svg path {
-//   fill: #fff;
-// }
-
-// /* Media queries */
-
-// @media screen and (max-width: 45em) {
-
-//   .ip-main h2 {
-//     font-size: 2.25em;
-//     font-size: 10vw;
-//   }
-
-//   .box {
-//     width: 100%%;
-//   }
-
-// }
+@keyframes rotateFall {
+  0% { transform: rotateZ(0deg); }
+  20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+  40% { transform: rotateZ(17deg); }
+  60% { transform: rotateZ(16deg); }
+  100% { transform: translateY(100%) rotateZ(17deg); }
+}
