@@ -31,7 +31,6 @@ $(document).ready ->
   # ----- Scroll down from Welcome screen ----- 
   $(".welcome-section .box h1").click (evt) ->
     place = $("body section").eq(1)
-    console.log place
     # var offsetTop = $('.navbar').outerHeight();
     $("html, body").animate
       scrollTop: $(place).offset().top
