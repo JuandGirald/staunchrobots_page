@@ -9,26 +9,13 @@
   .special-heading {
     margin-bottom: 50px;  
   }
-  .strengths {
-    list-style: none;
-    padding-left: 0;
-    li {
-      font-family: 'DroidSerif';
-      background: #232525;
+  .add-top-half {
+    .promo-text {
       margin-bottom: 1em;
-      padding-left: 0;
-      padding-right: 0;
-      .copy {
-        height: 11em;
-        padding-top: 1em;
-        padding: 42px;
-        h2 {
-          color: #fff;
-          font-size: 21pt;
-          letter-spacing: -0.06em;
-          margin-bottom: 0.5em;
-        }
-      }
+    }
+    h2 {
+      font-size: 39pt;
+      text-align: center;
     }
   }
 }
@@ -41,6 +28,24 @@
   .about-section {
     .container {
       width: 1280px;
+    }
+  }
+}
+@media screen and (max-width: 830px) {
+  .about-section {
+    .add-top-half {
+      h2 {
+        font-size: 21pt;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-section {
+    .add-top-half {
+      h2 {
+        font-size: 28pt;
+      }
     }
   }
 }
