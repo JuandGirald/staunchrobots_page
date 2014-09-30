@@ -2,7 +2,7 @@
    General Styles
    ========================================================================== */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'DroidSerif';
   font-size: 16px;
   line-height: 1.75;
   height: 100%;
@@ -84,10 +84,9 @@ a:hover {
   background-color: #32425a;
 }
 .section-description {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
+  font-family: 'DroidSerif';
+  font-size: 16pt;
   line-height: 1.2em;
-  font-weight: 300;
   margin-bottom: 50px;
 }
 .btn-outline {
@@ -109,7 +108,9 @@ a:hover {
 /* ---------- SPECIALS ---------- */
 .special-heading {
   text-transform: uppercase;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 21pt;
   margin: 0;
   padding: 5px 10px;
   border: 3px solid;

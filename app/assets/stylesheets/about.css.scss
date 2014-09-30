@@ -13,8 +13,8 @@
     list-style: none;
     padding-left: 0;
     li {
+      font-family: 'DroidSerif';
       background: #232525;
-      font-family: 'Montserrat', sans-serif;
       margin-bottom: 1em;
       padding-left: 0;
       padding-right: 0;
@@ -22,16 +22,11 @@
         height: 11em;
         padding-top: 1em;
         padding: 42px;
-        h4 {
+        h2 {
           color: #fff;
-          font-size: 2.5em;
-          font-weight: 700;
+          font-size: 21pt;
           letter-spacing: -0.06em;
           margin-bottom: 0.5em;
-        }
-        p {
-          color: #918F8F;
-          font-weight: 500;
         }
       }
     }

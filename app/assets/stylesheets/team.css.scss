@@ -68,13 +68,13 @@
   -webkit-border-radius: 50%;
 }
 .team-member h3 {
-  font-size: 1.75em;
+  font-size: 16pt;
   font-weight: 700;
   margin-bottom: 0;
 }
 .team-member span {
-  font-size: 0.875em;
-  font-family: 'Titillium Web', sans-serif;
+  font-size: 9pt;
+  font-family: 'DroidSerif';
   text-transform: uppercase;
   color: #d9a13f;
 }
@@ -129,7 +129,7 @@
   z-index: 1;
 }
 .team-member .team-bio p {
-  font-size: 0.9em;
+  font-size: 9pt;
   height: auto;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
