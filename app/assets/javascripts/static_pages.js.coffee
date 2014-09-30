@@ -107,7 +107,7 @@ $(document).ready ->
     speed: 3000
 
   # ----- Initialize Portfolio Grid ----- 
-  initializeGrid()
+  #initializeGrid()
 
   # ----- Initializa Parallax effect ----- 
   parallaxed ".parallax"
