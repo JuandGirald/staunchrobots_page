@@ -27,7 +27,7 @@
 }
 .contact-info span {
   text-align: center;
-  font-size: 0.875em;
+  font-size: 12pt;
   line-height: 1.4285em;
   display: block;
   clear: both;
@@ -35,9 +35,15 @@
 .contact-form {
   margin: 40px 0 70px;
 }
-.contact-form .form-group {
-  margin-bottom: 20px;
-}
+.contact-form {
+  .form-group {
+    margin-bottom: 20px;
+    .form-control {
+      font-size: 12pt !important;
+    }
+  }  
+} 
+  
 .contact-form button {
   background-color: #e7ddcc;
   border: 1px solid #e7ddcc !important;
@@ -46,9 +52,9 @@
   width: 100%;
   display: block;
   padding: 8px 25px;
-  font-size: 1.3125em;
+  font-size: 16pt;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: bold;
   outline: none;
 }
 .contact-form button:focus {
