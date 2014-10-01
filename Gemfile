@@ -55,3 +55,6 @@ end
 
 #Awesome Fonts
 gem "font-awesome-rails"
+
+#Redirect
+gem "rack-reverse-proxy", :require => "rack/reverse_proxy"
