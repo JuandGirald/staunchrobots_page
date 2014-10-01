@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
   match '/',  to: 'static_pages#create',          via: 'post'
+
+  get "/blog" => redirect("/blog/")
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
