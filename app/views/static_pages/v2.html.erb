@@ -24,20 +24,41 @@
 <!-- End of the Welcome Section -->
 
 <!-- page-section:starts -->
-<section id="about" class="about-section light-section dark-content"> 
+<section id="about" class="about-section2 light-section dark-content"> 
   <div class="container">
     <div class="row add-top-half">
-        <article class="text-left col-md-4">
-          <h2 class="promo-text dark"><span>Growing RAILS teams with distributed agile geeks!</span></h2>
-          <div class="arrow col-xs-12">
-            <img src="assets/logo.png">
-          </div>
-        </article>
-        <article class="text-left col-md-8">
-          <div class="col-md-12 video">
-            <iframe src="//fast.wistia.net/embed/iframe/nl1o78lq0c?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="400" height="225"></iframe><script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
-          </div>
-        </article>
+      <article class="col-xs-6">
+        <div class="content">
+          <h2 class="dark-special">We are savvy</h2>
+          <p>Serving global brands and cutting-edge companies, savvy apps is a full-service mobile development company that's driven by making life better, one app at a time.</p>
+          <p>What we do is not a job. We don't just work on projects. We inspire emotion, achieve the impossible, keep customers thrilled, and make dreams reality. This is our life's work, our legacy, and our passion.</p>
+          <p>Whether you are an innovative startup with an idea to disrupt a market, a demanding brand wanting to update your consumer application, or a large corporation needing help with enterprise app development, we're ready to help. We invite you to learn more about our award-winning mobile apps and top-ranked mobile development services.</p>  
+        </div>
+        
+      </article>
+      <article class="text-left col-xs-6">
+        <div class="col-md-10 video">
+          <iframe src="//fast.wistia.net/embed/iframe/nl1o78lq0c?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="400" height="225"></iframe><script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
+        </div>
+        <div class="col-md-10 text-center media">
+          <h3 class="dark-special">Media atention</h3>
+          <img src="assets/google.png">
+          <img src="assets/skype.png">
+          <img src="assets/twitter.png">
+          <img src="assets/youtube.png">
+          <img src="assets/linkedin.png">  
+        </div>
+        
+      </article>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="cultures clearfix">
+      <img src="assets/img-6.jpg" class="leo">
+      <img src="assets/office7.jpg" class="office">
+      <img src="assets/img-6.jpg" class="todd">
+      <img src="assets/office7.jpg" class="pair">
     </div>
   </div>
 </section>
@@ -284,14 +305,6 @@
       <div class="col-md-8 col-md-offset-2">
 
         <div id="result"></div>
-
-        <div class="row">
-          <%= render 'layouts/error_messages', object: @message %>
-          <% flash.each do |key, value| %>
-            <div class="alert alert-<%= key %>"><%= value %></div>
-          <% end %>
-        </div>
-        
 
         <form accept-charset="UTF-8" action="/" id="new_message" method="post" class="new_message contact-form">
           <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />

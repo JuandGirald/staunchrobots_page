@@ -18,7 +18,6 @@ class StaticPagesController < ApplicationController
   private
 
     def message_params
-      params.require(:message).permit(:name, :email, :humaninput,
-                                      :body)
+      params.require(:message).permit(:name, :email, :body)
     end
 end

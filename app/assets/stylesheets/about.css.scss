@@ -17,6 +17,7 @@
       font-size: 39pt;
       text-align: center;
       line-height: 60px;
+      color: black;
     }
     .arrow {
       text-align: center;
@@ -26,6 +27,106 @@
     }
   }
 }
+
+.about-section2 {
+  font-family: 'DroidSerif';
+  height: auto;
+  min-width: 100%;
+  text-align: center;
+  .special-heading {
+    margin-bottom: 50px;  
+  }
+  .add-top-half {
+    .col-md-10 {
+      margin-left: 4em;
+    }
+    .content {
+      float: right;
+      width: 460px;
+      p {
+        line-height: 1.6;
+        margin-bottom: 1em;
+        text-align: justify;
+      }
+    }
+    h2 {
+      font-size: 39pt;
+      text-align: center;
+      line-height: 60px;
+      margin-bottom: 0.5em;
+    }
+    h3 {
+      margin-bottom: 1em;
+      font-size: 21pt
+    }
+    p {
+      font-size: 12pt;
+    }
+    .video {
+      margin-top: 20px;
+      padding-left: 0;
+    }
+    .media {
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.wrapper{
+  position: relative;
+  margin: 0 auto 0 auto;
+  margin-top: 8em;
+  width: 978px;
+  text-align: left;
+  .cultures {
+    margin: 0 0 -20px 0;
+    img {
+      float: left;
+      display: block;
+      border: 4px solid #08080B;
+      margin: 0 0 0 -91px;
+      -webkit-transition: -webkit-transform .2s ease-in-out;
+      -moz-transition: -moz-transform .2s ease-in-out;
+      -ms-transition: -ms-transform .2s ease-in-out;
+      transition: transform .2s ease-in-out;
+    }
+    img:first-child {
+      margin-left: 4em;
+    }
+  }
+}
+img.leo{
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+img.todd{
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+img.office{
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg);
+  -ms-transform: rotate(-7deg);
+  transform: rotate(-7deg);
+}
+img.pair{
+  -webkit-transform: rotate(12deg);
+  -moz-transform: rotate(12deg);
+  -o-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+  transform: rotate(12deg);
+}
+
+
 
 /* =====================================================
    Media Querys
