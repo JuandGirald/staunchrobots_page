@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  match '/',  to: 'static_pages#create',          via: 'post'
-
+  match '/',    to: 'static_pages#create',    via: 'post'
+  match '/v2',  to: 'static_pages#v2',        via: 'get'
+  
   get "/blog" => redirect("/blog/")
 
   # The priority is based upon order of creation: first created -> highest priority.

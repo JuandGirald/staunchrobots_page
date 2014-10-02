@@ -14,9 +14,6 @@ body {
   bottom: 0px;
   overflow-x: hidden;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: "BreeSerif-Regular";
-}
 a {
   color: #32425a;
   text-decoration: none;
@@ -266,6 +263,7 @@ img.logo {
   background-image: image-url('yellow.jpg');
   background-attachment: scroll;
   background-position: center; 
+  background-color: white;
   height: auto;
   width: 100%;
   min-width: 100%;
