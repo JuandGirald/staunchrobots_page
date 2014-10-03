@@ -19,6 +19,9 @@
 .blog-section .post-col {
   margin-bottom: 60px;
   text-align: center;
+  p {
+    height: 6em; 
+  }
 }
 .blog-section .post-col:last-child {
   margin-bottom: 0;
