@@ -260,7 +260,8 @@ img.logo {
 
 /* ----------- Home Section ----------- */
 .welcome-section {
-  background-image: image-url('medellin.jpg');
+  background-image: image-url('planet_shaker.jpg');
+  background-size: cover;
   background-attachment: scroll;
   background-position: center; 
   background-color: white;
@@ -399,7 +400,9 @@ img.logo {
   min-width: 100%;
   text-align: center;
   padding: 60px 0;
-  background-image: url(../assets/yellow.jpg);
+  background-image: url(../assets/planet_shaker.jpg);
+  background-size: cover;
+  background-position-y: 18em;
   position: relative;
   z-index: 0;
 }

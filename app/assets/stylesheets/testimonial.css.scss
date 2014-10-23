@@ -2,8 +2,9 @@
    Testimonials Section
    ========================================================================== */
 .testimonials-section {
-  background-image: url('/assets/sanfrancisco.jpg');
+  background-image: url('/assets/medellin.jpg');
   background-attachment: scroll;
+  background-position-y: -10em;
   width: 100%;
   height: 54em;
   min-width: 100%;
@@ -12,7 +13,7 @@
   position: relative;
 }
 .testimonials-section .bg-overlay {
-  opacity: 0.8;
+  opacity: 0.3;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -21,7 +22,7 @@
 }
 .testimonials-section .special-heading {
   margin-bottom: 50px;
-  margin-top: 4em;
+  margin-top: 2em;
 }
 .quote-separator {
   width: 100%;
