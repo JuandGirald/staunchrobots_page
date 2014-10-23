@@ -14,12 +14,17 @@
       margin-bottom: 1em;
     }
     h2 {
-      font-size: 39pt;
+      font-size: 21pt;
       text-align: center;
       line-height: 60px;
       color: black;
     }
-    .arrow {
+    .video {
+      img {
+        width: 100%;
+      }
+    }
+    .robot {
       text-align: center;
       img {
         width: 40%;
@@ -37,12 +42,12 @@
     margin-bottom: 50px;  
   }
   .add-top-half {
+    margin-bottom: 8em;
     .col-md-10 {
       margin-left: 4em;
     }
     .content {
       float: right;
-      width: 460px;
       p {
         line-height: 1.6;
         margin-bottom: 1em;
@@ -61,6 +66,11 @@
     }
     p {
       font-size: 12pt;
+    }
+    article {
+      img {
+        width: 100%;
+      }
     }
     .video {
       margin-top: 20px;
