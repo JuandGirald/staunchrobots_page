@@ -304,10 +304,11 @@ img.logo {
     text-transform: uppercase;
   }
   h2{
+    font-size: 3em;
     margin-top: 8px;
     margin-bottom: 20px;
     letter-spacing: 6px;
-    line-height: 38px;
+    line-height: 45px;
   }
 }
 .welcome-section .welcome-content {
@@ -335,10 +336,13 @@ img.logo {
 }
 .welcome-section .welcome-content {
   display: table-cell;
-  vertical-align: middle;
   max-width: 60em;
+  padding-top: 6em;
+  .box {
+    margin-top: 9em;
+  }
   .white {
-    h1:hover {
+    h1 {
       background-color: white;
       color: #f17a2e;
     }
@@ -346,9 +350,6 @@ img.logo {
   .orange {
     h1{
       border-color: #f17a2e;
-      color: #f17a2e;
-    }
-    h1:hover {
       background-color: #f17a2e;
       color: white;
     }
