@@ -32,6 +32,13 @@
   display: block;
   clear: both;
 }
+
+span#contact-info-phone{
+  font-size:14pt;
+}
+div.contact-info i.fa-phone{
+  padding-top: 8px;
+}
 .contact-form {
   margin: 40px 0 70px;
 }
