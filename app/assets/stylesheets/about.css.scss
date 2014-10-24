@@ -33,6 +33,31 @@
   }
 }
 
+ul.about-us-list{
+  list-style: none;
+  padding: 0;
+}
+ul.about-us-list li{
+  background:  url(image_path('logo-as-bullet-24x24.png')) no-repeat 7px 7px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 0px 1px 40px;
+  vertical-align: middle;
+  text-align:left;
+  font-size: 12pt;
+  margin-bottom:.5em;
+}
+
+
+h3#about-headline{
+  margin: 0;
+  margin-bottom: 10px;
+  line-height:32px
+}
+
+div#about-text p {
+  margin-bottom:0;
+}
 .about-section2 {
   font-family: 'DroidSerif';
   height: auto;
@@ -68,7 +93,7 @@
       font-size: 12pt;
     }
     article {
-      img {
+      #map-img {
         width: 100%;
       }
     }
