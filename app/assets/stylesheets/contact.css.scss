@@ -11,8 +11,8 @@
 .contact-section .special-heading {
   margin-bottom: 70px;
 }
-.contact-informations {
-  margin-bottom: 30px;
+.contact-information {
+  margin-bottom: 10px;
 }
 .contact-info {
   display: block;
@@ -43,6 +43,14 @@
     }
   }  
 } 
+
+#contact .section-description {
+  margin-bottom: 30px;
+}
+
+#contact .contact-form {
+  margin-top: 20px;
+}
   
 .contact-form button {
   background-color: #e7ddcc;
