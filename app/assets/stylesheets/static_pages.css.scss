@@ -224,7 +224,7 @@ img.logo {
 }
 .navbar-nav {
   float: none;
-  font-size: 0.875em;
+  font-size: 1em;
   color: #fff;
   text-align: center;
 }
@@ -256,6 +256,10 @@ img.logo {
 .navbar-nav .active a:focus {
   color: #bf8726;
   background: none;
+}
+
+#twitter-nav {
+  padding-left:4px
 }
 
 /* ----------- Home Section ----------- */
