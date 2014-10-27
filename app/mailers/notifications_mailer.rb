@@ -4,7 +4,7 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail(:subject => "Staunchrobots website message")
+    mail(:subject => "[Lead] Message from web site")
   end
 
 end
