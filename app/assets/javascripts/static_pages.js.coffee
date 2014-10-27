@@ -36,6 +36,7 @@ $(document).ready ->
       scrollTop: $(place).offset().top
     , 1200, "easeInOutCubic"
     pde evt
+    $('#about-menu').addClass('active')
     return
 
   # ----- Nice scroll to Sections ----- 
@@ -102,7 +103,7 @@ $(document).ready ->
     false
 
   # ----- Testimonials rotator ----- 
-  $("#testimonials-rotator").cbpQTRotator()
+  $("#testimonials-rotator").cbpQTRotator(interval : 8000)
 
   # ----- Text Rotator ----- 
   $(".rotating-words").textrotator
