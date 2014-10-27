@@ -7,14 +7,13 @@
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600italic,600,400italic,700italic,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" type="text/css" href="assets/elementTransitions.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 
   <%= csrf_meta_tags %>
 </head>
-<bodydata-spy="scroll" data-target="#my-nav">
+<body data-spy="scroll" data-target="#my-nav">
 
   <!-- Navigation Bar -->
   <div class="navbar navbar-fixed-top">
@@ -46,8 +45,7 @@
   </div>
   <!-- End of Navigation Bar -->
 
-  <div class="et-wrapper et-rotate" et-out="moveToTopFade" et-in="rotateUnfoldBottom" >
-
+  <div >
     <%= yield %>
   </div>
   
@@ -61,6 +59,5 @@
   <script src="assets/jquery.nicescroll.min.js"></script>
   <script src="assets/waypoints.min.js"></script>
   <script src="assets/grid.js"></script>
-  <script type="assets/elementTransitions.js"></script>
 </body>
 </html>

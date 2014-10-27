@@ -14,7 +14,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
-//= require elementTransitions
 //= require jquery.simple-text-rotator.min
 //= require jquery.textrotator.min
 //= require jquery.easing.1.3.min
