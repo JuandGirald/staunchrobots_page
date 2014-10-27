@@ -113,14 +113,14 @@ $(document).ready ->
   parallaxed ".parallax"
 
 
-  # ----- Show Navbar when reload----- 
-  position = $(document).scrollTop()
-  headerHeight = $("#welcome").outerHeight()
-  if position <= headerHeight - 300
-    $(".navbar").hide()
-  else
-    $(".navbar").show "fast"
-  return
+  # # ----- Show Navbar when reload----- 
+  # position = $(document).scrollTop()
+  # headerHeight = $("#welcome").outerHeight()
+  # if position <= headerHeight - 300
+  #   $(".navbar").hide()
+  # else
+  #   $(".navbar").show "fast"
+  # return
 
 # ----- Functions ----- 
 initializeGrid = ->
