@@ -46,6 +46,10 @@ $(document).ready ->
       scrollTop: off_
     , 1200, "easeInOutCubic"
     pde evt
+    location.hash = place
+    #add the active class
+    $('ul.nav.navbar-nav li').removeClass('active')
+    $(place+'-menu').addClass('active')
     return
 
   # ----- Minimize and darken the Menu Bar ----- 
