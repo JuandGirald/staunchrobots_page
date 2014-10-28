@@ -2,19 +2,20 @@
 <html>
 <head>
   <title>Staunch Robots</title>
-  
+  <link rel="canonical" href="http://staunchrobots.com" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <!-- Google Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600italic,600,400italic,700italic,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" type="text/css" href="assets/elementTransitions.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-spy="scroll" data-target="#my-nav">
 
   <div class="et-wrapper" >
     <% if current_page?('/v2')%>
@@ -51,7 +52,6 @@
 
       <div class="navbar navbar-fixed-top">
         <div class="container">
-
           <div class="navbar-header">
             <a class="navbar-brand" href="#welcome"><img class="logo" src="assets/white1.png" alt=""></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -77,7 +77,6 @@
         </div>
       </div>
       <!-- End of Navigation Bar -->
-
     <% end %>
 
     <%= yield %>
@@ -86,13 +85,8 @@
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="assets/modernizr.custom.47152.js"></script>
-  <script src="assets/modernizr-ie.js"></script>
   <script src="assets/jquery.textrotator.min.js"></script>
   <script src="assets/jquery.simple-text-rotator.min.js"></script>
-  <script src="assets/jquery.nicescroll.min.js"></script>
-  <script src="assets/waypoints.min.js"></script>
-  <script src="assets/grid.js"></script>
-  <script type="assets/elementTransitions.js"></script>
+  
 </body>
 </html>

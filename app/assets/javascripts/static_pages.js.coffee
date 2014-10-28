@@ -36,6 +36,7 @@ $(document).ready ->
       scrollTop: $(place).offset().top
     , 1200, "easeInOutCubic"
     pde evt
+    $('#about-menu').addClass('active')
     return
 
   # ----- Nice scroll to Sections ----- 
@@ -46,12 +47,22 @@ $(document).ready ->
       scrollTop: off_
     , 1200, "easeInOutCubic"
     pde evt
+    location.hash = place
+    #add the active class
+    $('ul.nav.navbar-nav li').removeClass('active')
+    $(place+'-menu').addClass('active')
     return
 
   # ----- Minimize and darken the Menu Bar ----- 
   $("body").waypoint ((direction) ->
-    $(".navbar").fadeToggle "slow", "linear" 
-    $(".navbar").toggleClass "minified dark-menu"
+    $(".navbar").addClass "minified dark-menu"
+    return
+  ),
+    offset: "-500px"
+
+
+  $("body").waypoint ((direction) ->
+    $(".navbar").show "fast", "linear" 
     return
   ),
     offset: "-500px"
@@ -98,7 +109,7 @@ $(document).ready ->
     false
 
   # ----- Testimonials rotator ----- 
-  $("#testimonials-rotator").cbpQTRotator()
+  $("#testimonials-rotator").cbpQTRotator(interval : 8000)
 
   # ----- Text Rotator ----- 
   $(".rotating-words").textrotator
@@ -112,15 +123,16 @@ $(document).ready ->
   # ----- Initializa Parallax effect ----- 
   parallaxed ".parallax"
 
-
+  
   # ----- Show Navbar when reload----- 
-  # position = $(document).scrollTop()
-  # headerHeight = $("#welcome").outerHeight()
-  # if position <= headerHeight - 300
-  #   $(".navbar").hide()
-  # else
-  #   $(".navbar").show "fast"
-  # return
+  position = $(document).scrollTop()
+  headerHeight = $("#welcome").outerHeight()
+  if position <= headerHeight - 300
+    # $(".navbar").hide()
+  else
+    $(".navbar").show "fast"
+  return
+
 
 # ----- Functions ----- 
 initializeGrid = ->

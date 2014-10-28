@@ -1,6 +1,9 @@
 /* ==========================================================================
    Team Section
    ========================================================================== */
+#team {
+  min-height: 800px;
+}
 .team-section {
   background: image-url('medellin2.jpg');;
   width: 100%;
@@ -67,11 +70,17 @@
   -webkit-border-radius: 50%;
 }
 .team-member h3 {
-  font-size: 16pt;
+  color: #fff;
+  font-size: 21pt;
   font-weight: 700;
   margin-bottom: 0;
 }
+
+.team-member:hover h3 {
+  color: #32425a
+}
 .team-member span {
+  display: none;
   font-size: 9pt;
   font-family: 'DroidSerif';
   text-transform: uppercase;
@@ -97,7 +106,7 @@
   -o-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
 }
-.team-member .profile-social .icons-wrapper a {
+.team-member .profile-social .icons-wrapper {
   color: #fff;
   margin: 0 5px;
 }

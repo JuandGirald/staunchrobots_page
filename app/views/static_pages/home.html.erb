@@ -25,38 +25,20 @@
 
 <!-- page-section:starts -->
 <section id="about" class="about-section2 light-section dark-content"> 
-  <div class="container">
     <h1 class="special-heading dark-special">About Us</h1>
-    <div class="row add-top-half">
-      <article class="col-xs-5">
-        <div id="about-text" class="content">
           <h3 id="about-headline">We provide outstanding Ruby on Rails development. Period.</h3>
           <ul class="about-us-list">
-            <li>We attract talent from around the globe because we don't limit our geographical scope.</li> 
             <li>We only hire people who have demonstrated their competence publicly on open source projects.</li> 
+            <li>Because we don't limit our geographical scope, we attract talent from around the globe.</li> 
             <li>Because most of us are outside North America, we are extremely cost competitive.
+          <li>Because we are so confident in our skills, <span style="text-decoration:underline">we offer a money-back guarantee.</span></li>
+          <li><a href="#contact">Contact us</a> to learn more.</li>
+          
+          <a href="#contact"><%= image_tag 'logo.png', size: "160" %></li>
           </ul>
-          <p><strong>We offer a money-back guarantee.</strong> <a href="#contact">Contact us</a> to learn more.</p>
-          <a href="#contact"><%= image_tag 'logo.png', size: "160" %></a>
         </div>
         
       </article>
-      <article class="text-left col-xs-7">
-        <img id="map-img" src="assets/global_map.png">
-        <!-- <div class="col-md-10 video">
-          <iframe src="//fast.wistia.net/embed/iframe/nl1o78lq0c?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="400" height="225"></iframe><script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
-        </div>
-        <div class="col-md-10 text-center media">
-          <h3 class="dark-special">Media atention</h3>
-          <img src="assets/google.png">
-          <img src="assets/skype.png">
-          <img src="assets/twitter.png">
-          <img src="assets/youtube.png">
-          <img src="assets/linkedin.png">  
-        </div> -->
-        
-      </article>
-    </div>
   </div>
 
   <!-- <div class="wrapper">
@@ -83,14 +65,14 @@
         <div id="testimonials-rotator" class="testimonials-rotator">
           <div class="testimonial">
             <blockquote>
-              <p>We consider Staunch Robots an extension of our in-house tech team here in San Francisco. They've integrated so seamlessly that I can assign tasks to any one on either side (ours or theirs) and know that I'll get the same consistent level of quality and detail across the board. They're that good. We also use SR to audit our internal codebase and ops systems on a regular basis.</p>
+              <p>We consider Staunch Robots an extension of our in-house tech team here in San Francisco. They've integrated so seamlessly that I can assign tasks to any one on either side (ours or theirs) and know that I'll get the same consistent level of quality and detail across the board. They're that good. We also use Staunch Robots to audit our internal codebase and ops systems on a regular basis.</p>
               <footer>Jason Lee, Serial CTO</footer>
             </blockquote>
           </div>
           <div class="testimonial">
             <blockquote>
-              <p>I can strongly recommend working with Staunch Robots. Working with SR has greatly improved the quality of our team's work.Additionally their internal culture that has both complemented and improved our own. Ohh and their rates are super competitive.</p>
-              <footer>Mike Lobel CTO, Mytennislessons.com</footer>
+              <p>I can strongly recommend working with Staunch Robots. Working with them has greatly improved the quality of our team's work. Additionally their internal culture has both complemented and improved our own. Oh and their rates are super competitive.</p>
+              <footer>Mike Lobel, CTO of Mytennislessons.com</footer>
             </blockquote>
           </div>
         </div>
@@ -106,58 +88,57 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h1 class="special-heading dark-special">Selected Work</h1>
+        <h1 class="special-heading dark-special">Recent Projects</h1>
       </div>
     </div>
-
     <div class="main">
       <ul id="og-grid" class="og-grid">
-        <li class="portfolio-item visible-item" data-id="add-ons graphics">
-          <a href="#" data-largesrc="assets/work1-big.png" data-category="Add-Ons Graphics" data-date="Apr 10th, 2014" data-title="Azuki bean" data-description="This is a pack of 10 Vintage text styles. You can use all these styles in web design or web apps but I've made them in 2 different sizes, so you can use those vintage text styles even on print materials. With this Vintage Text Styles pack you can design a logo, a title or any text in web or print materials.">
-            <img src="assets/work1-big.png" alt="Breath - Vintage Text Styles"/>
+        <li class="portfolio-item visible-item">
+          <a target="_blank" href="http://zooppa.com">
+            <%= image_tag 'work1-big.png', size: '240x180', alt:"Zooppa logo" %>
             <div class="overlay-content">
-              <h4>Breath - Vintage Text Styles</h4>
-              <p>This is a pack of 10 Vintage text styles. You can use all these styles in web design or web apps but I've made them in 2 different sizes, so you can use those...</p>
+              <h4>Zooppa</h4>
+              <p><p>Provides a global market that crowdsources creative content for major brands</p>
             </div>
           </a>
-        </li><li class="portfolio-item visible-item" data-id="graphics">
-          <a href="#" data-largesrc="assets/work2-big.png" data-category="Graphics" data-date="Apr 10th, 2014" data-title="Business Card Mockups - pack 2" data-description="<p>Now you can show your mousemade artwork to your clients with style. This is my second pack of Mockup Templates for your Business Cards or Business Card Templates. You can use this mockups pack to present your designs in a better artistic way. Also you can use these business cards mockups for your logo previews to show how the logo looks on a printed card.</p><p>The Mockups pack includes 4 Templates with very realistic perspective and photo effects.Features on this</p><h4>Features:</h4><ul><li>includes 4 PSD files very well organized</li><li>realistic photo effects</li><li>realistic perspective and depth of field</li><li>designs made with smart objects</li></ul>">
-            <img src="assets/work2-big.png" alt="Business Card Mockups - pack 2"/>
+        </li><li class="portfolio-item visible-item">
+          <a target="_blank" href="http://alivefulfillment.com">
+            <img src="assets/work2-big.png" alt="Alive Fulfillment logo"/>
             <div class="overlay-content">
-              <h4>Business Card Mockups - pack 2</h4>
-              <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat.</p>
+              <h4>Alive Fulfillment</h4>
+              <p>Provides full service fulfillment and inventory management services</p>
             </div>
           </a>
-        </li><li class="portfolio-item visible-item" data-id="ui-design">
-          <a href="#" data-largesrc="assets/work3-big.png" data-category="UI Design" data-date="Apr 10th, 2014" data-title="Whitepixels UI v1.1" data-description="This is a great pack of premade graphics and web elements designed to help you create applications, great online services or websites. All elements are vector shapes so you can resize them without quality loss. The pack includes: buttons, knobs, forms, sliders, menu bar, switches, directional buttons, list selector, equalizer interface, timeline and a lot more. Every single element was designed with all my atention on details. I hope you'll like and recommend it.">
-            <img src="assets/work3-big.png" alt="Whitepixels UI v1.1"/>
+        </li><li class="portfolio-item visible-item">
+          <a target="_blank" href="http://luxdelux.com">
+            <img src="assets/work3-big.png" alt="LuxDelux logo"/>
             <div class="overlay-content">
-              <h4>Whitepixels UI v1.1</h4>
-              <p>This is a great pack of premade graphics and web elements designed to help you create applications, great online services or websites. All elements are vector...</p>
+              <h4>Lux Delux</h4>
+              <p>Offers a comprehensive guide and order processing for Las Vegas restaurants</p>
             </div>
           </a>
-        </li><li class="portfolio-item visible-item" data-id="graphics">
-          <a href="#" data-largesrc="assets/work4-big.png" data-category="Graphics" data-date="Apr 10th, 2014" data-title="Hardcover Book Mockups - mega pack" data-description="<p>If you are a writer, web designer or graphic designer and you need to showcase a book in minutes, this is the product you need. With just few clicks, your Hardcover book is prepared to be shown to the world with style. You only need to paste your title and graphics and your book is ready.</p><p>This Book Mockups pack contains 15 well-made and well-organized PSD files with transparent background. So you can easily save your book as png file and insert it on your design. Every file includes the wood background but you can still add your own. The Hardcover Book Mockups are made in hi-res so you can use them even on print materials.</p>">
-            <img src="assets/work4-big.png" alt="Hardcover Book Mockups - mega pack"/>
+        </li><li class="portfolio-item visible-item">
+          <a target="_blank" href="http://mytennislessons.com">
+            <img src="assets/work4-big.png" alt="My Tennis Lessons logo"/>
             <div class="overlay-content">
-              <h4>Hardcover Book Mockups - mega pack</h4>
-              <p>If you are a writer, web designer or graphic designer and you need to showcase a book in minutes, this is the product you need. With just few clicks...</p>
+              <h4>MyTennisLessons</h4>
+              <p>Offers a comprehensive guide and booking system for tennis instructors and their customers</p>
             </div>
           </a>
-        </li><li class="portfolio-item visible-item" data-id="ui-design">
-          <a href="#" data-largesrc="assets/work5-big.png" data-category="UI Design" data-date="Apr 10th, 2014" data-title="CreamUI - mobile interface kit" data-description="<p>This is a great mobile UI pack designed to help you create applications for iPhone and iPad with Retina screen. You can modify all graphics and styles just as you want, and use any of included elements: buttons, knobs, sliders, image thumbnails, progress bars, shelfs, forms, checkboxes, call-to-action buttons, audio and video player, switches and a lot more...</p><p>Every single button of this mobile UI pack is designed in 2 versions: normal and pressed. Also all graphics are vector. It means that you can resize every single element without losing quality.</p>">
-            <img src="assets/work1-big.png" alt="CreamUI - mobile interface kit"/>
+        </li><li class="portfolio-item visible-item">
+          <a target="_blank" href="http://alltherooms.com/">
+            <img src="assets/work5-big.png" alt="All the Rooms logo"/>
             <div class="overlay-content">
-              <h4>CreamUI - mobile interface kit</h4>
-              <p>This is a great mobile UI pack designed to help you create applications for iPhone and iPad with Retina screen. You can modify all graphics and styles just...</p>
+              <h4>AllTheRooms</h4>
+              <p>Provides the world's largest accommodation search engine</p>
             </div>
           </a>
-        </li><li class="portfolio-item visible-item" data-id="web-design">
-          <a href="#" data-largesrc="assets/work6-big.png" data-category="Web Design" data-date="Apr 10th, 2014" data-title="PlanusWP - One Page Wordpress Theme" data-description="<p>PlanusWP is a responsive one-page Wordpress theme built on Twitter Bootstrap 3 framework. PlanusWP theme is ment to present you as a designer or creative professional to the world. Moreover, this theme can be adapted to any kind of creative agency. This theme was built using the latest features from Bootstrap 3 so it's responsive (mobile first), flat and very nice animated.</p><p>The home page is very customizable as you can reorder the section using drag-and-drop technique. Also you can customize any feature due to the powerful custom admin options.</p><p>PlanusWP is a nice and simple theme allows you to create content and bring attention to it. You don't need to worry about contact plugin, as the contact form is stand-alone. Just add your email adress and all is done.</p>">
-            <img src="assets/work2-big.png" alt="PlanusWP - One Page Wordpress Theme"/>
+        </li><li class="portfolio-item visible-item">
+          <a target="_blank" href="http://verdacom.com" >
+            <img src="assets/work6-big.png" alt="Verdacom logo"/>
             <div class="overlay-content">
-              <h4>PlanusWP - One Page Wordpress Theme</h4>
-              <p>PlanusWP is a responsive one-page Wordpress theme built on Twitter Bootstrap 3 framework. PlanusWP theme is ment to present you as a designer or...</p>
+              <h4>Verdacom</h4>
+              <p>Offers logistic solutions and online tools for clincical drug trials</p>
             </div>
           </a>
         </li>
@@ -188,7 +169,7 @@
               </div>
             </div>
           </div>
-          <h3><a href="#">Todd Morril</a></h3>
+          <h3> Todd Morril </h3>
           <span>CEO Bot</span>
           <div class="team-bio">
             <p>Todd is the nicest boss in the world, and has the coffee cup to prove it. Todd likes to talk, so Derek <a href="/blog/?p=79">interviewed him</a> for our podcast about how he started Staunch Robots</a>. He lives in Medellin, Colombia.</p>
@@ -210,7 +191,7 @@
               </div>
             </div>
           </div>
-          <h3><a href="#">Leonardo Bighetti</a></h3>
+          <h3> Leonardo Bighetti </h3>
           <span> Alpha Geek Bot</span>
           <div class="team-bio">
             <p>Leo is the most respected geek in the company. He earned his title with tough code reviews, brutal pull requests and not a few zombie kills. Leo is a constant voice for code craftsmanship at SR. He lives in Sao Paolo, Brazil.</p>
@@ -232,7 +213,7 @@
               </div>
             </div>
           </div>
-          <h3><a href="#">Derek Scruggs</a></h3>
+          <h3> Derek Scruggs </h3>
           <span>Service Delivery Bot</span>
           <div class="team-bio">
             <p>Derek's job is to make sure clients are happy with both our code and the processes by which we deliver it. He does this with <a href="/blog/?p=22">hyperfocused workflow management</a>, precise communications and a winning smile. He lives in Boulder, Colorado.</p>
@@ -251,12 +232,12 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h1 class="special-heading dark-special">Drop us a line</h1>
-        <p class="section-description">Curious how we work? Where we work? Just want to say hi? Fill out the form below, or give us a call or &ndash; what the heck &ndash; why not <a href="https://twitter.com/intent/tweet?text=I wanna talk to @staunchrobots">Tweet at us</a>.</p>
         <div class="row contact-information">
           <div class="col-sm-4">
             <div class="contact-info clearfix">
               <i class="fa fa-map-marker"></i>
-              <span><strong>Colombia</strong> <br /> Street 40f # 40a-21, apto 201 <br /> Medellin - Antioquia</span>
+              <span><strong>Colombia</strong> <br />Calle 40f # 40a-21
+                <br />Apto 201 <br /> Medellin - Antioquia</span>
             </div>
           </div>
           <div class="col-sm-4">
@@ -268,7 +249,9 @@
           <div class="col-sm-4">
             <div class="contact-info clearfix">
               <i class="fa fa-map-marker"></i>
-              <span><strong>USA</strong><br /> 959 W. Moorhead Circle #D Boulder, CO 80305</span>
+              <span><strong>USA</strong><br /> 959 W. Moorhead Circle<br />
+                Apt #D
+                <br />Boulder, CO 80305</span>
             </div>
           </div>
         </div>

@@ -60,6 +60,7 @@ var PageTransitions = (function($) {
   }
 
   function animate(block, callback) {
+    debugger
     id = block.attr('href')
     nextPage($(block).closest('.et-wrapper'), $(block).attr('et-out'), $(block).attr('et-in'), id, callback);
   }

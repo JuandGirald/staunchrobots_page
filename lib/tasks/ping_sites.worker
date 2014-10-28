@@ -1,0 +1,14 @@
+# define the runtime language
+runtime "ruby"
+
+full_remote_build true
+
+# rest api calls
+gem 'json', '~> 1.8'
+gem 'httparty', '~> 0.13.1'
+
+# exec is the file that will be executed:
+exec "ping_sites_worker.rb"
+
+# to upload the iron worker exec		~iron_worker upload ping_sites
+# then schedule the task executed		~ruby ping_sites.rb
