@@ -55,8 +55,14 @@ $(document).ready ->
 
   # ----- Minimize and darken the Menu Bar ----- 
   $("body").waypoint ((direction) ->
-    $(".navbar").fadeToggle "slow", "linear" 
-    $(".navbar").toggleClass "minified dark-menu"
+    $(".navbar").addClass "minified dark-menu"
+    return
+  ),
+    offset: "-500px"
+
+
+  $("body").waypoint ((direction) ->
+    $(".navbar").show "fast", "linear" 
     return
   ),
     offset: "-500px"
@@ -117,15 +123,16 @@ $(document).ready ->
   # ----- Initializa Parallax effect ----- 
   parallaxed ".parallax"
 
-
+  
   # ----- Show Navbar when reload----- 
   position = $(document).scrollTop()
   headerHeight = $("#welcome").outerHeight()
   if position <= headerHeight - 300
-    $(".navbar").hide()
+    # $(".navbar").hide()
   else
     $(".navbar").show "fast"
   return
+
 
 # ----- Functions ----- 
 initializeGrid = ->
