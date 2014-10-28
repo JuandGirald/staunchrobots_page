@@ -60,10 +60,11 @@ var PageTransitions = (function($) {
   }
 
   function animate(block, callback) {
-    nextPage($(block).closest('.et-wrapper'), $(block).attr('et-out'), $(block).attr('et-in'), callback);
+    id = block.attr('href')
+    nextPage($(block).closest('.et-wrapper'), $(block).attr('et-out'), $(block).attr('et-in'), id, callback);
   }
 
-  function nextPage(block, outClass, inClass, callback) {
+  function nextPage(block, outClass, inClass, id, callback) {
     block = $(block);
     inClass = formatClass(inClass);
     outClass = formatClass(outClass);
@@ -79,7 +80,7 @@ var PageTransitions = (function($) {
 
     block.data('isAnimating', true);
 
-    var $currPage = $pages.eq(current);
+    var $currPage = $('.et-page-current');
     if(current < pagesCount - 1) {
       current++;
     }
@@ -88,7 +89,8 @@ var PageTransitions = (function($) {
     }
     block.data('current', current);
 
-    var $nextPage = $pages.eq(current).addClass('et-page-current');
+    debugger
+    var $nextPage = $(id).addClass('et-page-current');
 
     $currPage.addClass(outClass).on(animEndEventName, function() {
       $currPage.off(animEndEventName);

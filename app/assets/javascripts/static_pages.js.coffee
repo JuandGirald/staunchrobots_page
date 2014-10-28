@@ -113,7 +113,7 @@ $(document).ready ->
   parallaxed ".parallax"
 
 
-  # # ----- Show Navbar when reload----- 
+  # ----- Show Navbar when reload----- 
   # position = $(document).scrollTop()
   # headerHeight = $("#welcome").outerHeight()
   # if position <= headerHeight - 300

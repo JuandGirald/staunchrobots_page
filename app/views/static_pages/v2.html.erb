@@ -1,5 +1,5 @@
 <!-- Welcome Section -->
-<section class="full welcome-section photo-section light-content parallax et-page">
+<section id="welcome" class="full welcome-section photo-section light-content parallax et-page">
   <div class="bg-overlay"></div>
   <div class="container">
     <div class="content-wrapper preload">
@@ -24,7 +24,7 @@
 <!-- End of the Welcome Section -->
 
 <!-- page-section:starts -->
-<section class="et-page about-section light-section dark-content "> 
+<section id="about" class="et-page about-section light-section dark-content "> 
   <div class="container">
     <div class="row add-top-half">
         <article class="text-left col-md-4">
@@ -43,7 +43,7 @@
 </section>
 <!-- page-section:ends -->
 
-<section class="et-page parallax testimonials-section photo-section dark-section light-content">
+<section id="testimonials" class="et-page parallax testimonials-section photo-section dark-section light-content">
   <div class="bg-overlay"></div>
   <div class="container">
     <h1 class="special-heading light-special">What our clients say</h1>
@@ -135,3 +135,150 @@
   </div>
 </section>
 <!-- End of Portfolio Section -->
+
+<!-- Team Section -->
+<section id="team" class="et-page team-section light-section dark-content">
+  <div class="container">
+    <h1 class="special-heading dark-special">Leadership Team</h1>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="team-member">
+          <div class="profile-picture">
+            <figure><img src="assets/todd.png" alt=""></figure>
+            <div class="profile-overlay"></div>
+            <div class="profile-social">
+              <div class="icons-wrapper">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <h3><a href="#">Todd Morril</a></h3>
+          <span>CEO Bot</span>
+          <div class="team-bio">
+            <p>Todd is the nicest boss in the world, and has the coffee cup to prove it. Todd likes to talk, so Derek <a href="/blog/?p=79">interviewed him</a> for our podcast about how he started Staunch Robots</a>. He lives in Medellin, Colombia.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-member">
+          <div class="profile-picture">
+            <figure><img src="assets/leonardo.png" alt=""></figure>
+            <div class="profile-overlay"></div>
+            <div class="profile-social">
+              <div class="icons-wrapper">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <h3><a href="#">Leonardo Bighetti</a></h3>
+          <span> Alpha Geek Bot</span>
+          <div class="team-bio">
+            <p>Leo is the most respected geek in the company. He earned his title with tough code reviews, brutal pull requests and not a few zombie kills. Leo is a constant voice for code craftsmanship at SR. He lives in Sao Paolo, Brazil.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-member">
+          <div class="profile-picture">
+            <figure><img src="assets/derek.jpg" alt=""></figure>
+            <div class="profile-overlay"></div>
+            <div class="profile-social">
+              <div class="icons-wrapper">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <h3><a href="#">Derek Scruggs</a></h3>
+          <span>Service Delivery Bot</span>
+          <div class="team-bio">
+            <p>Derek's job is to make sure clients are happy with both our code and the processes by which we deliver it. He does this with <a href="/blog/?p=22">hyperfocused workflow management</a>, precise communications and a winning smile. He lives in Boulder, Colorado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of Team Section -->
+
+
+<!-- Contact Section -->
+<section id="contact" class="et-page contact-section light-section dark-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="special-heading dark-special">Drop us a line</h1>
+        <p class="section-description">Curious how we work? Where we work? Just want to say hi? Fill out the form below, or give us a call or &ndash; what the heck &ndash; why not </p>
+        <div class="row contact-information">
+          <div class="col-sm-4">
+            <div class="contact-info clearfix">
+              <i class="fa fa-map-marker"></i>
+              <span><strong>Colombia</strong> <br /> Street 40f # 40a-21, apto 201 <br /> Medellin - Antioquia</span>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="contact-info clearfix">
+              <i class="fa fa-phone"></i>
+              <span id="contact-info-phone">443-494-9228</span>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="contact-info clearfix">
+              <i class="fa fa-map-marker"></i>
+              <span><strong>USA</strong><br /> 959 W. Moorhead Circle #D Boulder, CO 80305</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact-form" class="row">
+
+      <div class="col-md-8 col-md-offset-2">
+
+        <form accept-charset="UTF-8" action="/v2" id="new_message" method="post" class="new_message contact-form">
+          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" name="message[name]" id="message_name" placeholder="Name" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="email" class="form-control input-lg" name="message[email]" id="message_email" placeholder="Email" requiered>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="10" name="message[body]" id="message_body" placeholder="Message" requiered></textarea>
+          </div>
+          <div class="form-group">
+            <button id="submit_btn" type="submit" class="btn btn-outline btn-big">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of Contact Section -->
+
+<!-- Footer -->
+<!-- <footer class="footer photo-section dark-section light-content">
+  <div class="bg-overlay"></div>
+  <div class="container">
+    <p>©<%= Time.now.year %> StaunchRobots, LLC. All rights reserved.</p>
+  </div>
+</footer>
+ -->

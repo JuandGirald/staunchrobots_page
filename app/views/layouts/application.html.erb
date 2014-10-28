@@ -14,39 +14,71 @@
 
   <%= csrf_meta_tags %>
 </head>
-<bodydata-spy="scroll" data-target="#my-nav">
+<body>
 
-  <!-- Navigation Bar -->
-  <div class="navbar navbar-fixed-top">
-    <div class="container">
+  <div class="et-wrapper" >
+    <% if current_page?('/v2')%>
+      <!-- Navigation Bar -->
+      <div class="navbar navbar-fixed-top">
+        <div class="container">
 
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#welcome"><img class="logo" src="assets/white1.png" alt=""></a>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#welcome"><img class="logo" src="assets/white1.png" alt=""></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <nav id="my-nav" class="navbar-collapse collapse" role="navigation">
+            <ul class="nav navbar-nav">
+              <li class="active"><a class="et-rotate" et-in="moveFromBottom" et-out="moveToTopEasing ontop" href="#welcome">Home</a></li>
+              <li><a class="et-rotate" et-in="moveFromBottom" et-out="moveToTopEasing ontop" href="#about">About</a></li>
+              <li><a class="et-rotate" et-in="moveFromBottom" et-out="moveToTopEasing ontop" href="#testimonials">Testimonials</a></li>
+              <li><a class="et-rotate" et-in="moveFromBottom" et-out="moveToTopEasing ontop" href="#portfolio">Portfolio</a></li>
+              <li><a class="et-rotate" et-in="moveFromBottom" et-out="moveToTopEasing ontop" href="#team">Leadership</a></li>
+              <li><a class="et-rotate" et-in="moveFromBottom" et-out="moveToTopEasing ontop" href="#contact">Contact</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="http://twitter.com/staunchrobots" id="twitter-nav"><img src="assets/twitter-small.png" width="24" heigth="19"/></a></li>
+            </ul>
+          </nav><!--/.navbar-collapse -->
+
+        </div>
       </div>
+      <!-- End of Navigation Bar -->
+    <% else %>
 
-      <nav id="my-nav" class="navbar-collapse collapse" role="navigation">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#welcome">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Leadership</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="http://twitter.com/staunchrobots" id="twitter-nav"><img src="assets/twitter-small.png" width="24" heigth="19"/></a></li>
-        </ul>
-      </nav><!--/.navbar-collapse -->
+      <div class="navbar navbar-fixed-top">
+        <div class="container">
 
-    </div>
-  </div>
-  <!-- End of Navigation Bar -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#welcome"><img class="logo" src="assets/white1.png" alt=""></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
 
-  <div class="et-wrapper et-rotate" et-out="moveToTopFade" et-in="rotateUnfoldBottom" >
+          <nav id="my-nav" class="navbar-collapse collapse" role="navigation">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#welcome">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#team">Leadership</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="http://twitter.com/staunchrobots" id="twitter-nav"><img src="assets/twitter-small.png" width="24" heigth="19"/></a></li>
+            </ul>
+          </nav><!--/.navbar-collapse -->
+
+        </div>
+      </div>
+      <!-- End of Navigation Bar -->
+
+    <% end %>
 
     <%= yield %>
   </div>
