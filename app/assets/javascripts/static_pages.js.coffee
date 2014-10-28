@@ -45,12 +45,12 @@ $(document).ready ->
     off_ = $(place).offset().top
     $("html, body").animate
       scrollTop: off_
-    , 1200, "easeInOutCubic"
+    , 1200, "easeInOutQuart"
     pde evt
-    location.hash = place
-    #add the active class
-    $('ul.nav.navbar-nav li').removeClass('active')
-    $(place+'-menu').addClass('active')
+    # location.hash = place
+    # #add the active class
+    # $('ul.nav.navbar-nav li').removeClass('active')
+    # $(place+'-menu').addClass('active')
     return
 
   # ----- Minimize and darken the Menu Bar ----- 
