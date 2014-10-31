@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
-  match '/',    to: 'static_pages#create',    via: 'post'
-  match '/v2',  to: 'static_pages#v2',        via: 'get'
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
+
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+
+  devise_scope :user do
+    get "/login"     => "devise/sessions#new"
+    get "/signup"    => "devise/registrations#new"
+    delete "/logout" => "devise/sessions#destroy"
+  end
+  
+  match '/',        to: 'static_pages#create',      via: 'post'
+  match '/v2',      to: 'static_pages#v2',          via: 'get'
   
   get "/blog" => redirect("/blog/")
 

@@ -59,3 +59,13 @@ gem "font-awesome-rails"
 
 #Redirect
 gem "rack-reverse-proxy", :require => "rack/reverse_proxy"
+
+#User magement
+gem 'devise'
+
+gem 'omniauth'
+
+gem 'omniauth-linkedin'
+
+gem "omniauth-google-oauth2"
+
