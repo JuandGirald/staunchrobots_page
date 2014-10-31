@@ -2,6 +2,9 @@ $(document).ready ->
   # ----- Vaariables and user agent check ----- 
   isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
+  if location.hash !='#l'
+    $('#l').hide()
+
   # ----- Function to prevent Default Events ----- 
   pde = (e) ->
     if e.preventDefault
