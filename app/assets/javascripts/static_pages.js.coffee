@@ -4,6 +4,9 @@ $(document).ready ->
 
   if location.hash !='#l'
     $('#l').hide()
+  else
+    #chance "home" link in nav to point to this section instead
+    $('a.link-to-home').attr('href','#l')
 
   # ----- Function to prevent Default Events ----- 
   pde = (e) ->
