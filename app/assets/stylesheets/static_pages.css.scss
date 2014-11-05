@@ -26,11 +26,11 @@ a:hover {
   text-decoration: none;
   color: #d9a13f;
 }
-::selection {
+a:selection {
   color: #fff;
   background: #d9a13f;
 }
-::-moz-selection {
+a:-moz-selection {
   color: #fff;
   background: #d9a13f;
 }
