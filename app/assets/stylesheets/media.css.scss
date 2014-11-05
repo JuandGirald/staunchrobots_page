@@ -78,6 +78,7 @@
   }
   .navbar-header {
     width: auto;
+    margin-top: 10px;
   }
   .navbar-header .navbar-brand {
     float: none;
@@ -231,6 +232,9 @@
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .navbar-header {
+    margin-top: 10px;
+  }
   .photo-section {
     -webkit-background-size: cover;
     background-size: cover;
@@ -262,6 +266,9 @@
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .navbar-header {
+    margin-top: 0;
+  }
   .team-member .profile-social {
     display: block;
   }
