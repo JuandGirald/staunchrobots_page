@@ -351,18 +351,10 @@ img.logo {
   .box {
     margin-top: 9em;
   }
-  .white {
-    h1 {
-      background-color: white;
-      color: #f17a2e;
-    }
-  }
-  .orange {
-    h1{
-      border-color: #f17a2e;
-      background-color: #f17a2e;
-      color: white;
-    }
+  h1{
+    border-color: #f17a2e;
+    background-color: #f17a2e;
+    color: white;
   }
 }
 .welcome-section .welcome-content p {
@@ -374,7 +366,6 @@ img.logo {
 }
 .welcome-section .welcome-content h1 {
   font-size: 14pt;
-  background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   -webkit-transition: background-color 0.6s ease 0s, opacity 1000ms, transform 1000ms;
   -moz-transition: background-color 0.6s ease 0s, opacity 1000ms, transform 1000ms;
