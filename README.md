@@ -1,5 +1,3 @@
-
-
 ### For custom landing pages
 
 * Search for 'landing-page' in home.html.erb
