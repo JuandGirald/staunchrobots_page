@@ -55,6 +55,7 @@ $(document).ready ->
 
   # ----- Minimize and darken the Menu Bar ----- 
   $("body").waypoint ((direction) ->
+    $(".navbar").removeClass "hidden"
     $(".navbar").addClass "minified dark-menu"
     return
   ),
@@ -127,11 +128,15 @@ $(document).ready ->
   # ----- Show Navbar when reload----- 
   position = $(document).scrollTop()
   headerHeight = $("#welcome").outerHeight()
-  if position <= headerHeight - 300
-    # $(".navbar").hide()
-  else
-    $(".navbar").show "fast"
-  return
+
+  if location.pathname == '/' and position <= headerHeight - 300
+    $(".navbar").addClass "hidden"
+
+  # if position <= headerHeight - 300
+  #   # $(".navbar").hide()
+  # else
+  #   $(".navbar").removeClass "hidden"
+  # return
 
 
 # ----- Functions ----- 
