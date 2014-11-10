@@ -1,0 +1,37 @@
+<%= form_for(@cv) do |f| %>
+  <% if @cv.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cv.errors.count, "error") %> prohibited this cv from being saved:</h2>
+
+      <ul>
+      <% @cv.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :profile %><br>
+    <%= f.text_area :profile %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :stackoverflow_reputation %><br>
+    <%= f.number_field :stackoverflow_reputation %>
+  </div>
+  <div class="field">
+    <%= f.label :blog %><br>
+    <%= f.text_field :blog %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

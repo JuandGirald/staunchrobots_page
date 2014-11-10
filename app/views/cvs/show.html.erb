@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cv.name %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @cv.profile %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cv.title %>
+</p>
+
+<p>
+  <strong>Stackoverflow reputation:</strong>
+  <%= @cv.stackoverflow_reputation %>
+</p>
+
+<p>
+  <strong>Blog:</strong>
+  <%= @cv.blog %>
+</p>
+
+<%= link_to 'Edit', edit_cv_path(@cv) %> |
+<%= link_to 'Back', cvs_path %>

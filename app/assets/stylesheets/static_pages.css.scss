@@ -179,8 +179,11 @@ a:hover {
 .minified .navbar-brand {
   height: auto !important;
 }
-img.logo {
-  width: 100%
+
+.navbar-header {
+  img {
+    width: 100%
+  } 
 }
 .darken-menu {
   background: rgba(0, 0, 0, 0.8);

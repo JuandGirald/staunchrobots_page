@@ -40,7 +40,7 @@ $(document).ready ->
     return
 
   # ----- Nice scroll to Sections ----- 
-  $(".navbar-nav li a").click (evt) ->
+  $(".navbar-nav-home li a").click (evt) ->
     place = $(this).attr("href")
     off_ = $(place).offset().top
     $("html, body").animate
@@ -55,7 +55,7 @@ $(document).ready ->
 
   # ----- Minimize and darken the Menu Bar ----- 
   $("body").waypoint ((direction) ->
-    $(".navbar").removeClass "hidden"
+    $(".navbar1").removeClass "hidden"
     $(".navbar").addClass "minified dark-menu"
     return
   ),
@@ -130,7 +130,7 @@ $(document).ready ->
   headerHeight = $("#welcome").outerHeight()
 
   if location.pathname == '/' and position <= headerHeight - 300
-    $(".navbar").addClass "hidden"
+    $(".navbar1").addClass "hidden"
 
   # if position <= headerHeight - 300
   #   # $(".navbar").hide()

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :cvs
+
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
@@ -9,8 +11,8 @@ Rails.application.routes.draw do
     delete "/logout" => "devise/sessions#destroy"
   end
   
-  match '/',        to: 'static_pages#create',      via: 'post'
-  match '/v2',      to: 'static_pages#v2',          via: 'get'
+  match '/',            to: 'static_pages#create',  via: 'post'
+  match '/v2',          to: 'static_pages#v2',      via: 'get'
   
   get "/blog" => redirect("/blog/")
 

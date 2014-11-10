@@ -19,20 +19,20 @@
 
   <div class="et-wrapper" >
     
-    <div class="navbar navbar-fixed-top darken-menu">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/"><img class="logo" src="assets/white1.png" alt=""></a>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
+    <% if current_page?('/') %>
+      <div class="navbar navbar1 navbar-fixed-top darken-menu">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/"><img class="logo" src="assets/white1.png" alt=""></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
 
-        <nav id="my-nav" class="navbar-collapse collapse" role="navigation">
-          <ul class="nav navbar-nav">
-            <% if current_page?('/')%>
+          <nav id="my-nav" class="navbar-collapse collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-nav-home">
               <li class="active"><a href="#welcome">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
@@ -40,22 +40,67 @@
               <li><a href="#team">Leadership</a></li>
               <li><a href="#contact">Contact</a></li>
               <li><a href="/blog/">Blog</a></li>
-            <% end %>
-            <% if !current_user %> 
-              <li><a href="/login">Sign In</a></li>
-            <% else %>
-              <li>
-              <%= link_to logout_path, method: "delete" do %>
-                Sign Out
+              <% if !current_user %> 
+                <li><a href="/login">Sign In</a></li>
+              <% else %>
+                <li>
+                <%= link_to logout_path, method: "delete" do %>
+                  Sign Out
+                <% end %>
+              </li>
               <% end %>
-            </li>
-            <% end %>
-          </ul>
-        </nav><!--/.navbar-collapse -->
+            </ul>
+          </nav><!--/.navbar-collapse -->
 
+        </div>
       </div>
-    </div>
-    <!-- End of Navigation Bar -->
+      <!-- End of Navigation Bar -->
+    <% else %>
+      <div class="navbar minified darken-menu">
+        <div class="container">
+          <div class="navbar-header">
+            <%= link_to image_tag("white1.png"), root_url, :class => "navbar-brand" %>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <nav id="my-nav" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li ><a href="/">Home</a></li>
+              <% if !current_user %> 
+                <li><a href="/login">Sign In</a></li>
+              <% else %>
+                <li>
+                <%= link_to logout_path, method: "delete" do %>
+                  Sign Out
+                <% end %>
+              </li>
+              <% end %>
+              <li><a href="/blog/">Blog</a></li>
+            </ul>
+          </nav><!--/.navbar-collapse -->
+        </div>
+      </div>
+    <% end %>
+
+    <!-- <div class="container">
+      <div class="small-12 columns">
+        <ul class="alertList">
+          <% flash.each do |key, value| %>
+            <div class="alert alert-info alert-dismissible">
+              <div class="alert-text">
+                <%= value %>
+              </div>
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <% end %>
+        </ul>
+      </div>
+    </div>    -->
     
     <%= yield %>
   </div>
