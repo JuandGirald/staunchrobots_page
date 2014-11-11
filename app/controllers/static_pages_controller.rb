@@ -11,6 +11,8 @@ class StaticPagesController < ApplicationController
       redirect_to(root_path, :notice => "Your message was sent successfully. ")
     else
       flash.now.alert = "Check the error list"
+      @track_contact_event = true
+      @email = params[:email]
       render :home
     end
   end

@@ -326,4 +326,9 @@ window.onload = function(){
     document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
   if(oldonload){oldonload()}};
 }());
+<% if @track_contact_event %>
+_gaq.push(['_trackEvent', 'Form', 'Contact Us', @email]);
+<% end %>
+
+
 </script>
