@@ -326,11 +326,11 @@ window.onload = function(){
     document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
   if(oldonload){oldonload()}};
 }());
-<% if sesssion[track_contact_event] %>
-_gaq.push(['_trackEvent', 'Form', 'Contact Us', session[email]);
+<% if session[:track_contact_event] %>
+_gaq.push(['_trackEvent', 'Form', 'Contact Us', '<%=URI.escape(session[:email].to_s)%>');
 <% 
-    sesssion[track_contact_event] = false
-    session[email] = nil
+    session[:track_contact_event] = false
+    session[:email] = nil
   end 
 %>
 

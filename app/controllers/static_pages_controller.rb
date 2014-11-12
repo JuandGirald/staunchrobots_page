@@ -5,11 +5,10 @@ class StaticPagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    
     if @message.valid?
       NotificationsMailer.new_message(@message).deliver
-      session[track_contact_event] = true
-      session[email] = params[:email]
+      session[:track_contact_event] = true
+      session[:email] = params[:email]
       redirect_to(root_path, :notice => "Your message was sent successfully. ")
     else
       flash.now.alert = "Check the error list"
