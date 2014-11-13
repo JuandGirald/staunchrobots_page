@@ -1,5 +1,7 @@
 class CvsController < ApplicationController
   before_action :set_cv, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :authenticate_admin, only: [:new, :create, :update, :destroy, :edit]
 
   def index
     @cvs = Cv.all
@@ -49,5 +51,11 @@ class CvsController < ApplicationController
 
     def cv_params
       params.require(:cv).permit(:name, :profile, :title, :stackoverflow_reputation, :blog)
+    end
+
+    def authenticate_admin
+      unless current_user.admin
+        redirect_to cvs_url, notice: 'Admin access required.'
+      end
     end
 end

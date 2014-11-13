@@ -1,37 +1,46 @@
-<%= form_for(@cv) do |f| %>
-  <% if @cv.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cv.errors.count, "error") %> prohibited this cv from being saved:</h2>
-
-      <ul>
-      <% @cv.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+<div class="row">
+  <div class="col-xs-6 col-md-offset-3">
+    <%= simple_form_for(@cv) do |f| %>
+      <%= render 'layouts/error_messages', object: f.object%>
+      
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.input :name, required: false%>
+          </div>  
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.input :profile, as: :text, rows: 10, required: false %>
+          </div>  
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.input :title, required: false %>
+          </div>  
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.input :stackoverflow_reputation, required: false %>
+          </div>  
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.input :blog, required: false %>
+          </div>  
+        </div>
+      </div>
+      <div class="actions">
+        <%= f.button :submit, 'Create', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :profile %><br>
-    <%= f.text_area :profile %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :stackoverflow_reputation %><br>
-    <%= f.number_field :stackoverflow_reputation %>
-  </div>
-  <div class="field">
-    <%= f.label :blog %><br>
-    <%= f.text_field :blog %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

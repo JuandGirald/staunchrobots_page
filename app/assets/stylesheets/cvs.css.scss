@@ -5,3 +5,30 @@
     text-align: center;
   }
 }
+
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Forms
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px !important;
+  @include box_sizing;
+}
+
+.help-inline {
+  display: none !important;
+}
+
+input {
+  height: auto !important;
+}

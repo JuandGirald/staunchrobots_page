@@ -35,6 +35,8 @@
 
   <br>
 
-  <%= link_to 'New Cv', new_cv_path %>
+  <% if current_user.admin %>
+    <%= link_to 'New Cv', new_cv_path %>
+  <% end %>
 
 </section>
