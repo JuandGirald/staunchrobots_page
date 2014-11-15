@@ -289,8 +289,7 @@
             session['rand2'] = num.rand(1..10)
 
             %>
-            <label for="captcha">Kindly prove you're human by doing a little math:</label>
-              <input type="text" class="form-control input-sm" name="captcha" id="captcha" placeholder="<%=session['rand1']%> + <%=session['rand2']%> = ?" required>
+              <input type="text" class="form-control input-sm" name="captcha" id="captcha" placeholder="Kindly prove you're human by doing a little math:  <%=session['rand1']%> + <%=session['rand2']%> = ?" required>
             </div>
           <div class="form-group">
             <button id="submit_btn" type="submit" class="btn btn-outline btn-big">Submit</button>
