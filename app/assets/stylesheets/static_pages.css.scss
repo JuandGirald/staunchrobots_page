@@ -39,7 +39,7 @@ a:-moz-selection {
   margin-bottom: 1em;
 }
 .light-section {
-  height: 59em;
+  min-height: 59em;
   background-color: #fff;
   padding-top: 120px;
   overflow: hidden;
@@ -414,4 +414,8 @@ img.logo {
 }
 .footer .social-icons {
   margin-bottom: 8px;
+}
+div.alert{
+  background-color:pink;
+  border: 1px solid black;
 }

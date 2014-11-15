@@ -1,5 +1,5 @@
 $(document).ready ->
-  # ----- Vaariables and user agent check ----- 
+  # ----- Variables and user agent check ----- 
   isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
   if location.hash !='#l'
@@ -81,6 +81,9 @@ $(document).ready ->
     pde e
     return
 
+  #if form error, move directly to the contact section
+  if(form_error)
+    document.location.hash = '#contact'
 
 
   # ----- Filterable Portfolio effect ----- 

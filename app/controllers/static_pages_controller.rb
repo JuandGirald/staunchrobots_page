@@ -1,19 +1,27 @@
 class StaticPagesController < ApplicationController
   def home
-    @message = Message.new
+    @message = session[:message].is_a?(Message) ? session[:message] : Message.new
+    @form_error ||= false
   end
 
   def create
+    expected = session['rand1'] + session['rand2']
     @message = Message.new(message_params)
-    if @message.valid?
+    valid = (expected == params[:captcha].to_i) && @message.valid?
+    
+    if valid
       NotificationsMailer.new_message(@message).deliver
       session[:track_contact_event] = true
       session[:email] = params[:email]
-      redirect_to(root_path, :notice => "Your message was sent successfully. ")
+      redirect_to(root_path, :notice => "Your message was sent successfully.")
     else
-      flash.now.alert = "Check the error list"
-
-      render :home
+      msg = "Check the error list"
+      if expected != params[:captcha]
+        msg += ' and your math...'
+      end
+      flash.now.alert = msg
+      @form_error = true
+      render 'home'
     end
   end
 
