@@ -1,8 +1,11 @@
 #cvs {
   .title {
     margin-top: 1em;
-    margin-bottom: 4em;
     text-align: center;
+  }
+  h3 {
+    color: #727272 !important;
+    font-weight: 500;
   }
 }
 
@@ -36,18 +39,16 @@ input {
 
 // Cv Styles
 
-#cvs-page {
-  #page {
-    .container {
-      background-color: #E7E6E6;
-      color: #4b4b4b;
-      font-family: "Open Sans", sans-serif;
-      font-size: 18px;
-      h1 {
-        color: #D57B1A;
-        font-size: 2.5em;
-        text-align: left;
-      }
+#cvs {
+  .container {
+    background-color: #E7E6E6;
+    color: #4b4b4b;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    h1 {
+      color: #D57B1A;
+      font-size: 2.5em;
+      text-align: left;
     }
   }
   #body_content {
@@ -60,12 +61,10 @@ input {
   h1 {
     color: black !important;
     font-size: 130px !important;
-    height: 120px;
     margin-right: 0.4em;
     font-family: "Droid Serif", serif;
     font-weight: bold;
     text-align: right !important;
-    padding-top: 40px;
   }
 }
 .profile{
@@ -74,18 +73,26 @@ input {
     font-size: 2.5em;
   }
   p {
-    margin-left: 25px;
-    margin-top: 2em;
+    margin-left: 40px;
+    font-weight: 100;
+    margin-top: 1em;
+    margin-bottom: 3em;
     text-align: justify;
   }
 }
 .projects{
   margin: 0 3em;
   margin-bottom: 2em;
+  ul {
+    font-weight: 100;
+  }
   h3 {
-    color: #727272 !important;
-    font-weight: 500;
-    margin-bottom: 0;
+    margin-bottom: 8px;
+    a {
+      color: #727272 !important;
+      font-weight: 500;
+      text-decoration: none;
+    }
   }
 }
 .projects .projectName{
@@ -101,9 +108,10 @@ input {
 .projects .projectInteresting{
   list-style-type: none;
   margin-top: 1em;
-  margin-left: 1em;
   li {
+    font-weight: 100;
     line-height: 25px;
+    margin-bottom: 0.5em;
   }
   li:before {
     color: #D57B1A;
@@ -122,20 +130,25 @@ input {
   color: black !important;
   font-weight: bold;
   font-family: sans-serif;
-  margin-top: 2em;
+  margin-top: 1em;
   text-align: left;
 }
 .education{
-  margin-top: 2em;
+  h3 {
+    font-size: 14pt;
+    margin-bottom: 0;
+  }
   p{
     color: #D57B1A !important;
+    font-size: 12pt;
   }
 }
 
 .skill {
-  margin-bottom: 4em;
+  margin-bottom: 1em;
   margin-top: 2em;
   p {
+    font-weight: 100;
     float: left;
     margin-right: 5px;
     position: relative;
@@ -172,7 +185,7 @@ input {
 .leftPart{
     border-right: 4px dashed #D57B1A;
     // border-style: none dashed none none;
-    margin-bottom: -30px;
+    margin-bottom: 5px;
     margin-top: 10px;
 }
 

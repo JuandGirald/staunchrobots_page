@@ -32,8 +32,15 @@ class CvsController < ApplicationController
   end
 
   def update
-    @cv.update(cv_params)
-    respond_with(@cv)
+    respond_to do |format|
+      if @cv.update(cv_params)
+        format.html { redirect_to cvs_path, notice: 'Cv was successfully updated.' }
+        format.json { render :index, status: :ok, location: @cv }
+      else
+        format.html { render :edit }
+        format.json { render json: @cv.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy

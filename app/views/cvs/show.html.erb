@@ -9,14 +9,26 @@
         <h1> <%=raw @cv.name %> </h1>
       </div>
       <div class="profile">
-        <h1> <i class="icon-user"></i> Profile</h1>
+        <h1> <i class="fa fa-user"></i> Profile</h1>
         <p>
           <%=raw @cv.profile %>
         </p>
       </div>
       <div class="projects">
-        <h1> <i class="icon-book" ></i> Recent Work Experience </h1>
-          
+        <h1> <i class="fa fa-book" ></i> Recent Work Experience </h1>
+        <ul>
+          <% @cv.projects.each do |project| %>
+            <h3 > <%= raw project.name %> (<a target="_blank" href="http://<%= project.url %>"><%= project.url %></a>) </h3> 
+            <%= raw project.description %>
+            <ul class="projectInteresting">
+              <% project.project_interest_points.each do |interest_point| %>
+                <li>
+                  <%= interest_point.content %>
+                </li>  
+              <% end %>    
+            </ul>
+          <% end %>
+        </ul>
       </div>
     </div>
     
@@ -31,6 +43,34 @@
           <p>
             <%=raw @cv.title %>
           </p>
+        </div>
+        <div class="experiences">
+          <% if @cv.experiences.any? %>
+            <ul >
+              <% @cv.experiences.each do |experience| %>
+                <p> <%= experience.years %>+ years <%= raw experience.name %> experience</p> 
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+        <div class="col-xs-12 skill">
+          <h1> <i class="fa fa-wrench" ></i> Toolbox </h1>
+          <ul>
+            <% @cv.skills.each do |skill| %>
+              <p> <%= raw skill.name %>, </p>
+            <% end %>    
+          </ul>
+        </div>
+        <div class="col-xs-12 education">
+          <% if @cv.educations.any? %>
+            <h1> <i class="fa fa-university" ></i> Learning</h1>
+            <ul >
+              <% @cv.educations.each do |education| %>
+                <h3> <%= education.title %>  </h3>
+                <p> <%= raw education.institution %> </p>  
+              <% end %>
+            </ul>
+          <% end %>
         </div>
         
       </aside>

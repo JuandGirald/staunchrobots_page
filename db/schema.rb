@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113222705) do
+ActiveRecord::Schema.define(version: 20141128223818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,22 @@ ActiveRecord::Schema.define(version: 20141113222705) do
     t.datetime "avatar_updated_at"
   end
 
+  create_table "educations", force: true do |t|
+    t.string   "title"
+    t.string   "institution"
+    t.integer  "cv_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "experiences", force: true do |t|
+    t.string   "name"
+    t.integer  "years"
+    t.integer  "cv_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "identities", force: true do |t|
     t.integer  "user_id"
     t.string   "provider"
@@ -39,6 +55,22 @@ ActiveRecord::Schema.define(version: 20141113222705) do
   end
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
+
+  create_table "project_interest_points", force: true do |t|
+    t.string   "content"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "description"
+    t.integer  "cv_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_images", force: true do |t|
     t.string   "image_mime_type"
@@ -179,6 +211,13 @@ ActiveRecord::Schema.define(version: 20141113222705) do
 
   add_index "seo_meta", ["id"], name: "index_seo_meta_on_id", using: :btree
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], name: "id_type_index_on_seo_meta", using: :btree
+
+  create_table "skills", force: true do |t|
+    t.string   "name"
+    t.integer  "cv_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

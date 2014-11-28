@@ -1,5 +1,12 @@
 class Cv < ActiveRecord::Base
 
+  validates :name, :presence => true, :uniqueness => true
+
+  has_many :experiences
+  has_many :projects
+  has_many :educations
+  has_many :skills
+
   has_attached_file :avatar, styles: {
     thumb: '100x100>',
     square: '200x200#',
