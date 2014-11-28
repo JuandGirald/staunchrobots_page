@@ -70,3 +70,8 @@ gem 'omniauth-linkedin'
 gem "omniauth-google-oauth2"
 
 gem 'simple_form'
+
+# Upload Image to aws
+gem 'paperclip'
+gem 'aws-sdk'
+

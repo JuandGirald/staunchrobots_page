@@ -50,7 +50,7 @@ class CvsController < ApplicationController
     end
 
     def cv_params
-      params.require(:cv).permit(:name, :profile, :title, :stackoverflow_reputation, :blog)
+      params.require(:cv).permit(:name, :profile, :title, :stackoverflow_reputation, :blog, :avatar)
     end
 
     def authenticate_admin

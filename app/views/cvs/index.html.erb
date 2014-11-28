@@ -9,10 +9,8 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Profile</th>
         <th>Title</th>
-        <th>Stackoverflow reputation</th>
-        <th>Blog</th>
+        <th>image</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -21,10 +19,13 @@
       <% @cvs.each do |cv| %>
         <tr>
           <td><%= cv.name %></td>
-          <td><%= cv.profile %></td>
           <td><%= cv.title %></td>
-          <td><%= cv.stackoverflow_reputation %></td>
-          <td><%= cv.blog %></td>
+          <td>
+            <div class="image">
+              <%= image_tag cv.avatar.url(:thumb) if cv.avatar? %>
+            </div>
+          </td>
+          
           <td><%= link_to 'Show', cv %></td>
           <td><%= link_to 'Edit', edit_cv_path(cv) %></td>
           <td><%= link_to 'Destroy', cv, method: :delete, data: { confirm: 'Are you sure?' } %></td>
