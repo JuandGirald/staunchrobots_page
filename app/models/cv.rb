@@ -6,8 +6,10 @@ class Cv < ActiveRecord::Base
   has_many :projects
   has_many :educations
   has_many :skills
+  has_many :languages
+  has_many :code_samples
 
-  accepts_nested_attributes_for :projects, :educations, :skills, :experiences,
+  accepts_nested_attributes_for :projects, :educations, :skills, :experiences, :languages, :code_samples,
                                 allow_destroy: true, reject_if: :all_blank                              
 
   has_attached_file :avatar, styles: {

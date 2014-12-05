@@ -72,7 +72,37 @@
             </ul>
           <% end %>
         </div>
-        
+        <div class="col-xs-12 language">
+          <% if @cv.languages.any? %>
+            <h1> <i class="fa fa-comments" ></i> Languages</h1>
+            <ul >
+              <% @cv.languages.each do |language| %>
+                <p class="lg"> <%= language.name %> </p>
+                <% for i in 1..(language.level - 1) %>
+                  <p></p>
+                <%end %>
+
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 codeSample">
+          <% if @cv.code_samples.any? %>
+            <h1> Code Samples</h1>
+            <ul >
+              <l
+              <% @cv.code_samples.each do |code_sample| %>
+                <p> <%= code_sample.name %>:  </p>
+                <a> <%= raw code_sample.github_url %> </a>  
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+
+        <div class="col-xs-12 logo">
+          <%= image_tag 'logo.png'%>
+        </div> 
       </aside>
     </div>
 

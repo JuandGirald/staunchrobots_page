@@ -7,6 +7,14 @@
     color: #727272 !important;
     font-weight: 500;
   }
+  .logo {
+    margin-top: 5em;
+    margin-bottom: 2em;
+    text-align: center;
+    img {
+      width: 70%;
+    }
+  }
 }
 
 
@@ -121,11 +129,6 @@ input {
 }
 
 
-.open-source{
-}
-.practices{
-}
-
 .experiences {
   color: black !important;
   font-weight: bold;
@@ -143,7 +146,6 @@ input {
     font-size: 12pt;
   }
 }
-
 .skill {
   margin-bottom: 1em;
   margin-top: 2em;
@@ -152,6 +154,32 @@ input {
     float: left;
     margin-right: 5px;
     position: relative;
+  }
+}
+.language {
+  p {
+    font-weight: 100;
+    float: left;
+    margin-bottom: 0;
+  }
+  .lg {
+    margin-bottom: 0;
+  }
+  p:after {
+    color: #D57B1A;
+    content: "■";
+    font-size: 1.5em;
+    vertical-align: middle;
+  }
+}
+.codeSample {
+  ul {
+    padding-left: 0;
+  }
+  p {
+    font-weight: 100;
+    margin-bottom: 0;
+    margin-top: 1em;
   }
 }
 
@@ -177,32 +205,29 @@ input {
 }
 
 .rightPart{
+  border-left: 4px dashed #D57B1A;
+  // border-style: none dashed none none;
+  margin-bottom: 5px;
+  margin-top: 10px;
   h1{
     font-size: 2em !important;  
   }
 }
 
-.leftPart{
-    border-right: 4px dashed #D57B1A;
-    // border-style: none dashed none none;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-
 .sectionTitle {
-    text-align: left !important;
-    font-weight: bold !important;
-    color: #D57B1A !important;
-    font-family: "Droid Serif", serif !important;
-    padding-left: 15px;
-    margin-bottom: 30px;
-    margin-top: 40px;
+  text-align: left !important;
+  font-weight: bold !important;
+  color: #D57B1A !important;
+  font-family: "Droid Serif", serif !important;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  margin-top: 40px;
 }
 .sectionContent{
-    padding-left: 30px;
+  padding-left: 30px;
 }
 .section {
-    text-align: justify;
+  text-align: justify;
 }
 
 .cv {

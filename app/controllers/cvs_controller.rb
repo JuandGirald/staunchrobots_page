@@ -62,7 +62,9 @@ class CvsController < ApplicationController
                                                           :project_interest_points_attributes => [:id, :content, :project_id, :_destroy]],
                                  :educations_attributes => [:id, :title, :institution, :cv_id, :_destroy],
                                  :skills_attributes => [:id, :name, :cv_id, :_destroy],
-                                 :experiences_attributes => [:id, :name, :years, :cv_id, :_destroy])
+                                 :experiences_attributes => [:id, :name, :years, :cv_id, :_destroy],
+                                 :languages_attributes => [:id, :name, :level, :cv_id, :_destroy],
+                                 :code_samples_attributes => [:id, :name, :github_url, :cv_id, :_destroy])
     end
 
     def authenticate_admin
