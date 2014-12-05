@@ -70,6 +70,7 @@ gem 'omniauth-linkedin'
 gem "omniauth-google-oauth2"
 
 gem 'simple_form'
+gem 'awesome_nested_fields'
 
 # Upload Image to aws
 gem 'paperclip'

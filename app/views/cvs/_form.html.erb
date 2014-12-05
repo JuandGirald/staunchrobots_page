@@ -1,48 +1,120 @@
 <div class="row">
   <div class="col-xs-6 col-md-offset-3">
-    <%= simple_form_for(@cv) do |f| %>
+    <%= form_for @cv, :html => { :class => "cv-form" } do |f| %>
       <%= render 'layouts/error_messages', object: f.object%>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </div>  
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.label :profile %>
+            <%= f.text_area :profile, size: "60x12" %>
+          </div>  
+        </div>
+      </div>
+
+      <h2>Recent Projects</h2>
+      <ol class="projects-container">
+        <%= f.nested_fields_for :projects, render_template: false, new_item_index: 'new_project_item' do |f| %>
+          <%= render 'project_fields', f: f %>
+        <% end %>
+      </ol>
+      <%= nested_fields_templates %>
+      <a href="#" class="project-add">Add Project</a>
       
       <div class="row">
         <div class="col-xs-12">
           <div class="field">
-            <%= f.input :name, required: false%>
+            <%= f.label :title %>
+            <%= f.text_field :title %>
           </div>  
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <div class="field">
-            <%= f.input :profile, as: :text, rows: 10, required: false %>
+            <%= f.label :stackoverflow_reputation %>
+            <%= f.number_field :stackoverflow_reputation %>
           </div>  
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <div class="field">
-            <%= f.input :title, required: false %>
+            <%= f.label :blog %>
+            <%= f.text_field :blog %>
           </div>  
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="field">
-            <%= f.input :stackoverflow_reputation, required: false %>
-          </div>  
+
+      <h2> Experience </h2>
+      <div id="experiences">
+        <div class="items">
+          <%= f.nested_fields_for :experiences do |e| %>
+            <%= e.label :name %>
+            <%= e.text_field :name %>
+
+            <%= e.label :years %>
+            <%= e.text_field :years %>
+
+            <a href="#" class="remove">remove</a>
+
+            <%= e.hidden_field :id %>
+            <%= e.hidden_field :_destroy %>
+          <% end %>
         </div>
+        <a href="#" class="add">add Experience</a>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="field">
-            <%= f.input :blog, required: false %>
-          </div>  
+
+
+      <h2> Learning </h2>
+      <div id="educations">
+        <div class="items">
+          <%= f.nested_fields_for :educations do |e| %>
+            <%= e.label :title %>
+            <%= e.text_field :title %>
+
+            <%= e.label :institution %>
+            <%= e.text_field :institution %>
+
+            <a href="#" class="remove">remove</a>
+
+            <%= e.hidden_field :id %>
+            <%= e.hidden_field :_destroy %>
+          <% end %>
         </div>
+        <a href="#" class="add">add Learning</a>
       </div>
+
+      <h2> Skills </h2>
+      <div id="skills">
+        <div class="items">
+          <%= f.nested_fields_for :skills do |s| %>
+            <%= s.label :name %>
+            <%= s.text_field :name %>
+
+            <a href="#" class="remove">remove</a>
+
+            <%= s.hidden_field :id %>
+            <%= s.hidden_field :_destroy %>
+          <% end %>
+        </div>
+        <a href="#" class="add">add Skill</a>
+      </div>
+
+
       <div class="field">
-        <%= f.input_field :avatar %>
+        <%= f.label :avatar %><br />
+        <%= f.file_field :avatar %>
       </div>
       <div class="actions">
-        <%= f.button :submit, 'Create', class: 'btn btn-primary' %>
+        <%= f.submit 'Submit', class: 'btn btn-primary' %>
       </div>
     <% end %>
   </div>
