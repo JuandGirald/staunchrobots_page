@@ -1,4 +1,6 @@
 #cvs {
+  margin-top: -2em;
+  padding-bottom: 2em;
   .title {
     margin-top: 1em;
     text-align: center;
@@ -48,8 +50,12 @@ input {
 // Cv Styles
 
 #cvs {
+  .show-developer {
+    background-color: rgb(221, 216, 216);
+  }
   .container {
     background-color: #E7E6E6;
+    box-shadow: 0 4px 12px rgba(36, 35, 35, 1);
     color: #4b4b4b;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
