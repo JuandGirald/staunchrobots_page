@@ -25,3 +25,4 @@ jQuery ($) ->
   # Applies nestedFields to all projects on page
   $(".cv-form").find(".nested-level-2").nestedFields(resourcesOptions)
   $("#educations, #skills, #experiences, #languages, #code_samples").nestedFields()
+  

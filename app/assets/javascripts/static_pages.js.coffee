@@ -57,9 +57,22 @@ $(document).ready ->
   $("body").waypoint ((direction) ->
     $(".navbar1").removeClass "hidden"
     $(".navbar").addClass "minified dark-menu"
+    $(".navbar2").addClass "navbar-fixed-top"
     return
   ),
     offset: "-500px"
+
+  $("body").waypoint ((direction) ->
+    $(".navbar2").addClass "navbar-fixed-top"
+    return
+  ),
+    offset: "-200px"
+
+  $("body").waypoint ((direction) ->
+    $(".navbar2").removeClass "navbar-fixed-top"
+    return
+  ),
+    offset: "-100px"
 
 
   $("body").waypoint ((direction) ->
