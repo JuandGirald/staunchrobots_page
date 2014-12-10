@@ -25,4 +25,40 @@ jQuery ($) ->
   # Applies nestedFields to all projects on page
   $(".cv-form").find(".nested-level-2").nestedFields(resourcesOptions)
   $("#educations, #skills, #experiences, #languages, #code_samples").nestedFields()
-  
+
+
+  $books = $("#bk-list > li > div.bk-book")
+  booksCount = $books.length
+  $books.each ->
+    $book = $(this)
+    $other = $books.not($book)
+    $parent = $book.parent()
+    $bookview = $parent.find("button.bk-bookview")
+    $gif = $book.children("div.bk-back").children()
+    $back = $book.children("div.bk-back")
+    $front = $book.children("div.bk-front")
+    current = 0
+    $front.hover (->
+      $back.addClass 'expand'
+      return
+    ), ->
+      $back.removeClass 'expand'
+      return
+
+    $parent.find("button.bk-bookback, div.bk-front").on "click", ->
+      $front.removeClass "bk-active"
+      debugger
+      if $book.data("flip")
+        $book.data(
+          opened: false
+          flip: false
+        ).removeClass("bk-viewback").addClass "bk-bookdefault"
+        $gif.addClass "hidden"
+      else
+        $book.data(
+          opened: false
+          flip: true
+        ).removeClass("bk-viewinside bk-bookdefault").addClass "bk-viewback"
+        $gif.removeClass "hidden"
+      return
+  return

@@ -5,36 +5,34 @@
       <h1 class="special-heading dark-special">Listing cvs</h1>  
     </div>
     
+    <div class="row cards">
+      <div class="card">
+        <div class="main">
+          <ul id="bk-list" class="bk-list clearfix">
+            <% @cvs.each do |cv| %>
+              <li class="col-xs-3">
+                <div class="bk-book book-1 bk-bookdefault">
+                  <div class="bk-front">
+                    <%= image_tag cv.avatar.url if cv.avatar? %>
+                  </div>
+                  <div class="bk-back">
+                    <div class="gif hidden">
+                      <iframe src="http://giphy.com/embed/oKn2qp8kKfguk?html5=true" width="267" height="267" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>  
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="bk-info">
+                  <button class="bk-bookback">Flip</button>
+                </div>
+              </li>
+            <% end %>  
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Title</th>
-          <th>image</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @cvs.each do |cv| %>
-          <tr>
-            <td><%= cv.name %></td>
-            <td><%= cv.title %></td>
-            <td>
-              <div class="image">
-                <%= image_tag cv.avatar.url(:thumb) if cv.avatar? %>
-              </div>
-            </td>
-            
-            <td><%= link_to 'Show', cv %></td>
-            <td><%= link_to 'Edit', edit_cv_path(cv) %></td>
-            <td><%= link_to 'Destroy', cv, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
+    
     <br>
 
     <% if current_user.admin %>
