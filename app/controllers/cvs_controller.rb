@@ -1,6 +1,6 @@
 class CvsController < ApplicationController
   before_action :set_cv, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_filter :auth_user
   before_action :authenticate_admin, only: [:new, :create, :update, :destroy, :edit]
 
   def index

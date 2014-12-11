@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
       redirect_to finish_signup_path(current_user)
     end
   end
+
+  def auth_user
+    redirect_to login_path unless user_signed_in?
+  end
 end
