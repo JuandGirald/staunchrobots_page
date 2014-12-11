@@ -1,5 +1,5 @@
 class CvsController < ApplicationController
-  before_action :set_cv, only: [:show, :edit, :update, :destroy]
+  before_action :set_cv, only: [:edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :authenticate_admin, only: [:new, :create, :update, :destroy, :edit]
 
@@ -8,6 +8,7 @@ class CvsController < ApplicationController
   end
 
   def show
+    @cv = Cv.friendly.find(params[:id])
   end
 
   def new

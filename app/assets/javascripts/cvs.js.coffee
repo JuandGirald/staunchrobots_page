@@ -47,7 +47,6 @@ jQuery ($) ->
 
     $parent.find("button.bk-bookback, div.bk-front").on "click", ->
       $front.removeClass "bk-active"
-      debugger
       if $book.data("flip")
         $book.data(
           opened: false

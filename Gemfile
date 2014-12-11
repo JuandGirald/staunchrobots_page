@@ -69,6 +69,8 @@ gem 'omniauth-linkedin'
 
 gem "omniauth-google-oauth2"
 
+gem 'friendly_id', :git => "git://github.com/norman/friendly_id.git", :branch => "master"
+
 gem 'simple_form'
 gem 'awesome_nested_fields'
 

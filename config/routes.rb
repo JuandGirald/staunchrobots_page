@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :cvs
+  resources :cvs, :path => 'profiles' do
+    resources :comments
+  end
 
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 

@@ -1,4 +1,6 @@
 class Cv < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name
 
   validates :name, :presence => true, :uniqueness => true
 

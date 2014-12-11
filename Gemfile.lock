@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/norman/friendly_id.git
+  revision: cf951a36da97fbc71cef355a21a60d858508b8c0
+  branch: master
+  specs:
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -235,6 +243,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   font-awesome-rails
+  friendly_id!
   jbuilder (~> 2.0)
   jquery-rails
   newrelic_rpm
