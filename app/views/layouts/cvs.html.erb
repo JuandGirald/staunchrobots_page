@@ -33,6 +33,7 @@
           <% if !current_user %> 
             <li><a href="/login">Sign In</a></li>
           <% else %>
+            <li><a href="/profiles">Browse Profiles</a></li>
             <li>
             <%= link_to logout_path, method: "delete" do %>
               Sign Out
