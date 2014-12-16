@@ -54,7 +54,8 @@ class CvsController < ApplicationController
 
   private
     def set_cv
-      @cv = Cv.find(params[:id])
+      @cv = Cv.friendly.find(params[:id])
+      #@cv = Cv.find(params[:id])
     end
 
     def cv_params
