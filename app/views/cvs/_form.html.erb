@@ -13,6 +13,14 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="field">
+            <%= f.label :availablity %>
+            <%= f.select :availablity, ['Immediately','Within 30 days','30-60 days','60-90 days','Unavailable' ] %>
+          </div>  
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
             <%= f.label :profile %>
             <%= f.text_area :profile, size: "60x12" %>
           </div>  
