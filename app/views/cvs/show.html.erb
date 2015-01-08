@@ -30,13 +30,21 @@
             <% @cv.projects.each do |project| %>
               <h3 > <%= raw project.name %> (<a target="_blank" href="http://<%= project.url %>"><%= project.url %></a>) </h3> 
               <%= raw project.description %>
-              <ul class="projectInteresting">
+              <ul class="projectInteresting row">
                 <% project.project_interest_points.each do |interest_point| %>
                   <li>
                     <%= interest_point.content %>
                   </li>  
                 <% end %>    
               </ul>
+              <% if !project.tech_stack.blank? %> 
+                <ul class="tech_stack row">
+                  <b>Tech Stack - </b> 
+                  <% project.tech_stack.split(",").each do |tech_stack| %>
+                    <li> <%= tech_stack %> </li>
+                  <% end %>  
+                </ul>
+              <% end %>
             <% end %>
           </ul>
         </div>

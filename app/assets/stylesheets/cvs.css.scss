@@ -91,6 +91,11 @@ input {
   }
 }
 
+.cv-form {
+  div {
+    margin-bottom: 0.865em;
+  }
+}
 .name{
   margin-top: 2em;
   h1 {
@@ -127,6 +132,21 @@ input {
       color: #727272 !important;
       font-weight: 500;
       text-decoration: none;
+    }
+  }
+  .tech_stack {
+    color: #3F3E3E;
+    font-size: 16px;
+    b {
+      float: left;
+      margin-right: 0.5em;
+    } 
+    li {
+      float: left;
+      position: relative;
+      margin-left: 1em;
+      list-style: initial;
+      text-indent: -8px;
     }
   }
 }

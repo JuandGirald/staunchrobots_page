@@ -1,17 +1,19 @@
 <li class="project">
-  <%= f.label :name %>
+  <%= f.label :name, "Project Name" %>
   <%= f.text_field :name %>
   <%= f.label :url %>
   <%= f.text_field :url %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.label :description, "Project Description" %>
+  <%= f.text_area :description %>
+  <%= f.label :tech_stack %>
+  <%= f.text_area :tech_stack %>
   
-  <h3>Resources</h3>
+  <h3>Bullet Points</h3>
   <div class="nested-level-2">
     <ul class="project_interest_point-container">
       <%= f.nested_fields_for :project_interest_points, new_item_index: 'new_project_interest_point_item', html: { class: "project_interest_point-form" } do |f| %>
         <li class="project_interest_point">
-          <%= f.label :content %>
+          <%= f.label :content, "Bullet" %>
           <%= f.text_field :content %>
           
           <a href="#" class="project_interest_point-remove">remove</a>
@@ -21,7 +23,7 @@
         </li>
       <% end %>
     </ul>
-    <a href="#" class="project_interest_point-add">Add Project Description</a>
+    <a href="#" class="project_interest_point-add">Add Bullet Point</a>
   </div>
   <a href="#" class="project-remove">remove project</a>
 
