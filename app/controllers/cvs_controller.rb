@@ -57,14 +57,15 @@ class CvsController < ApplicationController
     end
 
     def cv_params
-      params.require(:cv).permit(:name, :profile, :title, :stackoverflow_reputation, :blog, :avatar, :availablity,
+      params.require(:cv).permit(:name, :profile, :title, :stackoverflow_reputation, :blog, :avatar, :availablity, :religiously_following, :bookshelf,
                                  :projects_attributes => [:id, :name, :url, :description, :tech_stack, :cv_id, :_destroy, 
                                                           :project_interest_points_attributes => [:id, :content, :project_id, :_destroy]],
                                  :educations_attributes => [:id, :title, :institution, :cv_id, :_destroy],
                                  :skills_attributes => [:id, :name, :cv_id, :_destroy],
                                  :experiences_attributes => [:id, :name, :years, :cv_id, :_destroy],
                                  :languages_attributes => [:id, :name, :level, :cv_id, :_destroy],
-                                 :code_samples_attributes => [:id, :name, :github_url, :cv_id, :_destroy])
+                                 :code_samples_attributes => [:id, :name, :github_url, :cv_id, :_destroy],
+                                 :good_practices_attributes => [:id, :practice, :description, :cv_id, :_destroy])
     end
 
     def authenticate_admin

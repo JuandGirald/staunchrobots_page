@@ -24,7 +24,7 @@
             <%=raw @cv.profile %>
           </p>
         </div>
-        <div class="projects">
+        <div class="lists projects">
           <h1> <i class="fa fa-book" ></i> Recent Work Experience </h1>
           <ul>
             <% @cv.projects.each do |project| %>
@@ -45,6 +45,17 @@
                   <% end %>  
                 </ul>
               <% end %>
+            <% end %>
+          </ul>
+        </div>
+        <div class="lists good-practices">
+          <h1> <i class="fa fa-check" ></i> Good Practices and Skills </h1>
+          <ul>
+            <% @cv.good_practices.each do |good_practice| %>
+              <li>
+                <p> <span> <%= good_practice.practice %> -  </span> <%=  good_practice.description %> </p>
+                
+              </li>
             <% end %>
           </ul>
         </div>
@@ -72,12 +83,14 @@
             <% end %>
           </div>
           <div class="col-xs-12 skill">
-            <h1> <i class="fa fa-wrench" ></i> Toolbox </h1>
-            <ul>
-              <% @cv.skills.each do |skill| %>
-                <p> <%= raw skill.name %>, </p>
-              <% end %>    
-            </ul>
+            <% if @cv.skills.any? %>
+              <h1> <i class="fa fa-wrench" ></i> Toolbox </h1>
+              <ul>
+                <% @cv.skills.each do |skill| %>
+                  <p> <%= raw skill.name %>, </p>
+                <% end %>    
+              </ul>
+            <% end %>
           </div>
           <div class="col-xs-12 education">
             <% if @cv.educations.any? %>
@@ -90,6 +103,32 @@
               </ul>
             <% end %>
           </div>
+          <div class="col-xs-12 religiously">
+            <%if @cv.religiously_following %>
+              <ul>
+                <h3> Religiously Following </h3>
+                <% @cv.religiously_following.split(',').each do |following|%>
+                  <li>
+                    <%= following %>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+          <div class="col-xs-12 religiously">
+            <%if @cv.bookshelf %>
+              <ul>
+                <h3> BookShelf </h3>
+                <% @cv.bookshelf.split(',').each do |bookshelf|%>
+                  <li>
+                    <%= bookshelf %>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+
+
           <div class="col-xs-12 language">
             <% if @cv.languages.any? %>
               <h1> <i class="fa fa-comments" ></i> Languages</h1>

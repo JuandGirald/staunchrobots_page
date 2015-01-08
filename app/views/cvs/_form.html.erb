@@ -104,6 +104,25 @@
         <a href="#" class="add">add Learning</a>
       </div>
       </b>
+
+      <h2>Religiously Following</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.text_area :religiously_following %>
+          </div>  
+        </div>
+      </div>
+
+      <h2> Bookshelf </h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.text_area :bookshelf %>
+          </div>  
+        </div>
+      </div>
+      
       <h2> Toolbox </h2>
       <div id="skills">
         <div class="items">
@@ -156,6 +175,25 @@
           <% end %>
         </div>
         <a href="#" class="add">add Code Sample</a>
+      </div>
+
+      <h2> Good Practices and Skills </h2>
+      <div id="good_practices">
+        <div class="items">
+          <%= f.nested_fields_for :good_practices do |c| %>
+            <%= c.label :practice %>
+            <%= c.text_field :practice %>
+
+            <%= c.label :description %>
+            <%= c.text_area :description %>
+
+            <a href="#" class="remove">remove</a>
+
+            <%= c.hidden_field :id %>
+            <%= c.hidden_field :_destroy %>
+          <% end %>
+        </div>
+        <a href="#" class="add">add Practice or Skill</a>
       </div>
       
       </b>
