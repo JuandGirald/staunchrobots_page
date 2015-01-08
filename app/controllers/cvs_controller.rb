@@ -1,5 +1,5 @@
 class CvsController < ApplicationController
-  before_action :set_cv, only: [:edit, :update, :destroy]
+  before_action :set_cv, only: [:show, :edit, :update, :destroy]
   before_filter :auth_user
   before_action :authenticate_admin, only: [:new, :create, :update, :destroy, :edit]
 
@@ -8,7 +8,6 @@ class CvsController < ApplicationController
   end
 
   def show
-    @cv = Cv.friendly.find(params[:id])
   end
 
   def new
@@ -23,7 +22,7 @@ class CvsController < ApplicationController
 
     respond_to do |format|
       if @cv.save
-        format.html { redirect_to cvs_path, notice: 'CVS was successfully created.' }
+        format.html { redirect_to cvs_path, notice: 'The CV was successfully created.' }
         format.json { render :index, status: :created, location: @cv }
       else
         format.html { render :new }
@@ -35,7 +34,7 @@ class CvsController < ApplicationController
   def update
     respond_to do |format|
       if @cv.update(cv_params)
-        format.html { redirect_to cvs_path, notice: 'Cv was successfully updated.' }
+        format.html { redirect_to cvs_path, notice: 'The Cv was successfully updated.' }
         format.json { render :index, status: :ok, location: @cv }
       else
         format.html { render :edit }
@@ -47,7 +46,7 @@ class CvsController < ApplicationController
   def destroy
     @cv.destroy
     respond_to do |format|
-      format.html { redirect_to cvs_url, notice: 'CVS was successfully destroyed.' }
+      format.html { redirect_to cvs_url, notice: 'The CV was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
