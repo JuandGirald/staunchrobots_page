@@ -45,7 +45,7 @@
 
 .dev-card {
   height: 250px;
-  margin: 1em;
+  margin-bottom: 10px;
   background: white;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   h2 {
@@ -53,29 +53,30 @@
     margin-top: 1em;
   }
   img {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
+    margin-right: 15px;
     float: left;
-    width: 210px;
+    width: 230px;
   }
   .side-text {
     float: right;
-    width: 75%;
-    margin-left: 2em;
+    width: 77%;
     p {
       color: #6F7277;
       font-size: 10pt;
     }
     .dev-buttons {
-      margin-left: 16px;
       margin-top: 1em;
     }
+    .stars.row {
+      margin-left: 0 !important;
+    }
     .stars {
-      margin-left: 16px;
       h4 {
         color: #34363A;
-        font-size: 14pt;
+        font-size: 0.865em;
         font-weight: 100;
         float: left;
         margin-right: 3em;
