@@ -18,6 +18,16 @@
           </div>  
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+          </div>  
+        </div>
+      </div>
+      
       <div class="row">
         <div class="col-xs-12">
           <div class="field">
@@ -41,31 +51,6 @@
       <%= nested_fields_templates %>
       <a href="#" class="project-add">Add New Project</a>
       
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="field">
-            <%= f.label :title %>
-            <%= f.text_field :title %>
-          </div>  
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="field">
-            <%= f.label :stackoverflow_reputation %>
-            <%= f.number_field :stackoverflow_reputation %>
-          </div>  
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="field">
-            <%= f.label :blog %>
-            <%= f.text_field :blog %>
-          </div>  
-        </div>
-      </div>
-
       <h2> Experience </h2>
       <div id="experiences">
         <div class="items">

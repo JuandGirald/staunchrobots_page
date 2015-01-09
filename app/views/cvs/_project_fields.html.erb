@@ -14,7 +14,7 @@
       <%= f.nested_fields_for :project_interest_points, new_item_index: 'new_project_interest_point_item', html: { class: "project_interest_point-form" } do |f| %>
         <li class="project_interest_point">
           <%= f.label :content, "Bullet" %>
-          <%= f.text_field :content %>
+          <%= f.text_area :content %>
           
           <a href="#" class="project_interest_point-remove">remove</a>
 
