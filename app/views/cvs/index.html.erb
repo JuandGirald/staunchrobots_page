@@ -1,46 +1,43 @@
 <div class="developer">
   <section class="container">
-  
-    <div class="title">
-      <h1 class="special-heading dark-special">Listing cvs</h1>  
-    </div>
-    
-    <div class="row cards">
-      <div class="card">
-        <div class="main">
-          <ul id="bk-list" class="bk-list clearfix">
-            <% @cvs.each do |cv| %>
-              <li class="col-xs-3">
-                <div class="bk-book book-1 bk-bookdefault">
-                  <div class="bk-front">
-                    <%= image_tag cv.avatar.url if cv.avatar? %>
-                  </div>
-                  <div class="bk-back">
-                    <div class="gif hidden">
-                      <iframe src="https://giphy.com/embed/oKn2qp8kKfguk?html5=true" width="267" height="267" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>  
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="bk-info">
-                  <button class="bk-bookback">Flip</button>
-                  <button class="view">
-                    <%= link_to 'View', cv_path(cv.name) %>
-                  </button>
-                </div>
-              </li>
-            <% end %>  
-          </ul>
-        </div>
+    <div class="col-xs-12">
+      <div class="dev-cards">
+        <% @cvs.each do |cv| %>
+          <div class="dev-card">
+            <%= image_tag cv.avatar.url if cv.avatar? %>
+            <div class="side-text">
+              <h2><%= cv.name %></h2> 
+              <div class="stars row">
+                <h4> Ruby  
+                <% 3.times do %>
+                  <i class="fa fa-star" ></i>
+                <% end %>
+                </h4> 
+                <h4> Javascript  
+                <% 2.times do %>
+                  <i class="fa fa-star" ></i>
+                <% end %>
+                </h4>
+                <h4> Devop  
+                <% 3.times do %>
+                  <i class="fa fa-star" ></i>
+                <% end %>
+                </h4> 
+              </div>
+              <p> <%= cv.profile %></p>
+              <div class="dev-buttons">
+                <button type="button" class="btn btn-primary"> Code Samples </button>
+                <button type="button" class="btn btn-primary"> Work Experience </button>
+                <button type="button" class="btn btn-primary"> Full Profile </button>  
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
-
-    
     <br>
-
     <% if current_user.admin %>
       <%= link_to 'New Cv', new_cv_path %>
     <% end %>
-
   </section>  
 </div>

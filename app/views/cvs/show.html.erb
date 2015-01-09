@@ -104,7 +104,7 @@
             <% end %>
           </div>
           <div class="col-xs-12 religiously">
-            <%if @cv.religiously_following %>
+            <%if !@cv.religiously_following.blank? %>
               <ul>
                 <h3> Religiously Following </h3>
                 <% @cv.religiously_following.split(',').each do |following|%>
@@ -116,7 +116,7 @@
             <% end %>
           </div>
           <div class="col-xs-12 religiously">
-            <%if @cv.bookshelf %>
+            <%if !@cv.bookshelf.blank? %>
               <ul>
                 <h3> BookShelf </h3>
                 <% @cv.bookshelf.split(',').each do |bookshelf|%>

@@ -37,7 +37,72 @@
       width: 70%;
     }
   }
+  .btn-primary {
+    background-color: #5697EF !important;
+    border-color: white;
+    width: 10em !important;
+  }
 }
+
+.dev-card {
+  height: 250px;
+  margin: 1em;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  h2 {
+    color: #5697EF;
+    margin-top: 1em;
+  }
+  img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    float: left;
+    width: 210px;
+  }
+  .side-text {
+    float: right;
+    width: 75%;
+    margin-left: 2em;
+    p {
+      color: #6F7277;
+      font-size: 10pt;
+    }
+    .dev-buttons {
+      margin-left: 16px;
+      margin-top: 1em;
+    }
+    .stars {
+      margin-left: 16px;
+      h4 {
+        color: #34363A;
+        font-size: 14pt;
+        font-weight: 100;
+        float: left;
+        margin-right: 3em;
+      }
+      i {
+        color: #FEBB2B;
+        font-size: 28px;
+        margin-left: 6px;
+        vertical-align: middle;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .side-text {
+      width: 65%;
+    }
+  }
+}
+
+.dev-cards {
+  display: block;
+  float: left;
+  margin-top: 2em;
+  width: 100%;
+}
+
 
 .developers {
   .navbar {
