@@ -140,7 +140,12 @@
     }   
   }
   @media only screen 
-  and (max-device-width : 480px) {
+  and (max-device-width : 480px) 
+  and (max-device-width : 480px)
+  {
+    .dev-avatar {
+      margin-top: 3em;
+    }
     .side-text {
       .stars {
         display: none;
