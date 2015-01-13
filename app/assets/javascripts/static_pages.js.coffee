@@ -66,7 +66,7 @@ $(document).ready ->
     $(".navbar2").addClass "navbar-fixed-top"
     return
   ),
-    offset: "-200px"
+    offset: "-150px"
 
   $("body").waypoint ((direction) ->
     $(".navbar2").removeClass "navbar-fixed-top"

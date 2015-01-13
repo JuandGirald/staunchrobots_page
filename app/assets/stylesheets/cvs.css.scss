@@ -111,10 +111,13 @@
     margin-bottom: 0;
   }
   .navbar2 {
-    background-color: #2C2F46;
+    height: 30px;
+    min-height: 30px !important;
     .navbar-collapse {
-      margin-bottom: 1em !important;
-      margin-top: 1em !important;
+      a{
+        color: white;
+        margin-left: 3em;
+      }
     }
   }
   .orange {
