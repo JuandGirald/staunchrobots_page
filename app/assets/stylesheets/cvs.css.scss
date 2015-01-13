@@ -37,8 +37,6 @@
     }
   }
   .btn-primary {
-    background-color: #5697EF !important;
-    border-color: white;
     width: 10em !important;
   }
 }
@@ -51,19 +49,20 @@
   h2 {
     color: #5697EF;
     margin-top: 1em;
+    margin-bottom: 0;
   }
-  img {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 15px;
-    float: left;
-    width: 230px;
-    height: 230px;
+  .dev-avatar{
+    img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: -5px;
+      margin-right: 15px;
+      width: 230px;
+      height: 230px;
+    }
   }
   .side-text {
-    float: right;
-    width: 77%;
+    width: 55%;
     p {
       color: #6F7277;
       font-size: 10pt;
@@ -90,9 +89,23 @@
       }
     }
   }
+  .interview {
+    padding: 0;
+    text-align: center;
+    width: 20%;
+    img {
+      margin-top: 39px;
+      width: 100%;
+      height: auto;
+    }
+    p {
+      color: #760000;
+      font-size: 12px;
+    }
+  }
   @media (max-width: 1200px) {
     .side-text {
-      width: 65%;
+      // width: 65%;
     }
   }
 }
@@ -111,6 +124,7 @@
     margin-bottom: 0;
   }
   .navbar2 {
+    background-color: rgba(99, 99, 99, 0.8);
     height: 30px;
     min-height: 30px !important;
     .navbar-collapse {

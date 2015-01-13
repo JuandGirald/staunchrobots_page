@@ -4,8 +4,14 @@
       <div class="dev-cards">
         <% @cvs.each do |cv| %>
           <div class="dev-card">
-            <%= image_tag cv.avatar.url if cv.avatar? %>
-            <div class="side-text">
+            <div class="dev-avatar col-xs-3">
+              <% if cv.avatar? %>
+                <%= image_tag cv.avatar.url %>
+              <% else %>
+                <%= image_tag 'logo.png' %>
+              <% end %>
+            </div>
+            <div class="side-text col-xs-7">
               <h2><%= cv.name %></h2> 
               <div class="stars row">
                 <h4> Ruby  
@@ -24,12 +30,17 @@
                 <% end %>
                 </h4> 
               </div>
-              <p> <%= cv.profile[0, 388] %>...</p>
+              <p> <%= cv.profile[0, 180] %>...</p>
               <div class="dev-buttons">
                 <button type="button" class="btn btn-primary"> Code Samples </button>
                 <button type="button" class="btn btn-primary"> Work Experience </button>
                 <%= link_to "Full Profile", cv_path(cv.name), :class => "btn btn-primary "%>
               </div>
+            </div>
+            <div class="interview col-xs-2">
+              <%= image_tag 'on-assginment.png' %>
+              <p>Until: <%= cv.contract_until %></p>
+              <button type="button" class="btn btn-primary"> Interview </button>                
             </div>
           </div>
         <% end %>
