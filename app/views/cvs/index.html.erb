@@ -49,7 +49,10 @@
               <% else %>
                 <%= image_tag 'on-assginment.png' %>
                 <p>Until: <%= cv.contract_until %></p>
-                <button type="button" class="btn btn-primary"> Interview </button>                
+                <%= link_to interview_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} do %>
+                  <button type="button" class="btn btn-primary"> Interview </button>                
+                <% end %>
+                
               <% end %>
               
             </div>
