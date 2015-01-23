@@ -52,11 +52,13 @@ class CvsController < ApplicationController
 
   def interview_mail
     @message = InterviewMessage.new(interview_message_params)
+
     if @message.valid?
       InterviewMailer.new_message(@message).deliver
+      InterviewMailer.client_message(@message).deliver
     else
       flash.now.alert = "Check the error list"
-      render :home
+      render :index
     end
 
     respond_to do |format|
