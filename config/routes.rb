@@ -13,8 +13,11 @@ Rails.application.routes.draw do
     delete "/logout" => "devise/sessions#destroy"
   end
   
+  get "cvs/interview" => 'cvs#interview', :as => :interview
+  post "cvs/interview_mail" => 'cvs#interview_mail', :as => :interview_mail
   match '/',            to: 'static_pages#create',  via: 'post'
   match '/v2',          to: 'static_pages#v2',      via: 'get'
+
   
   get "/blog" => redirect("/blog/")
 

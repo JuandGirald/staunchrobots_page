@@ -1,0 +1,77 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Interview Form</h3>
+    </div>
+    <div class="modal-body">
+      <div class="col-xs-12">
+
+        <form accept-charset="UTF-8" data-remote="true" action="cvs/interview_mail" id="new_message" method="post" class="new_message contact">
+          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+          <div class="row">
+            <div class="col-sm-6">
+              <label class="required" for="name">
+                  Compay Name
+                  <input type="text" name="message[company_name]" id="message_company_name" placeholder="Google" required>
+              </label>
+            </div>
+            <div class="col-sm-6">
+              <label class="required" for="name">
+                  Name
+                  <input type="text" name="message[name]" id="message_name" placeholder="John Stuart">
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label class="required" for="email">
+                  Email
+                  <input type="email" name="message[email]" id="message_email" placeholder="John@Stuart.com" required>
+              </label>
+            </div>
+            <div class="col-sm-6">
+              <label class="required" for="name">
+                  Interviewers names
+                  <input type="text" name="message[interviwers]" id="message_interviwers" placeholder="Todd, Derek...">
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <label class="required">
+              Project Description
+                <textarea id="message_body" name="message[body]" rows="4" placeholder="I have a project idea..." required></textarea>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label class="required" for="name">
+                  Time frame to start
+                  <select name="message[start_time]" id="message_start_time">
+                    <option value="volvo">Immediately</option>
+                    <option value="saab">2 Weeks</option>
+                    <option value="mercedes">1 Month</option>
+                    <option value="audi">More than 1 month</option>
+                  </select>
+              </label>
+            </div>
+            <div class="col-sm-6">
+              <label class="required" for="name">
+                  Time Zone
+                  <input type="text" name="message[time_zone]" id="message_time_zone" placeholder="EST – Eastern Standard Time">
+              </label>
+            </div>
+          </div>
+          <div class="add-sm-top text-center">
+            <button class="btn btn-primary" type="submit"><i class="fa fa-envelope"></i> &nbsp; Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>  
+  </div>
+</div>

@@ -1,5 +1,7 @@
 <div class="developer">
   <section class="container">
+    <div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    <div id="modal-thanks" class="modal fade" role="dialog" aria-labelledby="myModalLabels" aria-hidden="true"></div>
     <div class="col-xs-12">
       <div class="dev-cards">
         <% @cvs.each do |cv| %>
@@ -40,7 +42,10 @@
             <div class="interview col-xs-2">
               <% if cv.contract_until.to_s < Time.now.strftime('%Y-%m-%d') %> 
                 <%= image_tag 'available.png' %>
-                <button type="button" class="btn btn-warning"> Interview </button>                
+                <%= link_to interview_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} do %>
+                  <button type="button" class="btn btn-warning"> Interview </button>
+                <% end %>
+                
               <% else %>
                 <%= image_tag 'on-assginment.png' %>
                 <p>Until: <%= cv.contract_until %></p>

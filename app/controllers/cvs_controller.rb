@@ -43,6 +43,20 @@ class CvsController < ApplicationController
     end
   end
 
+  def interview
+    respond_to do |format|
+      format.js
+      format.html
+    end
+  end
+
+  def interview_mail
+    respond_to do |format|
+      format.js
+      format.html
+    end
+  end
+
   def destroy
     @cv.destroy
     respond_to do |format|
