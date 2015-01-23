@@ -51,6 +51,14 @@ class CvsController < ApplicationController
   end
 
   def interview_mail
+    @message = InterviewMessage.new(interview_message_params)
+    if @message.valid?
+      InterviewMailer.new_message(@message).deliver
+    else
+      flash.now.alert = "Check the error list"
+      render :home
+    end
+
     respond_to do |format|
       format.js
       format.html
@@ -68,6 +76,10 @@ class CvsController < ApplicationController
   private
     def set_cv
       @cv = Cv.friendly.find(params[:id])
+    end
+
+    def interview_message_params
+      params.require(:interview_message).permit(:name, :email, :body, :company_name, :interviews, :start_time, :time_zone)
     end
 
     def cv_params
