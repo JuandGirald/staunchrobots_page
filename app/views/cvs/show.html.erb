@@ -1,14 +1,11 @@
-<div class="navbar navbar2 minified darken-menu">
+<!-- <div class="navbar navbar2 minified darken-menu">
   <div class="container">
     <div class="navbar-collapse collapse navbar-right">
       <a href="#">Hire / Interview</a>
-      <a href="#">Browse Devs</a><!-- 
-      <button type="button" class="orange">Hire/ Interview</button>
-      <button type="button" class="orange">Browse Devs</button> -->
+      <a href="#">Browse Devs</a>
     </div>
   </div>
-  
-</div>
+</div> -->
 <div class="developer">
   <div class="container">
 
@@ -70,6 +67,10 @@
               <%= image_tag @cv.avatar.url if @cv.avatar? %>
             </p>
           </div>
+          <div class="col-xs-12 text-center">
+            <button class="interview-btn btn orange"> Interview </button>  
+          </div>
+          
           <div class="title">
             <p>
               <%=raw @cv.title %>
