@@ -1,5 +1,5 @@
 class CvsController < ApplicationController
-  before_action :set_cv, only: [:show, :edit, :update, :destroy]
+  before_action :set_cv, only: [:interview, :show, :edit, :update, :destroy]
   before_filter :auth_user, except: [:show]
   before_action :authenticate_admin, only: [:new, :create, :update, :destroy, :edit]
 
@@ -81,7 +81,7 @@ class CvsController < ApplicationController
     end
 
     def interview_message_params
-      params.require(:interview_message).permit(:name, :email, :body, :company_name, :interviews, :start_time, :time_zone)
+      params.require(:interview_message).permit(:name, :email, :body, :company_name, :interviews, :start_time, :time_zone, :developer)
     end
 
     def cv_params

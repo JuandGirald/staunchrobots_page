@@ -4,7 +4,7 @@ class InterviewMessage
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :email, :company_name, :interviewers, :start_time, :body, :time_zone
+  attr_accessor :name, :email, :company_name, :interviewers, :start_time, :body, :time_zone, :developer
 
   validates :name, :email, :body, :presence => true
   validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => true, :presence => {:message => "Invalid email address"}

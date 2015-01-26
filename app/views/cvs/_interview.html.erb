@@ -63,6 +63,12 @@
                   <input type="text" name="interview_message[time_zone]" id="message_time_zone" placeholder="EST – Eastern Standard Time">
               </label>
             </div>
+            <div class="col-sm-6">
+              <label class="required" for="name">
+                  Developer
+                  <input type="text" name="interview_message[developer]" id="message_developer" value="<%= @cv.name %>">
+              </label>
+            </div>
           </div>
           <div class="add-sm-top text-center">
             <button class="btn btn-primary" type="submit"><i class="fa fa-envelope"></i> &nbsp; Send</button>
