@@ -26,7 +26,7 @@
         <div class="lists projects">
           <h1> <i class="fa fa-book" ></i> Recent Work Experience </h1>
           <ul>
-            <% @cv.projects.order("projects.order").each do |project| %>
+            <% @projects.each do |project| %>
               <h3 > <%= raw project.name %> (<a target="_blank" href="http://<%= project.url %>"><%= project.url %></a>) </h3> 
               <%= raw project.description %>
               <ul class="projectInteresting row">
