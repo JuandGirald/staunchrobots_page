@@ -12,35 +12,29 @@
           <div class="row">
             <div class="col-sm-6">
               <label class="required" for="name">
-                  Company Name
-                  <input type="text" name="interview_message[company_name]" id="message_company_name" placeholder="Google" required>
+                  Your name <b>(required)</b>
+                  <input type="text" name="interview_message[name]" id="message_name" placeholder="John Stuart">
               </label>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 form-group required">
               <label class="required" for="name">
-                  Name
-                  <input type="text" name="interview_message[name]" id="message_name" placeholder="John Stuart">
+                  Company name <b>(required)</b>
+                  <input type="text" name="interview_message[company_name]" id="message_company_name" placeholder="Google" required>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-6">
               <label class="required" for="email">
-                  Email
+                  Email <b>(required)</b>
                   <input type="email" name="interview_message[email]" id="message_email" placeholder="John@Stuart.com" required>
-              </label>
-            </div>
-            <div class="col-sm-6">
-              <label class="required" for="name">
-                  Interviewers names
-                  <input type="text" name="interview_message[interviewers]" id="message_interviewers" placeholder="Todd, Derek...">
               </label>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12">
               <label class="required">
-              Project Description
+              Project description <b>(required)</b>
                 <textarea id="message_body" name="interview_message[body]" rows="4" placeholder="I have a project idea..." required></textarea>
               </label>
             </div>
@@ -59,7 +53,7 @@
             </div>
             <div class="col-sm-6">
               <label class="required" for="name">
-                  Time Zone
+                  Time zone
                   <input type="text" name="interview_message[time_zone]" id="message_time_zone" placeholder="EST – Eastern Standard Time">
               </label>
             </div>

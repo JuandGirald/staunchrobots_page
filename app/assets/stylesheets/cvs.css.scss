@@ -1,4 +1,12 @@
 #cvs {
+  #new_interview_message {
+    .required {
+      b {
+        color: red;
+        font-size: 9pt;
+      }
+    }
+  }
   .title {
     margin-top: 1em;
     text-align: center;
