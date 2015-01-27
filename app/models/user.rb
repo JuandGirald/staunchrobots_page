@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
+  before_save :set_role
+
   def self.find_for_oauth(auth, signed_in_resource = nil)
 
     # Get the identity and user if they exist
@@ -39,6 +41,11 @@ class User < ActiveRecord::Base
           password: Devise.friendly_token[0,20]
         )
         user.skip_confirmation! if user.respond_to?(:skip_confirmation)
+
+        if user.role.nil?
+          user.role = "customer"
+        end
+
         user.save!
       end
     end
@@ -54,4 +61,11 @@ class User < ActiveRecord::Base
   def email_verified?
     self.email && self.email !~ TEMP_EMAIL_REGEX
   end
+
+  private 
+    def set_role
+      if self.role.nil?
+        self.role = 'customer'
+      end
+    end
 end

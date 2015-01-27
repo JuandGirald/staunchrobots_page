@@ -59,7 +59,7 @@
       </div>
     </div>
     <br>
-    <% if current_user.admin %>
+    <% if current_user.role == 'admin' %>
       <%= link_to 'New Cv', new_cv_path %>
     <% end %>
   </section>  

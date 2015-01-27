@@ -62,6 +62,7 @@ gem "rack-reverse-proxy", :require => "rack/reverse_proxy"
 
 #User magement
 gem 'devise'
+gem 'cancan'
 
 gem 'omniauth'
 

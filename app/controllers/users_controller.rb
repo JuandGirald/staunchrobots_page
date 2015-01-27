@@ -6,9 +6,29 @@ class UsersController < ApplicationController
     # authorize! :read, @user
   end
 
+  def new
+    @user = User.new
+  end
+
   # GET /users/:id/edit
   def edit
     # authorize! :update, @user
+  end
+
+  def create
+    def create
+      @user = User.new(user_params)
+
+      respond_to do |format|
+        if @user.save
+          format.html { redirect_to cvs_path, notice: 'The User was successfully created.' }
+          format.json { render :index, status: :created, location: @cv }
+        else
+          format.html { render :new }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
+      end
+    end
   end
 
   # PATCH/PUT /users/:id.:format
@@ -56,7 +76,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      accessible = [ :name, :email ] # extend with your own params
+      accessible = [ :name, :email, :role ] # extend with your own params
       accessible << [ :password, :password_confirmation ] unless params[:user][:password].blank?
       params.require(:user).permit(accessible)
     end

@@ -31,15 +31,18 @@
       <nav id="my-nav" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li ><a href="/">Home</a></li>
+          <% if current_user.role == 'admin' %>
+            <li><a href="/users_admin/new">New User</a></li>
+          <% end %>
           <% if !current_user %> 
             <li><a href="/login">Sign In</a></li>
           <% else %>
             <li><a href="/profiles">Browse Profiles</a></li>
             <li>
-            <%= link_to logout_path, method: "delete" do %>
-              Sign Out
-            <% end %>
-          </li>
+              <%= link_to logout_path, method: "delete" do %>
+                Sign Out
+              <% end %>
+            </li>
           <% end %>
           <li><a href="/blog/">Blog</a></li>
         </ul>
