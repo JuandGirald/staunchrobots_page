@@ -46,6 +46,7 @@ class CvsController < ApplicationController
   end
 
   def interview
+    @message = InterviewMessage.new
     respond_to do |format|
       format.js
       format.html
@@ -60,7 +61,6 @@ class CvsController < ApplicationController
       InterviewMailer.client_message(@message).deliver
     else
       flash.now.alert = "Check the error list"
-      render :index
     end
 
     respond_to do |format|

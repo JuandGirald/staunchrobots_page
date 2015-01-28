@@ -1,0 +1,62 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Schedule an interview with <%= @cv.name %> </h3>
+    </div>
+    <div class="modal-body">
+      <div class="col-xs-12">
+
+        <%= form_for @message, remote: true, url: interview_mail_path ,:html => { :class => 'contact'} do |f| %>
+          <div class="row">
+            <div class="col-sm-6">
+              <%= f.label :name do %>
+                Your name <b class="required">(required)</b>
+              <% end %>
+              <%= f.text_field :name, :required => true, placeholder: "John Stuart" %>
+            </div>
+            <div class="col-sm-6 form-group required">
+              <%= f.label :company_name do %>
+                Company name <b class="required">(required)</b>
+              <% end %>
+              <%= f.text_field :company_name, :required => true, placeholder: "Google" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <%= f.label :email do %>
+                Email <b class="required">(required)</b>
+              <% end %>
+              <%= f.text_field :email, :required => true, placeholder: "John@Stuart.com"%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <%= f.label :body do %>
+                Project description <b class="required">(required)</b>
+              <% end %>
+              <%= f.text_area :body, :required => true, placeholder: "I have a project idea..." %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <%= f.label :start_time %>
+              <%= f.select :start_time, ['Immediately','2 Weeks','1 Month','More than one month'] %>
+            </div>
+            <div class="col-xs-6">
+              <%= f.label :time_zone %>
+              <%= f.text_field :time_zone, placeholder: "EST – Eastern Standard Time" %>
+            </div>
+          </div>
+          
+          <div class="actions">
+            <%= f.submit 'Send', class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>  
+  </div>
+</div>

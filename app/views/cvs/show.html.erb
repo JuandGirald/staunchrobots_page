@@ -8,7 +8,8 @@
 </div> -->
 <div class="developer">
   <div class="container">
-
+    <div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    <div id="modal-thanks" class="modal fade" role="dialog" aria-labelledby="myModalLabels" aria-hidden="true"></div>
     <div class="row-fluid">
       <div class="col-xs-8 leftPart">
         <div class="name">
@@ -68,7 +69,9 @@
             </p>
           </div>
           <div class="col-xs-12 text-center">
-            <button class="interview-btn btn orange"> Interview </button>  
+            <%= link_to interview_path(@cv.name),  {class: "interview-link", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', 'data-dev' => "#{@cv.name}"} do %>
+              <button class="interview-btn btn orange"> Interview </button>  
+            <% end %>
           </div>
           
           <div class="title">
