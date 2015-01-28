@@ -2,7 +2,7 @@
   <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h3 id="myModalLabel">Interview Form</h3>
+      <h3 id="myModalLabel">Schedule an interview with <%= @cv.name %> </h3>
     </div>
     <div class="modal-body">
       <div class="col-xs-12">
@@ -57,7 +57,7 @@
                   <input type="text" name="interview_message[time_zone]" id="message_time_zone" placeholder="EST – Eastern Standard Time">
               </label>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 hidden">
               <label class="required" for="name">
                   Developer
                   <input type="text" name="interview_message[developer]" id="message_developer" value="<%= @cv.name %>">
