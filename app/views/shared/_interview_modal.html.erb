@@ -48,6 +48,10 @@
               <%= f.text_field :time_zone, placeholder: "EST – Eastern Standard Time" %>
             </div>
           </div>
+          <div class="col-sm-6 hidden">
+            <%= f.label :developer %>
+            <%= f.text_field :developer, :value => "#{@cv.name}" %>
+          </div>
           
           <div class="actions">
             <%= f.submit 'Send', class: 'btn btn-primary' %>
