@@ -93,7 +93,7 @@ class CvsController < ApplicationController
 
     def cv_params
       params.require(:cv).permit(:name, :profile, :title, :stackoverflow_reputation, :blog, :avatar, :availablity, :religiously_following, 
-                                 :bookshelf, :contract_until, :user_id,
+                                 :bookshelf, :contract_until, :skills, :user_id,
                                  :projects_attributes => [:id, :name, :url, :description, :tech_stack, :cv_id, :order, :_destroy,
                                                           :project_interest_points_attributes => [:id, :content, :project_id, :_destroy]],
                                  :educations_attributes => [:id, :title, :institution, :cv_id, :_destroy],

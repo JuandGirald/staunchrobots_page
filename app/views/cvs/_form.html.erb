@@ -127,20 +127,13 @@
         </div>
       </div>
       
-      <h2> Toolbox </h2>
-      <div id="skills">
-        <div class="items">
-          <%= f.nested_fields_for :skills do |s| %>
-            <%= s.label :name %>
-            <%= s.text_field :name %>
-
-            <a href="#" class="remove">remove</a>
-
-            <%= s.hidden_field :id %>
-            <%= s.hidden_field :_destroy %>
-          <% end %>
+      <h2> Toolbox (separated by commas) </h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.text_area :skills %>
+          </div>
         </div>
-        <a href="#" class="add">add Toolbox</a>
       </div>
       </b>
       <h2> Languages </h2>

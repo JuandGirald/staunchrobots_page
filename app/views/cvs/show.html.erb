@@ -89,11 +89,11 @@
             <% end %>
           </div>
           <div class="col-xs-12 skill">
-            <% if @cv.skills.any? %>
+            <% if @cv.skills %>
               <h1> <i class="fa fa-wrench" ></i> Toolbox </h1>
               <ul class="padding-align">
-                <% @cv.skills.each do |skill| %>
-                  <p> <%= raw skill.name %>, </p>
+                <% @cv.skills.split(',').each do |skill| %>
+                  <p> <%= skill %>,  </p>
                 <% end %>    
               </ul>
             <% end %>
