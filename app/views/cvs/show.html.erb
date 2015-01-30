@@ -19,7 +19,7 @@
             <h2> <i class="fa fa-calendar"></i> 
               Availability: 
               <% if @cv.contract_until.to_s <= Time.now.strftime('%Y-%m-%d') or @cv.contract_until.nil?  %> 
-                Availble
+                Available
               <% elsif (@cv.contract_until - Time.now.to_date).to_i <= 30 %>
                 Within 30 days
                 
