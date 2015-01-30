@@ -7,7 +7,7 @@
           <div class="col-xs-12">
             <div class="field">
               <%= f.label :user_id, "Developer" %>
-              <%= f.collection_select :user_id, @users, :id, :email %>
+              <%= f.collection_select :user_id, @users, :id, :email,  {include_blank: true} %>
             </div>  
           </div>
         </div>
