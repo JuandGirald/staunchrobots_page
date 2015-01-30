@@ -15,6 +15,21 @@
         <div class="name">
           <h1> <%=raw @cv.name %> </h1>
         </div>
+         <div class="profile">
+            <h2> <i class="fa fa-calendar"></i> 
+              Availability: 
+              <% if @cv.contract_until.to_s <= Time.now.strftime('%Y-%m-%d') or @cv.contract_until.nil?  %> 
+                Availble
+              <% elsif (@cv.contract_until - Time.now.to_date).to_i <= 30 %>
+                Within 30 days
+                
+              <% elsif (@cv.contract_until - Time.now.to_date).to_i <= 60 %>
+                Within 30-60 days
+              <% else %>
+                On assignment
+              <% end %>
+            </h2>
+        </div>
         <div class="profile">
           <h1> <i class="fa fa-user"></i> Profile</h1>
           <p>
