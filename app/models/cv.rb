@@ -4,6 +4,7 @@ class Cv < ActiveRecord::Base
 
   validates :name, :presence => true, :uniqueness => true
 
+  belongs_to :user
   has_many :experiences
   has_many :projects
   has_many :educations

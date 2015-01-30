@@ -1,5 +1,6 @@
 class CvsController < ApplicationController
-  before_action :set_cv, only: [:interview, :show, :edit, :update, :destroy]
+  before_action :set_cv,    only: [:interview, :show, :edit, :update, :destroy]
+  before_action :set_users, only: [:new, :edit]
   # before_filter :auth_user, except: [:show]
   load_and_authorize_resource :except => [:create]
   # before_action :authenticate_admin, only: [:new, :create, :update, :destroy, :edit]
@@ -82,12 +83,17 @@ class CvsController < ApplicationController
       @cv = Cv.friendly.find(params[:id])
     end
 
+    def set_users
+      @users = User.where(role: "developer")
+    end
+
     def interview_message_params
       params.require(:interview_message).permit(:name, :email, :body, :company_name, :interviews, :start_time, :time_zone, :developer)
     end
 
     def cv_params
-      params.require(:cv).permit(:name, :profile, :title, :stackoverflow_reputation, :blog, :avatar, :availablity, :religiously_following, :bookshelf, :contract_until,
+      params.require(:cv).permit(:name, :profile, :title, :stackoverflow_reputation, :blog, :avatar, :availablity, :religiously_following, 
+                                 :bookshelf, :contract_until, :user_id,
                                  :projects_attributes => [:id, :name, :url, :description, :tech_stack, :cv_id, :order, :_destroy,
                                                           :project_interest_points_attributes => [:id, :content, :project_id, :_destroy]],
                                  :educations_attributes => [:id, :title, :institution, :cv_id, :_destroy],

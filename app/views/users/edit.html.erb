@@ -1,0 +1,49 @@
+<div class="container">
+  <h2>Edit User</h2>
+  <div class="row">
+    <%= render 'layouts/error_messages', object: @user %>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-info alert-dismissible">
+        <div class="alert-text">
+            <%= value %>
+          </div>
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= form_for @user, :html => { :class => 'contact-form'} do |f| %>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, placeholder: "Name", :class => 'form-control input-lg' %>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.text_field :email, :required => true, placeholder: "Email", :class => 'form-control input-lg' %>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          <%= f.label :role %>
+          <% if current_user.id == @user.id %>
+            <%= f.text_field :role, :class => 'form-control input-lg', :readonly => true %>
+          <% else %>
+            <%= f.select :role, ['customer','developer', 'admin']%>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="actions form-group log-btn col-md-8 col-md-offset-2">
+      <%= f.submit 'Update', class: 'btn btn-outline btn-big ' %>
+    </div>
+  <% end %>
+  <div class="col-xs-12">
+    <%= link_to 'Users', users_path %>
+  </div>
+</div>
