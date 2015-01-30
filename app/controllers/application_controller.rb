@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  before_filter do
+    resource = controller_name.singularize.to_sym
+    method = "#{resource}_params"
+    params[resource] &&= send(method) if respond_to?(method, true)
+  end
+
   def update_sanitized_params
     devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:role, :email, :password, :password_confirmation)}
   end

@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
+  
+  resources :users, :only => [:edit, :index, :update, :new]
 
-  resources :users_admin, :controller => 'users'
+  # resources :users_admin, controller: 'users'
+  post 'create_user' => 'users#create', as: :create_user
 
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 

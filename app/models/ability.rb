@@ -8,12 +8,12 @@ class Ability
     if user.role == 'admin'
       can :manage, :all
     elsif user.role == 'developer'
-      can [:edit, :update], Cv
+      can [:edit, :update, :interview, :interview_mail], Cv
       can :read, :all
     elsif user.role == 'customer'
       can :read, :all
     else
-      can [:show], Cv
+      can [:show, :interview, :interview_mail], Cv
     end
     #
     # The first argument to `can` is the action you are giving the user 

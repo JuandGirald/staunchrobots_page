@@ -1,6 +1,6 @@
 <section class="contact-section light-section dark-content login">
   <div class="container">
-    <h2>Sign up</h2>
+    <h2>New User</h2>
 
     <div class="row">
       <%= render 'layouts/error_messages', object: @user %>
@@ -20,41 +20,37 @@
     <div id="contact-form" class="row">
 
       <div class="col-md-8 col-md-offset-2">
-
-        <div id="result"></div>
-
-        <form accept-charset="UTF-8" action="/users_admin" id="new_user" method="post" class="new_user contact-form">
-          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <div class="form-group">
-                <input type="email" class="form-control input-lg" name="user[email]" id="user_email" placeholder="Email" required>
-              </div>
-            </div>
-            <div class="col-md-8 col-md-offset-2">
-              <div class="form-group">
-                <input type="password" class="form-control input-lg" name="user[password]" id="user_password" placeholder="Password" requiered>
-              </div>
-            </div>
-            <div class="col-md-8 col-md-offset-2">
-              <div class="form-group">
-                <input type="password" class="form-control input-lg" name="user[password_confirmation]" id="user_password_confirmation" placeholder="Password confirmation" requiered>
-              </div>
-            </div>
-            <div class="col-md-8 col-md-offset-2">
-              <div class="form-group">
-                <select name="user[role]" id="user_role" class="form-control input-lg" required>
-                  <option value="admin">Admin</option>
-                  <option value="developer">Developer</option>
-                  <option value="customer">Customer</option>
-                </select>
-              </div>
+        <%= form_for @user, :url => create_user_path, :html => { :class => 'contact-form'} do |f| %>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <%= f.text_field :name, placeholder: "Name", :class => 'form-control input-lg' %>
             </div>
           </div>
-          <div class="form-group log-btn col-md-8 col-md-offset-2">
-            <button id="submit_btn" type="submit" class="btn btn-outline btn-big ">Sign Up</button>
+          <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <%= f.text_field :email, :required => true, placeholder: "Email", :class => 'form-control input-lg' %>
+            </div>
           </div>
-        </form>
+          <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <%= f.password_field :password, :required => true, placeholder: "Password", :class => 'form-control input-lg' %>
+            </div>
+          </div><div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <%= f.password_field :password_confirmation, :required => true, placeholder: "Password Confirmation", :class => 'form-control input-lg' %>
+            </div>
+          </div>
+          <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <%= f.select :role, ['customer','developer', 'admin'] %>
+            </div>
+          </div>
+        </div>
+        <div class="actions form-group log-btn col-md-8 col-md-offset-2">
+          <%= f.submit 'Sign up', class: 'btn btn-outline btn-big ' %>
+        </div>
+      <% end %>
       </div>
     </div>
   </div>
