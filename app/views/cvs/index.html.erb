@@ -38,15 +38,20 @@
               </div>
             </div>
             <div class="interview col-xs-2">
-              <% if cv.contract_until.to_s < Time.now.strftime('%Y-%m-%d') %> 
+              <% if cv.contract_until.to_s <= Time.now.strftime('%Y-%m-%d') or cv.contract_until.nil?  %> 
                 <%= image_tag 'available.png' %>
                 <%= link_to interview_path(cv.name),  {class: "interview-link", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', 'data-dev' => "#{cv.name}"} do %>
                   <button type="button" class="btn btn-warning"> Interview </button>
                 <% end %>
                 
+              <% elsif (cv.contract_until - Time.now.to_date).to_i <= 30 %>
+                <h2 class="days_30">Within 30 days</h2>
+                <button type="button" class="btn btn-primary"> Interview </button>
+              <% elsif (cv.contract_until - Time.now.to_date).to_i <= 60 %>
+                <h2 class="days_60">Within 30-60 days</h2>
+                <button type="button" class="btn btn-primary"> Interview </button>
               <% else %>
                 <%= image_tag 'on-assginment.png' %>
-                <p>Until: <%= cv.contract_until %></p>
                 <%= link_to interview_path(cv.name),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', 'data-dev' => "#{cv.name}"} do %>
                   <button type="button" class="btn btn-primary"> Interview </button>                
                 <% end %>

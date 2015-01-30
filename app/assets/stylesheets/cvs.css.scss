@@ -119,11 +119,17 @@
       font-size: 12px;
       margin-top: 10px
     }
+    .days_30 {
+      margin-bottom: 28px !important;
+    }
+    .days_60 {
+      margin-bottom: -18px !important;
+    }
     .btn {
-      margin-top: 0.7em;
+      margin-top: 2.6em;
     }
     .btn-warning {
-      margin-top: 4.9em;
+      margin-top: 3.9em;
     }
   }
   @media (max-width: 1200px) {
