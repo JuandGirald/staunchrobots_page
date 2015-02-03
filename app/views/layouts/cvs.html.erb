@@ -49,6 +49,22 @@
       </nav><!--/.navbar-collapse -->
     </div>
   </div>
+  <div class="navbar navbar2 minified darken-menu">
+    <div class="container">
+      <div class="navbar-collapse collapse navbar-right">
+        <%= link_to 'New Cv', new_cv_path %>
+        <% if @cv %>
+          <% if @cv.user %>
+            <% if @cv.user.id == current_user.id %>
+              <%= link_to 'Edit', edit_cv_path(@cv) %>
+            <% end %>
+          <% elsif current_user.role == 'admin' and !current_page?(new_cv_path) %>
+            <%= link_to 'Edit', edit_cv_path(@cv) %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
   
   <div class="row">
     <% flash.each do |key, value| %>
