@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # cancan fix with rails 4
   before_filter do
     resource = controller_name.singularize.to_sym
     method = "#{resource}_params"
@@ -35,5 +36,9 @@ class ApplicationController < ActionController::Base
 
   def auth_user
     redirect_to login_path unless user_signed_in?
+  end
+
+  def after_sign_in_path_for(resource)
+    cvs_path
   end
 end
