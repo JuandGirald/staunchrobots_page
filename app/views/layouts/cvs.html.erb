@@ -52,11 +52,13 @@
   <div class="navbar navbar2 minified darken-menu">
     <div class="container">
       <div class="navbar-collapse collapse navbar-right">
-        <% if @cv %>
-          <% if current_user.role == 'admin' and !current_page?(new_cv_path) %>
-            <%= link_to 'New Cv', new_cv_path %>
+        <% if current_user.role == 'admin' and !current_page?(new_cv_path) %>
+          <%= link_to 'New Cv', new_cv_path %>
+          <% if @cv %>
             <%= link_to 'Edit', edit_cv_path(@cv) %>
-          <% elsif  @cv.user %>
+          <% end %>
+        <% elsif  current_user.role == 'developer' and @cv %>
+          <% if  @cv.user %>
             <% if @cv.user.id == current_user.id %>
               <%= link_to 'Edit', edit_cv_path(@cv) %>
             <% end %>
