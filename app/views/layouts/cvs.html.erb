@@ -31,8 +31,10 @@
       <nav id="my-nav" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li ><a href="/">Home</a></li>
-          <% if current_user.role == 'admin' %>
-            <li><a href="/users">Users</a></li>
+          <% if current_user %>
+            <% if current_user.role == 'admin' %>
+              <li><a href="/users">Users</a></li>
+            <% end %>
           <% end %>
           <% if !current_user %> 
             <li><a href="/login">Sign In</a></li>
@@ -49,24 +51,26 @@
       </nav><!--/.navbar-collapse -->
     </div>
   </div>
-  <div class="navbar navbar2 minified darken-menu">
-    <div class="container">
-      <div class="navbar-collapse collapse navbar-right">
-        <% if current_user.role == 'admin' and !current_page?(new_cv_path) %>
-          <%= link_to 'New Cv', new_cv_path %>
-          <% if @cv %>
-            <%= link_to 'Edit', edit_cv_path(@cv) %>
-          <% end %>
-        <% elsif  current_user.role == 'developer' and @cv %>
-          <% if  @cv.user %>
-            <% if @cv.user.id == current_user.id %>
+  <% if current_user %>
+    <div class="navbar navbar2 minified darken-menu">
+      <div class="container">
+        <div class="navbar-collapse collapse navbar-right">
+          <% if current_user.role == 'admin' and !current_page?(new_cv_path) %>
+            <%= link_to 'New Cv', new_cv_path %>
+            <% if @cv %>
               <%= link_to 'Edit', edit_cv_path(@cv) %>
             <% end %>
+          <% elsif  current_user.role == 'developer' and @cv %>
+            <% if  @cv.user %>
+              <% if @cv.user.id == current_user.id %>
+                <%= link_to 'Edit', edit_cv_path(@cv) %>
+              <% end %>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
   
   <div class="row">
     <% flash.each do |key, value| %>
