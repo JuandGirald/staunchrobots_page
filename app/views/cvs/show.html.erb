@@ -1,3 +1,13 @@
+<% if !current_user or current_user.role == 'customer' %>
+  <div class="navbar navbar2 minified darken-menu">
+    <div class="container">
+      <div class="navbar-collapse collapse navbar-right">
+        <%= link_to "Interview", interview_path(@cv.name),  {class: "interview-link", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', 'data-dev' => "#{@cv.name}"} %>
+        <%= link_to 'Browse Devs', cvs_path %>
+      </div>
+    </div>
+  </div>
+<% end %>
 <div class="developer">
   <div class="container">
     <div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
@@ -176,10 +186,6 @@
           </div> 
         </aside>
       </div>
-
     </div>
   </div>
-  <%= link_to 'Back', cvs_path %>
-      
-  
 </div>

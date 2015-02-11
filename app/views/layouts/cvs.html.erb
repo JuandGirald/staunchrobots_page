@@ -51,10 +51,11 @@
       </nav><!--/.navbar-collapse -->
     </div>
   </div>
-  <% if current_user %>
+  <% if current_user and !(current_user.role == 'customer')%>
     <div class="navbar navbar2 minified darken-menu">
       <div class="container">
         <div class="navbar-collapse collapse navbar-right">
+          <%= link_to 'Browse Devs', cvs_path %>
           <% if current_user.role == 'admin' and !current_page?(new_cv_path) %>
             <%= link_to 'New Cv', new_cv_path %>
             <% if @cv %>

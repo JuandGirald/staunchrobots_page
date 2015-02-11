@@ -38,12 +38,14 @@
               </div>
             </div>
             <div class="interview col-xs-2">
-              <%if current_user.role == 'admin' %>
-                <div class="col-xs-12">
-                  <%= link_to cv, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn-destroy" do %>
-                    <i class="fa fa-close"></i>
-                  <% end %>
-                </div>
+              <% if current_user %>
+                <%if current_user.role == 'admin' %>
+                  <div class="col-xs-12">
+                    <%= link_to cv, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn-destroy" do %>
+                      <i class="fa fa-close"></i>
+                    <% end %>
+                  </div>
+                <% end %>
               <% end %>
               <% if cv.contract_until.to_s <= Time.now.strftime('%Y-%m-%d') or cv.contract_until.nil?  %> 
                 <%= image_tag 'available.png' %>
