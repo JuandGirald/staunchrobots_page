@@ -55,7 +55,6 @@
     <div class="navbar navbar2 minified darken-menu">
       <div class="container">
         <div class="navbar-collapse collapse navbar-right">
-          <%= link_to 'Browse Devs', cvs_path %>
           <% if current_user.role == 'admin' and !current_page?(new_cv_path) %>
             <%= link_to 'New Cv', new_cv_path %>
             <% if @cv %>
