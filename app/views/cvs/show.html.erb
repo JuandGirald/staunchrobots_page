@@ -104,7 +104,7 @@
           </div>
           <div class="col-xs-12 skill">
             <% if @cv.skills %>
-              <h1> <i class="fa fa-wrench" ></i> Toolbox </h1>
+              <h1> <i class="col-xs-2 fa fa-wrench" ></i> Toolbox </h1>
               <ul class="padding-align">
                 <% @cv.skills.split(',').each do |skill| %>
                   <p> <%= skill %>,  </p>
@@ -114,7 +114,7 @@
           </div>
           <div class="col-xs-12 education">
             <% if @cv.educations.any? %>
-              <h1> <i class="fa fa-university" ></i> Learning</h1>
+              <h1> <i class="col-xs-2 fa fa-university" ></i> Learning</h1>
               <ul class="padding-align">
                 <% @cv.educations.each do |education| %>
                   <h3> <%= education.title %>  </h3>
@@ -151,7 +151,7 @@
 
           <div class="col-xs-12 language">
             <% if @cv.languages.any? %>
-              <h1> <i class="fa fa-comments" ></i> Languages</h1>
+              <h1> <i class="col-xs-2 fa fa-comments" ></i> Languages</h1>
               <ul class="padding-align">
                 <% @cv.languages.each do |language| %>
                   <li>
@@ -171,7 +171,7 @@
 
           <div class="col-xs-12 codeSample">
             <% if @cv.code_samples.any? %>
-              <h1> <i class="fa fa-code" ></i> Code Samples</h1>
+              <h1> <i class="col-xs-2 fa fa-code" ></i>  Code Samples</h1>
               <ul >
                 <% @cv.code_samples.each do |code_sample| %>
                   <p> <%= code_sample.name %>:  </p>
