@@ -32,9 +32,12 @@
                 <% end %>
                 </h4> 
               </div>
-              <p> <%= cv.profile[0, 180] %>...</p>
+              <p> <%= cv.profile[0, 250] %>...</p>
               <div class="dev-buttons">
                 <%= link_to "Full Profile", cv_path(cv.name), :class => "btn btn-primary "%>
+                <%= link_to interview_path(cv.name),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', 'data-dev' => "#{cv.name}"} do %>
+                  <button type="button" class="btn btn-primary"> Interview </button>                
+                <% end %>
               </div>
             </div>
             <div class="interview col-xs-2">
@@ -49,22 +52,12 @@
               <% end %>
               <% if cv.contract_until.to_s <= Time.now.strftime('%Y-%m-%d') or cv.contract_until.nil?  %> 
                 <%= image_tag 'available.png' %>
-                <%= link_to interview_path(cv.name),  {class: "interview-link", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', 'data-dev' => "#{cv.name}"} do %>
-                  <button type="button" class="btn btn-warning"> Interview </button>
-                <% end %>
-                
               <% elsif (cv.contract_until - Time.now.to_date).to_i <= 30 %>
                 <h2 class="days_30">Within 30 days</h2>
-                <button type="button" class="btn btn-primary"> Interview </button>
               <% elsif (cv.contract_until - Time.now.to_date).to_i <= 60 %>
                 <h2 class="days_60">Within 30-60 days</h2>
-                <button type="button" class="btn btn-primary"> Interview </button>
               <% else %>
                 <%= image_tag 'on-assginment.png' %>
-                <%= link_to interview_path(cv.name),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', 'data-dev' => "#{cv.name}"} do %>
-                  <button type="button" class="btn btn-primary"> Interview </button>                
-                <% end %>
-                
               <% end %>
             </div>
           </div>
