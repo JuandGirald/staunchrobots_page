@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy, :finish_signup]
-  load_and_authorize_resource
+  load_and_authorize_resource :except => [:finish_signup]
 
   layout "cvs"
 
