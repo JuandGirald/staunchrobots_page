@@ -11,6 +11,15 @@
             </div>  
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="field">
+              <%= f.label :cv_type, "Type" %>
+              <%= f.select :cv_type, ["public", "private"] %>
+            </div>  
+          </div>
+        </div>
       <% end %>
       <div class="row">
         <div class="col-xs-12">
@@ -64,17 +73,17 @@
       <h2> Experience </h2>
       <div id="experiences">
         <div class="items">
-          <%= f.nested_fields_for :experiences do |e| %>
-            <%= e.label :name %>
-            <%= e.text_field :name %>
+          <%= f.nested_fields_for :experiences do |f| %>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
 
-            <%= e.label :years %>
-            <%= e.text_field :years %>
+            <%= f.label :years %>
+            <%= f.text_field :years %>
 
             <a href="#" class="remove">remove</a>
 
-            <%= e.hidden_field :id %>
-            <%= e.hidden_field :_destroy %>
+            <%= f.hidden_field :id %>
+            <%= f.hidden_field :_destroy %>
           <% end %>
         </div>
         <a href="#" class="add">add Experience</a>
