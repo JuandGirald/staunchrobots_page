@@ -9,7 +9,12 @@ class User < ActiveRecord::Base
 
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
-  before_save :set_role
+  before_save   :set_role
+  after_create  :send_admin_mail
+  
+  def send_admin_mail
+    NotificationsMailer.new_user_waiting_for_approval(self).deliver
+  end
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
 
@@ -60,6 +65,18 @@ class User < ActiveRecord::Base
 
   def email_verified?
     self.email && self.email !~ TEMP_EMAIL_REGEX
+  end
+
+  def active_for_authentication? 
+    super && approved? 
+  end 
+
+  def inactive_message 
+    if !approved? 
+      :not_approved 
+    else 
+      super # Use whatever other message 
+    end 
   end
 
   private 

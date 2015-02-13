@@ -7,4 +7,8 @@ class NotificationsMailer < ActionMailer::Base
     mail(:subject => "[Lead] Message from web site")
   end
 
+  def new_user_waiting_for_approval(message)
+    @message = message
+    mail(to: "juan.giraldo@staunchrobots.com", :subject => "User waiting for approval")
+  end
 end

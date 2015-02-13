@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations' }
   
   resources :users, :only => [:edit, :index, :update, :new]
 
@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   post "cvs/interview_mail" => 'cvs#interview_mail', :as => :interview_mail
   match '/',            to: 'static_pages#create',  via: 'post'
   match '/v2',          to: 'static_pages#v2',      via: 'get'
+  match '/welcome',     to: 'static_pages#welcome', via: 'get'
 
   
   get "/blog" => redirect("/blog/")
