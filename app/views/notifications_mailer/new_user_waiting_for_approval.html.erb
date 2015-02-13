@@ -7,6 +7,6 @@
   <p>
     <%= @message.email %> has created an account with Staunch. Please approve.
   </p>
-  <p> link to approve = <%= link_to "Approve User", edit_user_path(@message.id)%> </p> 
+  <p> link to approve = <%= link_to "Approve User", edit_user_url(@message.id)%> </p> 
 </body>
 </html>
