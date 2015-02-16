@@ -1,23 +1,20 @@
+<div class="row">
+  <%= render 'layouts/error_messages', object: @user %>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-info alert-dismissible">
+      <div class="alert-text">
+          <%= value %>
+        </div>
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  <% end %>
+</div>
 <section class="contact-section light-section dark-content login">
   <div class="container login-container">
-      <h1>In order to access our full database of</h1>
-      <h1>developers we require all customers to</h1>
-      <h1>register</h1>
-
-      <div class="row">
-        <%= render 'layouts/error_messages', object: @user %>
-        <% flash.each do |key, value| %>
-          <div class="alert alert-info alert-dismissible">
-            <div class="alert-text">
-                <%= value %>
-              </div>
-              <button type="button" class="close" data-dismiss="alert">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          </div>
-        <% end %>
-      </div>
+      <h1>In order to access our full database of developers we require all customers to register </h1>
 
       <div class="login-form">
         <div class="col-xs-6 left">
@@ -39,11 +36,11 @@
                     </div>
                   </div>
                 </div>
-                <!-- <div class="col-md-10 forgot text-left">
+                <div class="col-md-10 forgot text-left">
                   <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
                     <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
                   <% end -%>
-                </div> -->
+                </div>
                 <div class="form-group log-btn col-md-8">
                   <button id="submit_btn" type="submit" class="btn btn-outline btn-big ">LogIn</button>
                 </div>

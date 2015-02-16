@@ -19,8 +19,23 @@
 .container.login-container {
   width: 1000px;
   h1 {
-    font-size: 52px;
+    font-size: 28pt;
     margin: 0;
     text-align: left;
+  }
+}
+
+.signup {
+  h1 {
+    font-size: 28pt;
+    text-align: left;
+  }
+}
+.form-group {
+  .control-label {
+    position: absolute;
+    left: -18px;
+    top: 10px;
+    font-size: 2em;
   }
 }
