@@ -9,7 +9,7 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_user_waiting_for_approval(message)
     @message = message
-    mail(to: "juan.giraldo@staunchrobots.com", :subject => "User waiting for approval")
+    mail(to: "todd.morrill@staunchrobots.com", :subject => "User waiting for approval")
   end
 
   def user_approved(message)
