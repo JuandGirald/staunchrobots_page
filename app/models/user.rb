@@ -10,10 +10,15 @@ class User < ActiveRecord::Base
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
   before_save   :set_role
+  after_save    :send_customer_mail, :if => :approved_changed?
   after_create  :send_admin_mail
   
   def send_admin_mail
     NotificationsMailer.new_user_waiting_for_approval(self).deliver
+  end
+
+  def send_customer_mail
+    NotificationsMailer.user_approved(self).deliver
   end
 
   def self.find_for_oauth(auth, signed_in_resource = nil)

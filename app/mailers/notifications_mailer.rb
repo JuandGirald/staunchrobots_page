@@ -11,4 +11,9 @@ class NotificationsMailer < ActionMailer::Base
     @message = message
     mail(to: "juan.giraldo@staunchrobots.com", :subject => "User waiting for approval")
   end
+
+  def user_approved(message)
+    @message = message
+    mail(to: "#{message.email}", :subject => "User approved")
+  end
 end

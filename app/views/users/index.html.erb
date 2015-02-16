@@ -7,6 +7,13 @@
         <h3 class="col-xs-4"><%= link_to 'Edit', edit_user_path(user) %></h3>
       </div>
     <% end %>
+    <h1>Users awaiting approval</h1>
+    <% @users_approval.each do |user| %>
+      <div class="col-xs-12">
+        <h3 class="col-xs-8"> <%= user.email %>  </h3>
+        <h3 class="col-xs-4"><%= link_to 'Edit', edit_user_path(user) %></h3>
+      </div>
+    <% end %>
     <div class="col-xs-10">
       <h3> <%= link_to 'New User', new_user_path %></p>
     </div>

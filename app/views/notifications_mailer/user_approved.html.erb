@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1> <%= @message.email %>,</h1>
+  <p>
+    Your account has been created. You can login now!.
+  </p>
+  <p> LogIn = <%= link_to "StaunchRobots LogIn", login_url(@message.id)%> </p> 
+  <p> Staunch Robots </p>
+</body>

@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   layout "cvs"
 
   def index
-    @users = User.all
+    @users = User.where(approved: 'true')
+    @users_approval = User.where(approved: 'false')
   end
   # GET /users/:id.:format
   def show
