@@ -1,9 +1,14 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", login_path %><br />
+  <%= link_to "LogIn", login_path %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Create an Account", signup_path %><br />
+  <div class="contact-form col-md-6"> 
+    <p>Not yet registered?</p>
+    <%= link_to signup_path  do %>
+      <button id="submit_btn" type="submit" class="btn btn-outline btn-big ">Sign Up</button>
+    <% end %>
+  </div>
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
@@ -14,7 +19,7 @@
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end -%>
 
-<h2>Or</h2> </br>
+<!-- <h2>Or</h2> </br>
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
 
@@ -25,3 +30,4 @@
     <% end %>
   <% end -%>
 <% end -%>
+ -->

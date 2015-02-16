@@ -1,53 +1,61 @@
 <section class="contact-section light-section dark-content login">
-  <div class="container">
-    <h2>Log in</h2>
+  <div class="container login-container">
+      <h1>In order to access our full database of developers we require all customers to register</h1>
 
-    <div class="row">
-      <%= render 'layouts/error_messages', object: @user %>
-      <% flash.each do |key, value| %>
-        <div class="alert alert-info alert-dismissible">
-          <div class="alert-text">
-              <%= value %>
+      <div class="row">
+        <%= render 'layouts/error_messages', object: @user %>
+        <% flash.each do |key, value| %>
+          <div class="alert alert-info alert-dismissible">
+            <div class="alert-text">
+                <%= value %>
+              </div>
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <button type="button" class="close" data-dismiss="alert">
-              <span aria-hidden="true">&times;</span>
-            </button>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="login-form">
+        <div class="col-xs-6 left">
+          <div id="contact-form" class="row">
+            <div class="col-md-8">
+              <div id="result"></div>
+              <form accept-charset="UTF-8" action="/users/sign_in" id="new_user" method="post" class="new_user contact-form">
+                <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+                <p>Already Registered? Login!</p>
+                <div class="row">
+                  <div class="col-md-10">
+                    <div class="form-group">
+                      <input type="email" class="form-control input-lg" name="user[email]" id="user_email" placeholder="Email" required>
+                    </div>
+                  </div>
+                  <div class="col-md-10">
+                    <div class="form-group">
+                      <input type="password" class="form-control input-lg" name="user[password]" id="user_password" placeholder="Password" requiered>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-md-10 forgot text-left">
+                  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                    <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+                  <% end -%>
+                </div> -->
+                <div class="form-group log-btn col-md-8">
+                  <button id="submit_btn" type="submit" class="btn btn-outline btn-big ">LogIn</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      <% end %>
-    </div>
-
-    <div id="contact-form" class="row">
-
-      <div class="col-md-8 col-md-offset-2">
-
-        <div id="result"></div>
-
-        <form accept-charset="UTF-8" action="/users/sign_in" id="new_user" method="post" class="new_user contact-form">
-          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <div class="form-group">
-                <input type="email" class="form-control input-lg" name="user[email]" id="user_email" placeholder="Email" required>
-              </div>
-            </div>
-            <div class="col-md-8 col-md-offset-2">
-              <div class="form-group">
-                <input type="password" class="form-control input-lg" name="user[password]" id="user_password" placeholder="Password" requiered>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-8 col-md-offset-2 forgot text-left">
-            <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-              <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-            <% end -%>
-          </div>
-          <div class="form-group log-btn col-md-8 col-md-offset-2">
-            <button id="submit_btn" type="submit" class="btn btn-outline btn-big ">LogIn</button>
-          </div>
-        </form>
+        <div class="col-xs-6">
+          <%= render "devise/shared/links" %>   
+        </div>
       </div>
-    </div>
+      
+      
+      
+    
   </div>
-  <%= render "devise/shared/links" %>
 </section>
