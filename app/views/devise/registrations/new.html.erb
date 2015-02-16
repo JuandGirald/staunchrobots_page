@@ -1,6 +1,6 @@
 <section class="contact-section light-section dark-content login">
   <div class="container">
-    <h2>Sign up</h2>
+    <h1>In order to talk with you; before granting you full access our developer database. Please fill out the bellow form and we will be in touch within a couple of hours</h1>
 
     <div class="row">
       <%= render 'layouts/error_messages', object: @user %>
@@ -31,6 +31,32 @@
                 <input type="email" class="form-control input-lg" name="user[email]" id="user_email" placeholder="Email" required>
               </div>
             </div>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" name="user[company]" id="user_company" placeholder="Company Name">
+              </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" name="user[name]" id="user_name" placeholder="Your Name">
+              </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" name="user[skype]" id="user_skype" placeholder="Skype username">
+              </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="form-group">
+                <input rows='4' type="text" class="form-control input-lg" name="user[phone]" id="user_phone" placeholder="Phone Number">
+              </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="form-group">
+                <textarea class="form-control input-lg" name="user[company]" id="user_company" placeholder="Put your comments here..."></textarea>
+              </div>
+            </div>
+            
             <div class="col-md-8 col-md-offset-2">
               <div class="form-group">
                 <input type="password" class="form-control input-lg" name="user[password]" id="user_password" placeholder="Password" requiered>
