@@ -13,7 +13,8 @@ class Ability
     elsif user.role == 'customer'
       can :read, :all
     else
-      can [:show, :index, :interview, :interview_mail], Cv
+      can [:index, :interview, :interview_mail], Cv
+      can :show, Cv, :cv_type => 'public'
     end
     #
     # The first argument to `can` is the action you are giving the user 

@@ -20,4 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  unauthorized:
+    show:
+      cv: "This developers profile is private. In order to view it you must have an account with Staunch Robots"
