@@ -21,7 +21,8 @@ class ApplicationController < ActionController::Base
   end
 
   def update_sanitized_params
-    devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:role, :email, :password, :password_confirmation)}
+    devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:role, :email, :password, :password_confirmation, :name,
+                                                          :phone, :skype, :comments, :company, :monthly_digest)}
   end
 
   def ensure_signup_complete
