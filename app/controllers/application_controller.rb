@@ -56,6 +56,10 @@ class ApplicationController < ActionController::Base
   # end
 
   def after_sign_in_path_for(resource)
-    cvs_path
+    if current_user.role == 'admin'
+      users_path
+    else
+      cvs_path
+    end
   end
 end
